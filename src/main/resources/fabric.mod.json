@@ -6,8 +6,10 @@
   "name": "SimplyShady",
   "description": "Adds 3 new metals and tiers for such",
   "authors": [
-    "Turnip Labs",
-		"CalamityKage"
+    "Turnip Labs for the example mod",
+		"CalamityKage, created the concept and assets as well as put the code together",
+		"Useless since I used his MoonMoonMoon item code",
+		"Csweetla for the Fire Damage code"
   ],
   "contact": {
     "homepage": "",
