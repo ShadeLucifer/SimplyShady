@@ -1,12 +1,13 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
+  "id": "simplyshady",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This mod aims to help new BTA modders.",
+  "name": "SimplyShady",
+  "description": "Adds 3 new metals and tiers for such",
   "authors": [
-    "Turnip Labs"
+    "Turnip Labs",
+		"CalamityKage"
   ],
   "contact": {
     "homepage": "",
@@ -19,20 +20,20 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-			"turniplabs.examplemod.ExampleMod"
+			"calamitykage.simplyshady.SimplyShady"
     ],
 		"beforeGameStart": [
-			"turniplabs.examplemod.ExampleMod"
+			"calamitykage.simplyshady.SimplyShady"
 		],
 		"afterGameStart": [
-			"turniplabs.examplemod.ExampleMod"
+			"calamitykage.simplyshady.SimplyShady"
 		],
 		"recipesReady": [
-			"turniplabs.examplemod.ExampleMod"
+			"calamitykage.simplyshady.SimplyShady"
 		]
 	},
   "mixins": [
-      "examplemod.mixins.json"
+      "simplyshady.mixins.json"
   ],
 
   "depends": {
