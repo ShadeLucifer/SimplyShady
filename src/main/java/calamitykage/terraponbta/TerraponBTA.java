@@ -1,11 +1,7 @@
 package calamitykage.terraponbta;
 
 import calamitykage.terraponbta.blocks.TerraponBTABlocks;
-import calamitykage.terraponbta.item.TerraponBTAFireSword;
 import calamitykage.terraponbta.item.TerraponBTAItems;
-import calamitykage.terraponbta.blocks.TerraponBTABlocks;
-import calamitykage.terraponbta.item.TerraponBTAItems;
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.core.crafting.LookupFuelFurnace;
 import net.minecraft.core.crafting.LookupFuelFurnaceBlast;
@@ -340,14 +336,14 @@ public class TerraponBTA implements ModInitializer, GameStartEntrypoint, RecipeE
 				"HHH",
 				"H H",
 				"H H")
-			.addInput('H', ingotEinvadrilIngot)
+			.addInput('H', ingotHlifintiteIngot)
 			.create("hlifintite_leggings", pantsHlifintite);
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
 				"H H",
 				"H H",
 				"   ")
-			.addInput('H', ingotEinvadrilIngot)
+			.addInput('H', ingotHlifintiteIngot)
 			.create("hlifintite_boots", feetsiesHlifintite);
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
