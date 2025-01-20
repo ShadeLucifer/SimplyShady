@@ -1,42 +1,29 @@
-package calamitykage.simplyshady;
+package calamitykage.terraponbta;
 
-import calamitykage.simplyshady.blocks.TerraponBTABlocks;
-import calamitykage.simplyshady.item.SimplyShadyFireSword;
-import calamitykage.simplyshady.item.TerraponBTAItems;
+import calamitykage.terraponbta.blocks.TerraponBTABlocks;
+import calamitykage.terraponbta.item.TerraponBTAFireSword;
+import calamitykage.terraponbta.item.TerraponBTAItems;
+import calamitykage.terraponbta.blocks.TerraponBTABlocks;
+import calamitykage.terraponbta.item.TerraponBTAItems;
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.client.render.item.model.ItemModelStandard;
-import net.minecraft.core.block.material.Material;
-import net.minecraft.core.block.tag.BlockTags;
 import net.minecraft.core.crafting.LookupFuelFurnace;
 import net.minecraft.core.crafting.LookupFuelFurnaceBlast;
 import net.minecraft.core.item.Item;
-import net.minecraft.core.item.ItemArmor;
-import net.minecraft.core.item.ItemStack;
-import net.minecraft.core.item.material.ArmorMaterial;
-import net.minecraft.core.item.material.ToolMaterial;
-import net.minecraft.core.item.tool.ItemToolAxe;
-import net.minecraft.core.item.tool.ItemToolHoe;
-import net.minecraft.core.item.tool.ItemToolPickaxe;
-import net.minecraft.core.item.tool.ItemToolShovel;
-import net.minecraft.core.item.tool.ItemToolSword;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import turniplabs.halplibe.helper.ArmorHelper;
-import turniplabs.halplibe.helper.BlockBuilder;
-import turniplabs.halplibe.helper.ItemBuilder;
 import turniplabs.halplibe.helper.RecipeBuilder;
 import turniplabs.halplibe.util.ConfigHandler;
 import turniplabs.halplibe.util.GameStartEntrypoint;
 import turniplabs.halplibe.util.RecipeEntrypoint;
 import net.minecraft.core.block.Block;
 
-import static calamitykage.simplyshady.blocks.TerraponBTABlocks.*;
-import static calamitykage.simplyshady.item.TerraponBTAItems.*;
+import static calamitykage.terraponbta.blocks.TerraponBTABlocks.*;
+import static calamitykage.terraponbta.item.TerraponBTAItems.*;
 
 import java.util.Properties;
 
-public class SimplyShady implements ModInitializer, GameStartEntrypoint, RecipeEntrypoint {
-    public static final String MOD_ID = "simplyshady";
+public class TerraponBTA implements ModInitializer, GameStartEntrypoint, RecipeEntrypoint {
+    public static final String MOD_ID = "terraponbta";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	public static int itemId;
@@ -55,7 +42,7 @@ public class SimplyShady implements ModInitializer, GameStartEntrypoint, RecipeE
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("SimplyShady initialized.");
+		LOGGER.info("TerraponBTA initialized.");
 		new TerraponBTAItems().initializeItems();
 		new TerraponBTABlocks().initializeBlocks();
 	}
@@ -83,7 +70,6 @@ public class SimplyShady implements ModInitializer, GameStartEntrypoint, RecipeE
 			.addInput('G', Block.glowstone)
 			.addInput('C', Item.ingotSteelCrude)
 			.create("raw_seidrilium", rawSeidriliumRaw.getDefaultStack());
-
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
 				"CGC",

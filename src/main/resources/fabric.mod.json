@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "simplyshady",
+  "id": "terraponbta",
   "version": "${version}",
 
-  "name": "SimplyShady",
+  "name": "TerraponBTA",
   "description": "Adds 3 new metals and tiers for such",
   "authors": [
     "Turnip Labs for the example mod",
@@ -22,20 +22,20 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-			"calamitykage.simplyshady.SimplyShady"
+			"calamitykage.terraponbta.TerraponBTA"
     ],
 		"beforeGameStart": [
-			"calamitykage.simplyshady.SimplyShady"
+			"calamitykage.terraponbta.TerraponBTA"
 		],
 		"afterGameStart": [
-			"calamitykage.simplyshady.SimplyShady"
+			"calamitykage.terraponbta.TerraponBTA"
 		],
 		"recipesReady": [
-			"calamitykage.simplyshady.SimplyShady"
+			"calamitykage.terraponbta.TerraponBTA"
 		]
 	},
   "mixins": [
-      "simplyshady.mixins.json"
+		"terraponbta.mixins.json"
   ],
 
   "depends": {

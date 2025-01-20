@@ -1,4 +1,4 @@
-package calamitykage.simplyshady.blocks;
+package calamitykage.terraponbta.blocks;
 
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.material.Material;
@@ -8,7 +8,7 @@ import turniplabs.halplibe.util.ConfigHandler;
 
 import java.util.Properties;
 
-import static calamitykage.simplyshady.SimplyShady.MOD_ID;
+import static calamitykage.terraponbta.TerraponBTA.MOD_ID;
 
 public class TerraponBTABlocks {
 	public static int blockId;

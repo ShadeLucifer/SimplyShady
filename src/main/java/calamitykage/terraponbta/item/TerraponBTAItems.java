@@ -1,6 +1,5 @@
-package calamitykage.simplyshady.item;
+package calamitykage.terraponbta.item;
 
-import calamitykage.simplyshady.SimplyShady;
 import net.minecraft.client.render.item.model.ItemModelStandard;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemArmor;
@@ -10,7 +9,7 @@ import net.minecraft.core.item.tool.*;
 import turniplabs.halplibe.helper.ArmorHelper;
 import turniplabs.halplibe.helper.ItemBuilder;
 import turniplabs.halplibe.util.ConfigHandler;
-import static calamitykage.simplyshady.SimplyShady.MOD_ID;
+import static calamitykage.terraponbta.TerraponBTA.MOD_ID;
 import java.util.Properties;
 
 public class TerraponBTAItems {
@@ -126,7 +125,7 @@ public class TerraponBTAItems {
 		toolSwordEinvadril = new ItemBuilder(MOD_ID)
 			.setIcon(MOD_ID + ":item/einvadril_sword")
 			.setItemModel(item -> new ItemModelStandard(item, null).setFull3D())
-			.build(new SimplyShadyFireSword("tool.sword.einvadril", itemId++, einvadrilTool));
+			.build(new TerraponBTAFireSword("tool.sword.einvadril", itemId++, einvadrilTool));
 		toolAxeEinvadril = new ItemBuilder(MOD_ID)
 			.setIcon(MOD_ID + ":item/einvadril_axe")
 			.setItemModel(item -> new ItemModelStandard(item, null).setFull3D())
@@ -203,7 +202,7 @@ public class TerraponBTAItems {
 		toolSwordEilifligronium = new ItemBuilder(MOD_ID)
 			.setIcon(MOD_ID + ":item/eilifligronium_sword")
 			.setItemModel(item -> new ItemModelStandard(item, null).setFull3D())
-			.build(new SimplyShadyFireSword("tool.sword.eilifligronium", itemId++, eilifligroniumTool));
+			.build(new TerraponBTAFireSword("tool.sword.eilifligronium", itemId++, eilifligroniumTool));
 		toolAxeEilifligronium = new ItemBuilder(MOD_ID)
 			.setIcon(MOD_ID + ":item/eilifligronium_axe")
 			.setItemModel(item -> new ItemModelStandard(item, null).setFull3D())
