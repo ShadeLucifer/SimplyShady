@@ -5,10 +5,12 @@ import calamitykage.terraponbta.item.TerraponBTAFireSword;
 import calamitykage.terraponbta.item.TerraponBTAItems;
 import calamitykage.terraponbta.blocks.TerraponBTABlocks;
 import calamitykage.terraponbta.item.TerraponBTAItems;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.core.crafting.LookupFuelFurnace;
 import net.minecraft.core.crafting.LookupFuelFurnaceBlast;
 import net.minecraft.core.item.Item;
+import net.minecraft.core.item.ItemStack;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import turniplabs.halplibe.helper.RecipeBuilder;
@@ -424,6 +426,118 @@ public class TerraponBTA implements ModInitializer, GameStartEntrypoint, RecipeE
 		RecipeBuilder.BlastFurnace(MOD_ID)
 			.setInput(rawHlifintiteRaw)
 			.create("hlifintite_ingot", ingotHlifintiteIngot);
+
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(hatSeidrilium)
+			.create("seidrilium_ingot", new ItemStack(ingotSeidriliumIngot, 5));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(shirtSeidrilium)
+			.create("seidrilium_ingot", new ItemStack(ingotSeidriliumIngot, 8));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(pantsSeidrilium)
+			.create("seidrilium_ingot", new ItemStack(ingotSeidriliumIngot, 7));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(feetsiesSeidrilium)
+			.create("seidrilium_ingot", new ItemStack(ingotSeidriliumIngot, 4));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolShovelSeidrilium)
+			.create("seidrilium_ingot", new ItemStack(ingotSeidriliumIngot, 1));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolPickaxeSeidrilium)
+			.create("seidrilium_ingot", new ItemStack(ingotSeidriliumIngot, 3));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolAxeSeidrilium)
+			.create("seidrilium_ingot", new ItemStack(ingotSeidriliumIngot, 3));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolHoeSeidrilium)
+			.create("seidrilium_ingot", new ItemStack(ingotSeidriliumIngot, 2));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolSwordSeidrilium)
+			.create("seidrilium_ingot", new ItemStack(ingotSeidriliumIngot, 2));
+
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(hatEinvadril)
+			.create("einvadril_ingot", new ItemStack(ingotEinvadrilIngot, 5));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(shirtEinvadril)
+			.create("einvadril_ingot", new ItemStack(ingotEinvadrilIngot, 8));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(pantsEinvadril)
+			.create("einvadril_ingot", new ItemStack(ingotEinvadrilIngot, 7));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(feetsiesEinvadril)
+			.create("einvadril_ingot", new ItemStack(ingotEinvadrilIngot, 4));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolShovelEinvadril)
+			.create("einvadril_ingot", new ItemStack(ingotEinvadrilIngot, 1));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolPickaxeEinvadril)
+			.create("einvadril_ingot", new ItemStack(ingotEinvadrilIngot, 3));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolAxeEinvadril)
+			.create("einvadril_ingot", new ItemStack(ingotEinvadrilIngot, 3));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolHoeEinvadril)
+			.create("einvadril_ingot", new ItemStack(ingotEinvadrilIngot, 2));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolSwordEinvadril)
+			.create("einvadril_ingot", new ItemStack(ingotEinvadrilIngot, 2));
+
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(hatHlifintite)
+			.create("hlifintite_ingot", new ItemStack(ingotHlifintiteIngot, 5));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(shirtHlifintite)
+			.create("hlifintite_ingot", new ItemStack(ingotHlifintiteIngot, 8));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(pantsHlifintite)
+			.create("hlifintite_ingot", new ItemStack(ingotHlifintiteIngot, 7));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(feetsiesHlifintite)
+			.create("hlifintite_ingot", new ItemStack(ingotHlifintiteIngot, 4));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolShovelHlifintite)
+			.create("hlifintite_ingot", new ItemStack(ingotHlifintiteIngot, 1));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolPickaxeHlifintite)
+			.create("hlifintite_ingot", new ItemStack(ingotHlifintiteIngot, 3));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolAxeHlifintite)
+			.create("hlifintite_ingot", new ItemStack(ingotHlifintiteIngot, 3));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolHoeHlifintite)
+			.create("hlifintite_ingot", new ItemStack(ingotHlifintiteIngot, 2));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolSwordHlifintite)
+			.create("hlifintite_ingot", new ItemStack(ingotHlifintiteIngot, 2));
+
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(hatEilifligronium)
+			.create("eilifligronium_ingot", new ItemStack(ingotEilifligroniumIngot, 5));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(shirtEilifligronium)
+			.create("eilifligronium_ingot", new ItemStack(ingotEilifligroniumIngot, 8));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(pantsEilifligronium)
+			.create("eilifligronium_ingot", new ItemStack(ingotEilifligroniumIngot, 7));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(feetsiesEilifligronium)
+			.create("eilifligronium_ingot", new ItemStack(ingotEilifligroniumIngot, 4));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolShovelEilifligronium)
+			.create("eilifligronium_ingot", new ItemStack(ingotEilifligroniumIngot, 1));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolPickaxeEilifligronium)
+			.create("eilifligronium_ingot", new ItemStack(ingotEilifligroniumIngot, 3));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolAxeEilifligronium)
+			.create("eilifligronium_ingot", new ItemStack(ingotEilifligroniumIngot, 3));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolHoeEilifligronium)
+			.create("eilifligronium_ingot", new ItemStack(ingotEilifligroniumIngot, 2));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolSwordEilifligronium)
+			.create("eilifligronium_ingot", new ItemStack(ingotEilifligroniumIngot, 2));
 	}
 
 	@Override

@@ -23,13 +23,13 @@ public class TerraponBTAItems {
 
 		config.updateConfig();
 	}
-	public static ToolMaterial seidriliumTool = new ToolMaterial().setDurability(14162).setEfficiency(18.0f, 22.0f).setMiningLevel(7).setDamage(6);
-	public static ToolMaterial einvadrilTool = new ToolMaterial().setDurability(16384).setEfficiency(14.0f, 20.0f).setMiningLevel(9).setDamage(8);
-	public static ToolMaterial hlifintiteTool = new ToolMaterial().setDurability(23150).setEfficiency(16.0f, 16.0f).setMiningLevel(11).setDamage(7);
-	public static ToolMaterial eilifligroniumTool = new ToolMaterial().setDurability(Integer.MAX_VALUE).setEfficiency(25.0f, 25.0f).setMiningLevel(25).setDamage(25);
-	public static ArmorMaterial seidriliumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "seidrilium", 15000, 65f, 65f, 65f, 90f);
-	public static ArmorMaterial einvadrilArmor = ArmorHelper.createArmorMaterial(MOD_ID, "einvadril", 17000, 90f, 65f, 90f, 65f);
-	public static ArmorMaterial hlifintiteArmor = ArmorHelper.createArmorMaterial(MOD_ID, "hlifintite", 24000, 90f, 90f, 65f, 65f);
+	public static ToolMaterial seidriliumTool = new ToolMaterial().setDurability(14162).setEfficiency(20.0f, 22.0f).setMiningLevel(7).setDamage(17);
+	public static ToolMaterial einvadrilTool = new ToolMaterial().setDurability(16384).setEfficiency(16.0f, 20.0f).setMiningLevel(8).setDamage(18);
+	public static ToolMaterial hlifintiteTool = new ToolMaterial().setDurability(23150).setEfficiency(18.0f, 16.0f).setMiningLevel(11).setDamage(16);
+	public static ToolMaterial eilifligroniumTool = new ToolMaterial().setDurability(Integer.MAX_VALUE).setEfficiency(30.0f, 30.0f).setMiningLevel(50).setDamage(50);
+	public static ArmorMaterial seidriliumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "seidrilium", 15000, 75f, 75f, 75f, 95f);
+	public static ArmorMaterial einvadrilArmor = ArmorHelper.createArmorMaterial(MOD_ID, "einvadril", 17000, 95f, 75f, 95f, 75f);
+	public static ArmorMaterial hlifintiteArmor = ArmorHelper.createArmorMaterial(MOD_ID, "hlifintite", 24000, 95f, 95f, 75f, 95f);
 	public static ArmorMaterial eilifligroniumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "eilifligronium", Integer.MAX_VALUE, 100f, 100f, 100f, 100f);
 
 	public static Item ingotSeidriliumIngot;
