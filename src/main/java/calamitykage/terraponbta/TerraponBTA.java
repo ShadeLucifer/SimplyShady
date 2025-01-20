@@ -366,7 +366,7 @@ public class TerraponBTA implements ModInitializer, GameStartEntrypoint, RecipeE
 				" U ",
 				" L ",
 				" L ")
-			.addInput('H', ingotEilifligroniumIngot)
+			.addInput('U', ingotEilifligroniumIngot)
 			.addInput('L', Block.blockLapis)
 			.create("eilifligronium_shovel", toolShovelEilifligronium);
 		RecipeBuilder.Shaped(MOD_ID)
@@ -374,7 +374,7 @@ public class TerraponBTA implements ModInitializer, GameStartEntrypoint, RecipeE
 				"UUU",
 				" L ",
 				" L ")
-			.addInput('H', ingotEilifligroniumIngot)
+			.addInput('U', ingotEilifligroniumIngot)
 			.addInput('L', Block.blockLapis)
 			.create("eilifligronium_pickaxe", toolPickaxeEilifligronium);
 		RecipeBuilder.Shaped(MOD_ID)
