@@ -30,7 +30,7 @@ public class TerraponBTAItems {
 	public static ArmorMaterial seidriliumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "seidrilium", 15000, 65f, 65f, 65f, 90f);
 	public static ArmorMaterial einvadrilArmor = ArmorHelper.createArmorMaterial(MOD_ID, "einvadril", 17000, 90f, 65f, 90f, 65f);
 	public static ArmorMaterial hlifintiteArmor = ArmorHelper.createArmorMaterial(MOD_ID, "hlifintite", 24000, 90f, 90f, 65f, 65f);
-	public static ArmorMaterial eilifligroniumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "eilifligronium", -1, 100f, 100f, 100f, 100f);
+	public static ArmorMaterial eilifligroniumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "eilifligronium", Integer.MAX_VALUE, 100f, 100f, 100f, 100f);
 
 	public static Item ingotSeidriliumIngot;
 	public static Item rawSeidriliumRaw;
@@ -185,7 +185,7 @@ public class TerraponBTAItems {
 			.setItemModel(item -> new ItemModelStandard(item, null).setFull3D())
 			.build(new ItemToolHoe("tool.hoe.hlifintite", itemId++, hlifintiteTool));
 		hatHlifintite = new ItemBuilder(MOD_ID)
-			.setIcon("simplyshady:item/hlifintite_helmet")
+			.setIcon(MOD_ID + ":item/hlifintite_helmet")
 			.build(new ItemArmor("helmet.hlifintite", itemId++, hlifintiteArmor, 0));
 		shirtHlifintite = new ItemBuilder(MOD_ID)
 			.setIcon(MOD_ID + ":item/hlifintite_chestplate")
