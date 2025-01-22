@@ -62,28 +62,40 @@ public class TerraponBTA implements ModInitializer, GameStartEntrypoint, RecipeE
 
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
+				"GSG",
+				"SDS",
+				"GSG")
+			.addInput('G', Block.glowstone)
+			.addInput('D', Item.diamond)
+			.addInput('S', Item.ingotSteelCrude)
+			.create("orb_of_seidril", orbOfSeidril.getDefaultStack());
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
 				"CGC",
-				"G G",
+				"GOG",
 				"CGC")
 			.addInput('G', Block.glowstone)
 			.addInput('C', Item.ingotSteelCrude)
+			.addInput('O', orbOfSeidril)
 			.create("raw_seidrilium", rawSeidriliumRaw.getDefaultStack());
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
 				"CGC",
-				"G G",
+				"GOG",
 				"CGC")
 			.addInput('G', Item.nethercoal)
-			.addInput('C', ingotSeidriliumIngot)
+			.addInput('C', Item.ingotSteelCrude)
+			.addInput('O', orbOfSeidril)
 			.create("raw_einvadril", rawEinvadrilRaw.getDefaultStack());
 
 			RecipeBuilder.Shaped(MOD_ID)
 				.setShape(
 					"CGC",
-					"G G",
+					"GOG",
 					"CGC")
 				.addInput('G', Block.blockLapis)
-				.addInput('C', ingotEinvadrilIngot)
+				.addInput('C', Item.diamond)
+				.addInput('O', orbOfSeidril)
 				.create("raw_hlifintite", rawHlifintiteRaw);
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
@@ -190,6 +202,13 @@ public class TerraponBTA implements ModInitializer, GameStartEntrypoint, RecipeE
 			.create("seidrilium_helmet", hatSeidrilium);
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
+				"   ",
+				"SSS",
+				"S S")
+			.addInput('S', ingotSeidriliumIngot)
+			.create("seidrilium_helmet", hatSeidrilium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
 				"S S",
 				"SSS",
 				"SSS")
@@ -207,6 +226,13 @@ public class TerraponBTA implements ModInitializer, GameStartEntrypoint, RecipeE
 				"S S",
 				"S S",
 				"   ")
+			.addInput('S', ingotSeidriliumIngot)
+			.create("seidrilium_boots", feetsiesSeidrilium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"   ",
+				"S S",
+				"S S")
 			.addInput('S', ingotSeidriliumIngot)
 			.create("seidrilium_boots", feetsiesSeidrilium);
 		RecipeBuilder.Shaped(MOD_ID)
@@ -258,6 +284,13 @@ public class TerraponBTA implements ModInitializer, GameStartEntrypoint, RecipeE
 			.create("einvadril_helmet", hatEinvadril);
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
+				"   ",
+				"EEE",
+				"E E")
+			.addInput('E', ingotEinvadrilIngot)
+			.create("einvadril_helmet", hatEinvadril);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
 				"E E",
 				"EEE",
 				"EEE")
@@ -275,6 +308,13 @@ public class TerraponBTA implements ModInitializer, GameStartEntrypoint, RecipeE
 				"E E",
 				"E E",
 				"   ")
+			.addInput('E', ingotEinvadrilIngot)
+			.create("einvadril_boots", feetsiesEinvadril);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"   ",
+				"E E",
+				"E E")
 			.addInput('E', ingotEinvadrilIngot)
 			.create("einvadril_boots", feetsiesEinvadril);
 		RecipeBuilder.Shaped(MOD_ID)
@@ -326,6 +366,13 @@ public class TerraponBTA implements ModInitializer, GameStartEntrypoint, RecipeE
 			.create("hlifintite_helmet", hatHlifintite);
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
+				"   ",
+				"HHH",
+				"H H")
+			.addInput('H', ingotHlifintiteIngot)
+			.create("hlifintite_helmet", hatHlifintite);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
 				"H H",
 				"HHH",
 				"HHH")
@@ -343,6 +390,13 @@ public class TerraponBTA implements ModInitializer, GameStartEntrypoint, RecipeE
 				"H H",
 				"H H",
 				"   ")
+			.addInput('H', ingotHlifintiteIngot)
+			.create("hlifintite_boots", feetsiesHlifintite);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"   ",
+				"H H",
+				"H H")
 			.addInput('H', ingotHlifintiteIngot)
 			.create("hlifintite_boots", feetsiesHlifintite);
 		RecipeBuilder.Shaped(MOD_ID)
@@ -394,6 +448,13 @@ public class TerraponBTA implements ModInitializer, GameStartEntrypoint, RecipeE
 			.create("eilifligronium_helmet", hatEilifligronium);
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
+				"   ",
+				"UUU",
+				"U U")
+			.addInput('U', ingotEilifligroniumIngot)
+			.create("eilifligronium_helmet", hatEilifligronium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
 				"U U",
 				"UUU",
 				"UUU")
@@ -411,6 +472,13 @@ public class TerraponBTA implements ModInitializer, GameStartEntrypoint, RecipeE
 				"U U",
 				"U U",
 				"   ")
+			.addInput('U', ingotEilifligroniumIngot)
+			.create("eilifligronium_boots", feetsiesEilifligronium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"   ",
+				"U U",
+				"U U")
 			.addInput('U', ingotEilifligroniumIngot)
 			.create("eilifligronium_boots", feetsiesEilifligronium);
 		RecipeBuilder.BlastFurnace(MOD_ID)

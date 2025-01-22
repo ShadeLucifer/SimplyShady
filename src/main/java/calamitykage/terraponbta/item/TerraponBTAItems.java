@@ -32,6 +32,7 @@ public class TerraponBTAItems {
 	public static ArmorMaterial hlifintiteArmor = ArmorHelper.createArmorMaterial(MOD_ID, "hlifintite", 24000, 95f, 95f, 75f, 95f);
 	public static ArmorMaterial eilifligroniumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "eilifligronium", Integer.MAX_VALUE, 100f, 100f, 100f, 100f);
 
+	public static Item orbOfSeidril;
 	public static Item ingotSeidriliumIngot;
 	public static Item rawSeidriliumRaw;
 	public static Item toolSwordSeidrilium;
@@ -78,6 +79,9 @@ public class TerraponBTAItems {
 	public static Item feetsiesEilifligronium;
 
 	public void initializeItems() {
+		orbOfSeidril = new ItemBuilder(MOD_ID)
+			.setIcon(MOD_ID + ":item/orbofseidril")
+			.build(new Item("orbofseidril", itemId++));
 		ingotSeidriliumIngot = new ItemBuilder(MOD_ID)
 			.setIcon(MOD_ID + ":item/seidrilium_ingot")
 			.build(new Item("ingot.seidrilium", itemId++));
