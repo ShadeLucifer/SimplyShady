@@ -30,7 +30,7 @@ public class TerraponBTA73Items {
 	public static ArmorMaterial seidriliumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "seidrilium", 15000, 65f, 65f, 65f, 90f);
 	public static ArmorMaterial einvadrilArmor = ArmorHelper.createArmorMaterial(MOD_ID, "einvadril", 17000, 90f, 65f, 90f, 65f);
 	public static ArmorMaterial hlifintiteArmor = ArmorHelper.createArmorMaterial(MOD_ID, "hlifintite", 24000, 90f, 90f, 65f, 65f);
-	public static ArmorMaterial eilifligroniumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "eilifligronium", Integer.MAX_VALUE, 100f, 100f, 100f, 100f);
+	public static ArmorMaterial eilifligroniumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "eilifligronium", -1, 100f, 100f, 100f, 100f);
 
 	public static Item ingotSeidriliumIngot;
 	public static Item rawSeidriliumRaw;

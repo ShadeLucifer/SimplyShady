@@ -20,6 +20,7 @@ import net.minecraft.core.crafting.LookupFuelFurnace;
 import net.minecraft.core.crafting.LookupFuelFurnaceBlast;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemArmor;
+import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.item.Items;
 import net.minecraft.core.item.tool.*;
 import net.minecraft.core.util.collection.NamespaceID;
@@ -30,10 +31,7 @@ import turniplabs.halplibe.helper.BlockBuilder;
 import turniplabs.halplibe.helper.ItemBuilder;
 import turniplabs.halplibe.helper.ModelHelper;
 import turniplabs.halplibe.helper.RecipeBuilder;
-import turniplabs.halplibe.util.ClientStartEntrypoint;
-import turniplabs.halplibe.util.GameStartEntrypoint;
-import turniplabs.halplibe.util.ModelEntrypoint;
-import turniplabs.halplibe.util.RecipeEntrypoint;
+import turniplabs.halplibe.util.*;
 
 import static calamitykage.terraponbta73.blocks.TerraponBTA73Blocks.*;
 import static calamitykage.terraponbta73.item.TerraponBTA73Items.*;
@@ -41,6 +39,12 @@ import static calamitykage.terraponbta73.item.TerraponBTA73Items.*;
 public class TerraponBTA73 implements ModInitializer, RecipeEntrypoint, GameStartEntrypoint, ModelEntrypoint, ClientStartEntrypoint {
 	public static final String MOD_ID = "terraponbta73";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+	public static TomlConfigHandler tomlConfig;
+	private static int startingID = TerraponBTA73Config.CFG.getInt("IDs.startingBlockID");
+	private static int nextID() {
+		return startingID++;
+	}
+
 	@Override
 	public void onRecipesReady() {
 		LookupFuelFurnace.instance.addFuelEntry(loptFuel.id, 96000);
@@ -48,29 +52,14 @@ public class TerraponBTA73 implements ModInitializer, RecipeEntrypoint, GameStar
 
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
-				"CGC",
-				"G G",
-				"CGC")
+				"GSG",
+				"SDS",
+				"GSG")
 			.addInput('G', Blocks.GLOWSTONE)
-			.addInput('C', Items.INGOT_STEEL_CRUDE)
-			.create("raw_seidrilium", rawSeidriliumRaw.getDefaultStack());
-		RecipeBuilder.Shaped(MOD_ID)
-			.setShape(
-				"CGC",
-				"G G",
-				"CGC")
-			.addInput('G', Items.NETHERCOAL)
-			.addInput('C', ingotSeidriliumIngot)
-			.create("raw_einvadril", rawEinvadrilRaw.getDefaultStack());
+			.addInput('D', Items.DIAMOND)
+			.addInput('S', Items.INGOT_STEEL_CRUDE)
+			.create("orbofseidril", orbOfSeidril.getDefaultStack());
 
-		RecipeBuilder.Shaped(MOD_ID)
-			.setShape(
-				"CGC",
-				"G G",
-				"CGC")
-			.addInput('G', Blocks.BLOCK_LAPIS)
-			.addInput('C', ingotEinvadrilIngot)
-			.create("raw_hlifintite", rawHlifintiteRaw);
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
 				"CCC",
@@ -140,6 +129,13 @@ public class TerraponBTA73 implements ModInitializer, RecipeEntrypoint, GameStar
 			.create("seidrilium_helmet", hatSeidrilium);
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
+				"   ",
+				"SSS",
+				"S S")
+			.addInput('S', ingotSeidriliumIngot)
+			.create("seidrilium_helmet", hatSeidrilium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
 				"S S",
 				"SSS",
 				"SSS")
@@ -159,6 +155,23 @@ public class TerraponBTA73 implements ModInitializer, RecipeEntrypoint, GameStar
 				"   ")
 			.addInput('S', ingotSeidriliumIngot)
 			.create("seidrilium_boots", feetsiesSeidrilium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"   ",
+				"S S",
+				"S S")
+			.addInput('S', ingotSeidriliumIngot)
+			.create("seidrilium_boots", feetsiesSeidrilium);
+
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"CGC",
+				"GOG",
+				"CGC")
+			.addInput('G', Items.NETHERCOAL)
+			.addInput('C', Items.INGOT_STEEL_CRUDE)
+			.addInput('O', orbOfSeidril)
+			.create("raw_einvadril", rawEinvadrilRaw.getDefaultStack());
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
 				"EEE",
@@ -208,6 +221,13 @@ public class TerraponBTA73 implements ModInitializer, RecipeEntrypoint, GameStar
 			.create("einvadril_helmet", hatEinvadril);
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
+				"   ",
+				"EEE",
+				"E E")
+			.addInput('E', ingotEinvadrilIngot)
+			.create("einvadril_helmet", hatEinvadril);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
 				"E E",
 				"EEE",
 				"EEE")
@@ -227,6 +247,23 @@ public class TerraponBTA73 implements ModInitializer, RecipeEntrypoint, GameStar
 				"   ")
 			.addInput('E', ingotEinvadrilIngot)
 			.create("einvadril_boots", feetsiesEinvadril);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"   ",
+				"E E",
+				"E E")
+			.addInput('E', ingotEinvadrilIngot)
+			.create("einvadril_boots", feetsiesEinvadril);
+
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"CGC",
+				"GOG",
+				"CGC")
+			.addInput('G', Blocks.BLOCK_LAPIS)
+			.addInput('C', Items.DIAMOND)
+			.addInput('O', orbOfSeidril)
+			.create("raw_hlifintite", rawHlifintiteRaw);
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
 				"HHH",
@@ -276,6 +313,13 @@ public class TerraponBTA73 implements ModInitializer, RecipeEntrypoint, GameStar
 			.create("hlifintite_helmet", hatHlifintite);
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
+				"   ",
+				"HHH",
+				"H H")
+			.addInput('H', ingotHlifintiteIngot)
+			.create("hlifintite_helmet", hatHlifintite);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
 				"H H",
 				"HHH",
 				"HHH")
@@ -286,15 +330,23 @@ public class TerraponBTA73 implements ModInitializer, RecipeEntrypoint, GameStar
 				"HHH",
 				"H H",
 				"H H")
-			.addInput('H', ingotEinvadrilIngot)
+			.addInput('H', ingotHlifintiteIngot)
 			.create("hlifintite_leggings", pantsHlifintite);
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
 				"H H",
 				"H H",
 				"   ")
-			.addInput('H', ingotEinvadrilIngot)
+			.addInput('H', ingotHlifintiteIngot)
 			.create("hlifintite_boots", feetsiesHlifintite);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"   ",
+				"H H",
+				"H H")
+			.addInput('H', ingotHlifintiteIngot)
+			.create("hlifintite_boots", feetsiesHlifintite);
+
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
 				"UU ",
@@ -316,7 +368,7 @@ public class TerraponBTA73 implements ModInitializer, RecipeEntrypoint, GameStar
 				" U ",
 				" L ",
 				" L ")
-			.addInput('H', ingotEilifligroniumIngot)
+			.addInput('U', ingotEilifligroniumIngot)
 			.addInput('L', Blocks.BLOCK_LAPIS)
 			.create("eilifligronium_shovel", toolShovelEilifligronium);
 		RecipeBuilder.Shaped(MOD_ID)
@@ -324,7 +376,7 @@ public class TerraponBTA73 implements ModInitializer, RecipeEntrypoint, GameStar
 				"UUU",
 				" L ",
 				" L ")
-			.addInput('H', ingotEilifligroniumIngot)
+			.addInput('U', ingotEilifligroniumIngot)
 			.addInput('L', Blocks.BLOCK_LAPIS)
 			.create("eilifligronium_pickaxe", toolPickaxeEilifligronium);
 		RecipeBuilder.Shaped(MOD_ID)
@@ -340,6 +392,13 @@ public class TerraponBTA73 implements ModInitializer, RecipeEntrypoint, GameStar
 				"UUU",
 				"U U",
 				"   ")
+			.addInput('U', ingotEilifligroniumIngot)
+			.create("eilifligronium_helmet", hatEilifligronium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"   ",
+				"UUU",
+				"U U")
 			.addInput('U', ingotEilifligroniumIngot)
 			.create("eilifligronium_helmet", hatEilifligronium);
 		RecipeBuilder.Shaped(MOD_ID)
@@ -363,6 +422,126 @@ public class TerraponBTA73 implements ModInitializer, RecipeEntrypoint, GameStar
 				"   ")
 			.addInput('U', ingotEilifligroniumIngot)
 			.create("eilifligronium_boots", feetsiesEilifligronium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"   ",
+				"U U",
+				"U U")
+			.addInput('U', ingotEilifligroniumIngot)
+			.create("eilifligronium_boots", feetsiesEilifligronium);
+
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(hatSeidrilium)
+			.create("seidrilium_ingot", new ItemStack(ingotSeidriliumIngot, 5));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(shirtSeidrilium)
+			.create("seidrilium_ingot", new ItemStack(ingotSeidriliumIngot, 8));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(pantsSeidrilium)
+			.create("seidrilium_ingot", new ItemStack(ingotSeidriliumIngot, 7));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(feetsiesSeidrilium)
+			.create("seidrilium_ingot", new ItemStack(ingotSeidriliumIngot, 4));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolShovelSeidrilium)
+			.create("seidrilium_ingot", new ItemStack(ingotSeidriliumIngot, 1));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolPickaxeSeidrilium)
+			.create("seidrilium_ingot", new ItemStack(ingotSeidriliumIngot, 3));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolAxeSeidrilium)
+			.create("seidrilium_ingot", new ItemStack(ingotSeidriliumIngot, 3));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolHoeSeidrilium)
+			.create("seidrilium_ingot", new ItemStack(ingotSeidriliumIngot, 2));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolSwordSeidrilium)
+			.create("seidrilium_ingot", new ItemStack(ingotSeidriliumIngot, 2));
+
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(hatEinvadril)
+			.create("einvadril_ingot", new ItemStack(ingotEinvadrilIngot, 5));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(shirtEinvadril)
+			.create("einvadril_ingot", new ItemStack(ingotEinvadrilIngot, 8));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(pantsEinvadril)
+			.create("einvadril_ingot", new ItemStack(ingotEinvadrilIngot, 7));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(feetsiesEinvadril)
+			.create("einvadril_ingot", new ItemStack(ingotEinvadrilIngot, 4));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolShovelEinvadril)
+			.create("einvadril_ingot", new ItemStack(ingotEinvadrilIngot, 1));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolPickaxeEinvadril)
+			.create("einvadril_ingot", new ItemStack(ingotEinvadrilIngot, 3));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolAxeEinvadril)
+			.create("einvadril_ingot", new ItemStack(ingotEinvadrilIngot, 3));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolHoeEinvadril)
+			.create("einvadril_ingot", new ItemStack(ingotEinvadrilIngot, 2));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolSwordEinvadril)
+			.create("einvadril_ingot", new ItemStack(ingotEinvadrilIngot, 2));
+
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(hatHlifintite)
+			.create("hlifintite_ingot", new ItemStack(ingotHlifintiteIngot, 5));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(shirtHlifintite)
+			.create("hlifintite_ingot", new ItemStack(ingotHlifintiteIngot, 8));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(pantsHlifintite)
+			.create("hlifintite_ingot", new ItemStack(ingotHlifintiteIngot, 7));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(feetsiesHlifintite)
+			.create("hlifintite_ingot", new ItemStack(ingotHlifintiteIngot, 4));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolShovelHlifintite)
+			.create("hlifintite_ingot", new ItemStack(ingotHlifintiteIngot, 1));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolPickaxeHlifintite)
+			.create("hlifintite_ingot", new ItemStack(ingotHlifintiteIngot, 3));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolAxeHlifintite)
+			.create("hlifintite_ingot", new ItemStack(ingotHlifintiteIngot, 3));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolHoeHlifintite)
+			.create("hlifintite_ingot", new ItemStack(ingotHlifintiteIngot, 2));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolSwordHlifintite)
+			.create("hlifintite_ingot", new ItemStack(ingotHlifintiteIngot, 2));
+
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(hatEilifligronium)
+			.create("eilifligronium_ingot", new ItemStack(ingotEilifligroniumIngot, 5));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(shirtEilifligronium)
+			.create("eilifligronium_ingot", new ItemStack(ingotEilifligroniumIngot, 8));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(pantsEilifligronium)
+			.create("eilifligronium_ingot", new ItemStack(ingotEilifligroniumIngot, 7));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(feetsiesEilifligronium)
+			.create("eilifligronium_ingot", new ItemStack(ingotEilifligroniumIngot, 4));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolShovelEilifligronium)
+			.create("eilifligronium_ingot", new ItemStack(ingotEilifligroniumIngot, 1));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolPickaxeEilifligronium)
+			.create("eilifligronium_ingot", new ItemStack(ingotEilifligroniumIngot, 3));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolAxeEilifligronium)
+			.create("eilifligronium_ingot", new ItemStack(ingotEilifligroniumIngot, 3));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolHoeEilifligronium)
+			.create("eilifligronium_ingot", new ItemStack(ingotEilifligroniumIngot, 2));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolSwordEilifligronium)
+			.create("eilifligronium_ingot", new ItemStack(ingotEilifligroniumIngot, 2));
+
 		RecipeBuilder.BlastFurnace(MOD_ID)
 			.setInput(rawSeidriliumRaw)
 			.create("seidrilium_ingot", ingotSeidriliumIngot);
@@ -426,20 +605,20 @@ public class TerraponBTA73 implements ModInitializer, RecipeEntrypoint, GameStar
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
 
 		seidriliumBlock = seidrilium_builder
-			.build("block.seidrilium", "block/seidrilium_block", 4700, b -> new BlockLogic(b, Material.metal));
+			.build("block.seidrilium", "block/seidrilium_block", nextID(), b -> new BlockLogic(b, Material.metal));
 
 
 		einvadrilBlock = einvadril_builder
-			.build("block.einvadril", "block/einvadril_block", 4701, b -> new BlockLogic(b, Material.metal));
+			.build("block.einvadril", "block/einvadril_block", nextID(), b -> new BlockLogic(b, Material.metal));
 
 
 		hlifintiteBlock = hlifintite_builder
-			.build("block.hlifintite", "block/hlifintite_block", 4702, b -> new BlockLogic(b, Material.metal));
+			.build("block.hlifintite", "block/hlifintite_block", nextID(), b -> new BlockLogic(b, Material.metal));
 
 		eilifligroniumBlock = eilifligronium_builder
-			.build("block.eilifligronium", "block/eilifligronium_block", 4703, b -> new BlockLogic(b, Material.metal));
+			.build("block.eilifligronium", "block/eilifligronium_block", nextID(), b -> new BlockLogic(b, Material.metal));
 		eilifligrLamp = eilifligrlamp_builder
-			.build("eilifligrlamp", "block/eilifligr_lamp", 4704, b -> new BlockLogic(b, Material.metal));
+			.build("eilifligrlamp", "block/eilifligr_lamp", nextID(), b -> new BlockLogic(b, Material.metal));
 		LOGGER.info("TerraponBTA73 initialized.");
 
 	}
@@ -467,10 +646,10 @@ public class TerraponBTA73 implements ModInitializer, RecipeEntrypoint, GameStar
 			.setTex(0, "terraponbta73:block/eilifligronium_blockside", Side.WEST, Side.EAST, Side.SOUTH)
 			.setTex(0, "terraponbta73:block/eilifligronium_blockfront", Side.NORTH));
 		ModelHelper.setBlockModel(eilifligrLamp, () -> new BlockModelStandard<>(eilifligrLamp)
-			.setTex(0, "terraponbta73:block/eilifligrlamp_blocktop", Side.TOP)
-			.setTex(0, "terraponbta73:block/eilifligrlamp_blockbottom", Side.BOTTOM)
-			.setTex(0, "terraponbta73:block/eilifligrlamp_blockside", Side.WEST, Side.EAST, Side.SOUTH)
-			.setTex(0, "terraponbta73:block/eilifligrlamp_blockfront", Side.NORTH));
+			.setTex(0, "terraponbta73:block/eilifligrlamptop", Side.TOP)
+			.setTex(0, "terraponbta73:block/eilifligrlampbottom", Side.BOTTOM)
+			.setTex(0, "terraponbta73:block/eilifligrlampside", Side.WEST, Side.EAST, Side.SOUTH)
+			.setTex(0, "terraponbta73:block/eilifligrlampfront", Side.NORTH));
 
 
 	}

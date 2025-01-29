@@ -21,6 +21,7 @@ public class TerraponBTA73Blocks implements ModInitializer {
 		return startingID++;
 	}
 
+
 	public static Block<?> seidriliumBlock;
 	public static Block<?> einvadrilBlock;
 	public static Block<?> hlifintiteBlock;
@@ -54,20 +55,20 @@ public class TerraponBTA73Blocks implements ModInitializer {
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
 
 		seidriliumBlock = seidrilium_builder
-			.build("block.seidrilium", "block/seidrilium_block", 4700, b -> new BlockLogic(b, Material.metal));
+			.build("block.seidrilium", "block/seidrilium_block", nextID(), b -> new BlockLogic(b, Material.metal));
 
 
 		einvadrilBlock = einvadril_builder
-			.build("block.einvadril", "block/einvadril_block", 4701, b -> new BlockLogic(b, Material.metal));
+			.build("block.einvadril", "block/einvadril_block", nextID(), b -> new BlockLogic(b, Material.metal));
 
 
 		hlifintiteBlock = hlifintite_builder
-			.build("block.hlifintite", "block/hlifintite_block", 4702, b -> new BlockLogic(b, Material.metal));
+			.build("block.hlifintite", "block/hlifintite_block", nextID(), b -> new BlockLogic(b, Material.metal));
 
 		eilifligroniumBlock = eilifligronium_builder
-			.build("block.eilifligronium", "block/eilifligronium_block", 4703, b -> new BlockLogic(b, Material.metal));
+			.build("block.eilifligronium", "block/eilifligronium_block", nextID(), b -> new BlockLogic(b, Material.metal));
 		eilifligrLamp = eilifligrlamp_builder
-			.build("eilifligrlamp", "block/eilifligr_lamp", 4704, b -> new BlockLogic(b, Material.metal));
+			.build("eilifligrlamp", "block/eilifligr_lamp", nextID(), b -> new BlockLogic(b, Material.metal));
 	}
 
 }
