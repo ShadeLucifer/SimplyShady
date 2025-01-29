@@ -71,6 +71,16 @@ public class TerraponBTA73 implements ModInitializer, RecipeEntrypoint, GameStar
 			.create("eilifligronium_ingot", ingotEilifligroniumIngot.getDefaultStack());
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
+				"CGC",
+				"GOG",
+				"CGC")
+			.addInput('G', Blocks.GLOWSTONE)
+			.addInput('C', Items.INGOT_STEEL_CRUDE)
+			.addInput('O', orbOfSeidril)
+			.create("raw_seidrilium", rawSeidriliumRaw.getDefaultStack());
+
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
 				"CEC",
 				"GEG",
 				"DED")
