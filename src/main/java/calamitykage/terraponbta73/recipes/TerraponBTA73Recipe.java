@@ -435,9 +435,10 @@ public class TerraponBTA73Recipe implements RecipeEntrypoint {
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
 				"HHH",
-				"H H",
+				"L L",
 				"H H")
 			.addInput('H', ingotHlifintiteIngot)
+			.addInput('L', Items.LEATHER)
 			.create("hlifintite_leggings", pantsHlifintite);
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(

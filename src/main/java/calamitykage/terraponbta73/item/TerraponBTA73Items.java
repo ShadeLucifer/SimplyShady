@@ -23,10 +23,10 @@ public class TerraponBTA73Items {
 	}
 
 
-	public static ToolMaterial seidriliumTool = new ToolMaterial().setDurability(11162).setEfficiency(18.0f, 22.0f).setMiningLevel(7).setDamage(9);
-	public static ToolMaterial einvadrilTool = new ToolMaterial().setDurability(14384).setEfficiency(14.0f, 20.0f).setMiningLevel(9).setDamage(12);
-	public static ToolMaterial hlifintiteTool = new ToolMaterial().setDurability(20150).setEfficiency(16.0f, 16.0f).setMiningLevel(11).setDamage(10);
-	public static ToolMaterial eilifligroniumTool = new ToolMaterial().setDurability(-1).setEfficiency(25.0f, 25.0f).setMiningLevel(25).setDamage(25);
+	public static ToolMaterial seidriliumTool = new ToolMaterial().setDurability(14162).setEfficiency(20.0f, 25.0f).setMiningLevel(9).setDamage(10);
+	public static ToolMaterial einvadrilTool = new ToolMaterial().setDurability(11384).setEfficiency(14.0f, 20.0f).setMiningLevel(7).setDamage(12);
+	public static ToolMaterial hlifintiteTool = new ToolMaterial().setDurability(20150).setEfficiency(16.0f, 16.0f).setMiningLevel(11).setDamage(8);
+	public static ToolMaterial eilifligroniumTool = new ToolMaterial().setDurability(-1).setEfficiency(25.0f, 30.0f).setMiningLevel(25).setDamage(25);
 	public static ArmorMaterial seidriliumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "seidrilium", 11000, 65f, 65f, 65f, 90f);
 	public static ArmorMaterial einvadrilArmor = ArmorHelper.createArmorMaterial(MOD_ID, "einvadril", 14000, 90f, 65f, 90f, 65f);
 	public static ArmorMaterial hlifintiteArmor = ArmorHelper.createArmorMaterial(MOD_ID, "hlifintite", 20000, 90f, 90f, 65f, 65f);
