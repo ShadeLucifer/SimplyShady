@@ -23,13 +23,13 @@ public class TerraponBTA73Items {
 	}
 
 
-	public static ToolMaterial seidriliumTool = new ToolMaterial().setDurability(14162).setEfficiency(18.0f, 22.0f).setMiningLevel(7).setDamage(9);
-	public static ToolMaterial einvadrilTool = new ToolMaterial().setDurability(16384).setEfficiency(14.0f, 20.0f).setMiningLevel(9).setDamage(12);
-	public static ToolMaterial hlifintiteTool = new ToolMaterial().setDurability(23150).setEfficiency(16.0f, 16.0f).setMiningLevel(11).setDamage(10);
+	public static ToolMaterial seidriliumTool = new ToolMaterial().setDurability(11162).setEfficiency(18.0f, 22.0f).setMiningLevel(7).setDamage(9);
+	public static ToolMaterial einvadrilTool = new ToolMaterial().setDurability(14384).setEfficiency(14.0f, 20.0f).setMiningLevel(9).setDamage(12);
+	public static ToolMaterial hlifintiteTool = new ToolMaterial().setDurability(20150).setEfficiency(16.0f, 16.0f).setMiningLevel(11).setDamage(10);
 	public static ToolMaterial eilifligroniumTool = new ToolMaterial().setDurability(-1).setEfficiency(25.0f, 25.0f).setMiningLevel(25).setDamage(25);
-	public static ArmorMaterial seidriliumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "seidrilium", 15000, 65f, 65f, 65f, 90f);
-	public static ArmorMaterial einvadrilArmor = ArmorHelper.createArmorMaterial(MOD_ID, "einvadril", 17000, 90f, 65f, 90f, 65f);
-	public static ArmorMaterial hlifintiteArmor = ArmorHelper.createArmorMaterial(MOD_ID, "hlifintite", 24000, 90f, 90f, 65f, 65f);
+	public static ArmorMaterial seidriliumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "seidrilium", 11000, 65f, 65f, 65f, 90f);
+	public static ArmorMaterial einvadrilArmor = ArmorHelper.createArmorMaterial(MOD_ID, "einvadril", 14000, 90f, 65f, 90f, 65f);
+	public static ArmorMaterial hlifintiteArmor = ArmorHelper.createArmorMaterial(MOD_ID, "hlifintite", 20000, 90f, 90f, 65f, 65f);
 	public static ArmorMaterial eilifligroniumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "eilifligronium", -1, 100f, 100f, 100f, 100f);
 
 	public static Item ingotSeidriliumIngot;
@@ -76,9 +76,25 @@ public class TerraponBTA73Items {
 	public static Item shirtEilifligronium;
 	public static Item pantsEilifligronium;
 	public static Item feetsiesEilifligronium;
-	public static Item orbOfSeidril;
+	public static Item orbOfRogmal;
+	public static Item steelRod;
+	public static Item redstoneAlloy;
+	public static Item redstoneAlloyRod;
+	public static Item lapisAlloy;
+	public static Item lapisAlloyRod;
 
 static {
+	steelRod = new ItemBuilder(MOD_ID)
+		.build(new Item("item.steel.rod", MOD_ID + ":item/steel_rod", nextID()));
+	redstoneAlloy = new ItemBuilder(MOD_ID)
+		.build(new Item("item.redstone.alloy", MOD_ID + ":item/redstone_alloy", nextID()));
+	redstoneAlloyRod = new ItemBuilder(MOD_ID)
+		.build(new Item("item.redstone.alloy.rod", MOD_ID + ":item/redstone_alloy_rod", nextID()));
+	lapisAlloy = new ItemBuilder(MOD_ID)
+		.build(new Item("item.lapis.alloy", MOD_ID + ":item/lapis_alloy", nextID()));
+	lapisAlloyRod = new ItemBuilder(MOD_ID)
+		.build(new Item("item.lapis.alloy.rod", MOD_ID + ":item/lapis_alloy_rod", nextID()));
+
 	rawSeidriliumRaw = new ItemBuilder(MOD_ID)
 		.build(new Item("item.raw.seidrilium", MOD_ID + ":item/raw_seidrilium", nextID()));
 	ingotSeidriliumIngot = new ItemBuilder(MOD_ID)
@@ -102,8 +118,8 @@ static {
 	feetsiesSeidrilium = new ItemBuilder(MOD_ID)
 		.build(new ItemArmor("seidrilium.boots", MOD_ID + (":item/seidrilium_boots"), nextID(), seidriliumArmor, 0));
 
-	orbOfSeidril = new ItemBuilder(MOD_ID)
-		.build(new Item("orbofseidril", MOD_ID + (":item/orbofseidril"), nextID()));
+	orbOfRogmal = new ItemBuilder(MOD_ID)
+		.build(new Item("orbofrogmal", MOD_ID + (":item/orbofrogmal"), nextID()));
 	loptFuel = new ItemBuilder(MOD_ID)
 		.build(new Item("lopt.fuel", MOD_ID + (":item/lopt_fuel"), nextID()));
 
@@ -173,6 +189,7 @@ static {
 		.build(new ItemArmor("eilifligronium.leggings", MOD_ID + (":item/eilifligronium_leggings"), nextID(), eilifligroniumArmor, 1));
 	feetsiesEilifligronium = new ItemBuilder(MOD_ID)
 		.build(new ItemArmor("eilifligronium.boots", MOD_ID + (":item/eilifligronium_boots"), nextID(), eilifligroniumArmor, 0));
+
 }
 
 }
