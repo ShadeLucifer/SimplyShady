@@ -26,10 +26,12 @@ public class TerraponBTA73Items {
 	public static ToolMaterial seidriliumTool = new ToolMaterial().setDurability(14162).setEfficiency(20.0f, 25.0f).setMiningLevel(9).setDamage(10);
 	public static ToolMaterial einvadrilTool = new ToolMaterial().setDurability(11384).setEfficiency(14.0f, 20.0f).setMiningLevel(7).setDamage(12);
 	public static ToolMaterial hlifintiteTool = new ToolMaterial().setDurability(20150).setEfficiency(16.0f, 16.0f).setMiningLevel(11).setDamage(8);
+	public static ToolMaterial sollogiumTool = new ToolMaterial().setDurability(15150).setEfficiency(17.0f, 15.0f).setMiningLevel(7).setDamage(10);
 	public static ToolMaterial eilifligroniumTool = new ToolMaterial().setDurability(-1).setEfficiency(25.0f, 30.0f).setMiningLevel(25).setDamage(25);
-	public static ArmorMaterial seidriliumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "seidrilium", 11000, 65f, 65f, 65f, 90f);
-	public static ArmorMaterial einvadrilArmor = ArmorHelper.createArmorMaterial(MOD_ID, "einvadril", 14000, 90f, 65f, 90f, 65f);
-	public static ArmorMaterial hlifintiteArmor = ArmorHelper.createArmorMaterial(MOD_ID, "hlifintite", 20000, 90f, 90f, 65f, 65f);
+	public static ArmorMaterial seidriliumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "seidrilium", 14000, 55f, 55f, 55f, 80f);
+	public static ArmorMaterial einvadrilArmor = ArmorHelper.createArmorMaterial(MOD_ID, "einvadril", 11000, 80f, 55f, 55f, 55f);
+	public static ArmorMaterial hlifintiteArmor = ArmorHelper.createArmorMaterial(MOD_ID, "hlifintite", 21000, 70f, 70f, 70f, 70f);
+	public static ArmorMaterial sollogiumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "sollogium", 16000, 55f, 55f, 90f, 55f);
 	public static ArmorMaterial eilifligroniumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "eilifligronium", -1, 100f, 100f, 100f, 100f);
 
 	public static Item ingotSeidriliumIngot;
@@ -82,8 +84,24 @@ public class TerraponBTA73Items {
 	public static Item redstoneAlloyRod;
 	public static Item lapisAlloy;
 	public static Item lapisAlloyRod;
+	public static Item glowstoneAlloy;
+	public static Item obsidianAlloy;
+	public static Item obsidianAlloyRod;
+	public static Item rawSollogiumRaw;
+	public static Item ingotSollogiumIngot;
+	public static Item toolPickaxeSollogium;
+	public static Item toolAxeSollogium;
+	public static Item toolSwordSollogium;
+	public static Item toolShovelSollogium;
+	public static Item toolHoeSollogium;
+	public static Item hatSollogium;
+	public static Item shirtSollogium;
+	public static Item pantsSollogium;
+	public static Item feetsiesSollogium;
 
-static {
+	static {
+// Basic Items used to craft the new stuff
+
 	steelRod = new ItemBuilder(MOD_ID)
 		.build(new Item("item.steel.rod", MOD_ID + ":item/steel_rod", nextID()));
 	redstoneAlloy = new ItemBuilder(MOD_ID)
@@ -94,6 +112,16 @@ static {
 		.build(new Item("item.lapis.alloy", MOD_ID + ":item/lapis_alloy", nextID()));
 	lapisAlloyRod = new ItemBuilder(MOD_ID)
 		.build(new Item("item.lapis.alloy.rod", MOD_ID + ":item/lapis_alloy_rod", nextID()));
+	obsidianAlloy = new ItemBuilder(MOD_ID)
+		.build(new Item("item.obsidian.alloy", MOD_ID + ":item/obsidian_alloy", nextID()));
+	obsidianAlloyRod = new ItemBuilder(MOD_ID)
+		.build(new Item("item.obsidian.alloy.rod", MOD_ID + ":item/obsidian_alloy_rod", nextID()));
+	glowstoneAlloy = new ItemBuilder(MOD_ID)
+		.build(new Item("item.glowstone.alloy", MOD_ID + ":item/glowstone_alloy", nextID()));
+	orbOfRogmal = new ItemBuilder(MOD_ID)
+		.build(new Item("orbofrogmal", MOD_ID + (":item/orbofrogmal"), nextID()));
+
+// Seidrilium (Magick... *snort snort*)
 
 	rawSeidriliumRaw = new ItemBuilder(MOD_ID)
 		.build(new Item("item.raw.seidrilium", MOD_ID + ":item/raw_seidrilium", nextID()));
@@ -118,10 +146,8 @@ static {
 	feetsiesSeidrilium = new ItemBuilder(MOD_ID)
 		.build(new ItemArmor("seidrilium.boots", MOD_ID + (":item/seidrilium_boots"), nextID(), seidriliumArmor, 0));
 
-	orbOfRogmal = new ItemBuilder(MOD_ID)
-		.build(new Item("orbofrogmal", MOD_ID + (":item/orbofrogmal"), nextID()));
-	loptFuel = new ItemBuilder(MOD_ID)
-		.build(new Item("lopt.fuel", MOD_ID + (":item/lopt_fuel"), nextID()));
+
+// Einvadril (EINVADRIL (HULK) STRONGEST THERE IS!)
 
 	rawEinvadrilRaw = new ItemBuilder(MOD_ID)
 		.build(new Item("item.raw.einvadril", MOD_ID + ":item/raw_Einvadril", nextID()));
@@ -146,6 +172,8 @@ static {
 	feetsiesEinvadril = new ItemBuilder(MOD_ID)
 		.build(new ItemArmor("einvadril.boots", MOD_ID + (":item/einvadril_boots"), nextID(), einvadrilArmor, 0));
 
+// Hlifintite (Durability is very protective)
+
 	rawHlifintiteRaw = new ItemBuilder(MOD_ID)
 		.build(new Item("item.raw.hlifintite", MOD_ID + ":item/raw_Hlifintite", nextID()));
 	ingotHlifintiteIngot = new ItemBuilder(MOD_ID)
@@ -168,6 +196,38 @@ static {
 		.build(new ItemArmor("hlifintite.leggings", MOD_ID + (":item/hlifintite_leggings"), nextID(), hlifintiteArmor, 1));
 	feetsiesHlifintite = new ItemBuilder(MOD_ID)
 		.build(new ItemArmor("hlifintite.boots", MOD_ID + (":item/hlifintite_boots"), nextID(), hlifintiteArmor, 0));
+
+// Sollogium (BURN BABY BURN)
+
+	rawSollogiumRaw = new ItemBuilder(MOD_ID)
+		.build(new Item("item.raw.Sollogium", MOD_ID + ":item/raw_sollogium", nextID()));
+	ingotSollogiumIngot = new ItemBuilder(MOD_ID)
+		.build(new Item("item.sollogium.ingot", MOD_ID + (":item/sollogium_ingot"), nextID()));
+	toolSwordSollogium = new ItemBuilder(MOD_ID)
+		.build(new ItemToolSword("item.sollogium.sword", MOD_ID + (":item/sollogium_sword"), nextID(), sollogiumTool));
+	toolAxeSollogium = new ItemBuilder(MOD_ID)
+		.build(new ItemToolAxe("item.sollogium.axe", MOD_ID + (":item/sollogium_axe"), nextID(), sollogiumTool));
+	toolPickaxeSollogium = new ItemBuilder(MOD_ID)
+		.build(new ItemToolPickaxe("item.sollogium.pickaxe", MOD_ID + (":item/sollogium_pickaxe"), nextID(), sollogiumTool));
+	toolShovelSollogium = new ItemBuilder(MOD_ID)
+		.build(new ItemToolShovel("item.sollogium.shovel", MOD_ID + (":item/sollogium_shovel"), nextID(), sollogiumTool));
+	toolHoeSollogium = new ItemBuilder(MOD_ID)
+		.build(new ItemToolHoe("item.sollogium.hoe", MOD_ID + (":item/sollogium_hoe"), nextID(), sollogiumTool));
+	hatSollogium = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("sollogium.helmet", MOD_ID + (":item/sollogium_helmet"), nextID(), sollogiumArmor, 3));
+	shirtSollogium = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("sollogium.chestplate", MOD_ID + (":item/sollogium_chestplate"), nextID(), sollogiumArmor, 2));
+	pantsSollogium = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("sollogium.leggings", MOD_ID + (":item/sollogium_leggings"), nextID(), sollogiumArmor, 1));
+	feetsiesSollogium = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("sollogium.boots", MOD_ID + (":item/sollogium_boots"), nextID(), sollogiumArmor, 0));
+
+
+
+	loptFuel = new ItemBuilder(MOD_ID)
+		.build(new Item("lopt.fuel", MOD_ID + (":item/lopt_fuel"), nextID()));
+
+// Ultimate Metal Eilifligronium
 
 	ingotEilifligroniumIngot = new ItemBuilder(MOD_ID)
 		.build(new Item("item.eilifligronium.ingot", MOD_ID + (":item/eilifligronium_ingot"), nextID()));

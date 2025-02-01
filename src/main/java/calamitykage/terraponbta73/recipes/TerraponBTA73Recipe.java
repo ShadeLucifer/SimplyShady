@@ -21,8 +21,16 @@ public class TerraponBTA73Recipe implements RecipeEntrypoint {
 		LookupFuelFurnace.instance.addFuelEntry(loptFuel.id, 128000);
 		LookupFuelFurnaceBlast.instance.addFuelEntry(loptFuel.id, 128000);
 
-		// Base Items using just vanilla
-
+		// Base Items using just vanilla items, used for the modded metals
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"GSG",
+				"SDS",
+				"GSG")
+			.addInput('G', Blocks.GLOWSTONE)
+			.addInput('D', Blocks.BLOCK_DIAMOND)
+			.addInput('S', Blocks.BLOCK_STEEL)
+			.create("orbOfRogmal", orbOfRogmal.getDefaultStack());
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
 				"CEC",
@@ -32,6 +40,24 @@ public class TerraponBTA73Recipe implements RecipeEntrypoint {
 			.addInput('C', Items.NETHERCOAL)
 			.addInput('R', Blocks.BLOCK_REDSTONE)
 			.create("redstone_alloy", redstoneAlloy.getDefaultStack());
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"CEC",
+				"ERE",
+				"CEC")
+			.addInput('E', Blocks.BLOCK_STEEL)
+			.addInput('C', Items.NETHERCOAL)
+			.addInput('R', Blocks.GLOWSTONE)
+			.create("glowstone_alloy", glowstoneAlloy.getDefaultStack());
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"CEC",
+				"ERE",
+				"CEC")
+			.addInput('E', Blocks.BLOCK_STEEL)
+			.addInput('C', Items.NETHERCOAL)
+			.addInput('R', Blocks.GLOWSTONE)
+			.create("obsidian_alloy", obsidianAlloy.getDefaultStack());
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
 				"CEC",
@@ -105,8 +131,29 @@ public class TerraponBTA73Recipe implements RecipeEntrypoint {
 				"E  ")
 			.addInput('E', redstoneAlloy)
 			.create("redstone_alloy_rod", new ItemStack(redstoneAlloyRod, 3));
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				" E ",
+				" E ",
+				" E ")
+			.addInput('E', obsidianAlloy)
+			.create("obsidian_alloy_rod", new ItemStack(obsidianAlloyRod, 3));
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"  E",
+				"  E",
+				"  E")
+			.addInput('E', obsidianAlloy)
+			.create("obsidian_alloy_rod", new ItemStack(obsidianAlloyRod, 3));
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"E  ",
+				"E  ",
+				"E  ")
+			.addInput('E', obsidianAlloy)
+			.create("obsidian_alloy_rod", new ItemStack(obsidianAlloyRod, 3));
 
-		// New Items + Blocks
+		// Blocks
 
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
@@ -146,16 +193,9 @@ public class TerraponBTA73Recipe implements RecipeEntrypoint {
 			.addInput('S', seidriliumBlock)
 			.create("eilifligrlamp", eilifligrLamp.getDefaultStack());
 
-		RecipeBuilder.Shaped(MOD_ID)
-			.setShape(
-				"GSG",
-				"SDS",
-				"GSG")
-			.addInput('G', Blocks.GLOWSTONE)
-			.addInput('D', Blocks.BLOCK_DIAMOND)
-			.addInput('S', Blocks.BLOCK_STEEL)
-			.create("orbOfRogmal", orbOfRogmal.getDefaultStack());
 
+
+// Metals
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
 				"CCC",
@@ -170,10 +210,19 @@ public class TerraponBTA73Recipe implements RecipeEntrypoint {
 				"CGC",
 				"GOG",
 				"CGC")
-			.addInput('G', Blocks.GLOWSTONE)
+			.addInput('G', glowstoneAlloy)
 			.addInput('C', Blocks.BLOCK_STEEL)
 			.addInput('O', orbOfRogmal)
 			.create("raw_seidrilium", rawSeidriliumRaw.getDefaultStack());
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"CGC",
+				"GOG",
+				"CGC")
+			.addInput('G', Blocks.BLOCK_NETHER_COAL)
+			.addInput('C', Blocks.BLOCK_STEEL)
+			.addInput('O', orbOfRogmal)
+			.create("raw_sollogium", rawSollogiumRaw.getDefaultStack());
 
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
@@ -185,6 +234,8 @@ public class TerraponBTA73Recipe implements RecipeEntrypoint {
 			.addInput('D', ingotHlifintiteIngot)
 			.addInput('E', Blocks.BLOCK_NETHER_COAL)
 			.create("lopt_fuel", loptFuel.getDefaultStack());
+
+
 
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(

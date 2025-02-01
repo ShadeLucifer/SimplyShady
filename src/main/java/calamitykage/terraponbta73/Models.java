@@ -75,6 +75,21 @@ public class Models implements ModelEntrypoint {
 			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/lapis_alloy_rod"));
 			return model;
 		});
+		ModelHelper.setItemModel(obsidianAlloyRod, () -> {
+			ItemModelStandard model = new ItemModelStandard(obsidianAlloyRod, MOD_ID).setFull3D();
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/obsidian_alloy_rod"));
+			return model;
+		});
+		ModelHelper.setItemModel(obsidianAlloy, () -> {
+			ItemModelStandard model = new ItemModelStandard(obsidianAlloy, MOD_ID);
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/obsidian_alloy"));
+			return model;
+		});
+		ModelHelper.setItemModel(glowstoneAlloy, () -> {
+			ItemModelStandard model = new ItemModelStandard(glowstoneAlloy, MOD_ID);
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/glowstone_alloy"));
+			return model;
+		});
 		ModelHelper.setItemModel(toolSwordSeidrilium, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolSwordSeidrilium, MOD_ID).setFull3D();
 			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/seidrilium_sword"));
@@ -115,11 +130,6 @@ public class Models implements ModelEntrypoint {
 			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/seidrilium_helmet"));
 			return model;
 		});
-		ModelHelper.setItemModel(hatSeidrilium, () -> {
-			ItemModelStandard model = new ItemModelStandard(hatSeidrilium, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/seidrilium_helmet"));
-			return model;
-		});
 		ModelHelper.setItemModel(shirtSeidrilium, () -> {
 			ItemModelStandard model = new ItemModelStandard(shirtSeidrilium, MOD_ID);
 			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/seidrilium_chestplate"));
@@ -133,6 +143,61 @@ public class Models implements ModelEntrypoint {
 		ModelHelper.setItemModel(feetsiesSeidrilium, () -> {
 			ItemModelStandard model = new ItemModelStandard(feetsiesSeidrilium, MOD_ID);
 			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/seidrilium_boots"));
+			return model;
+		});
+		ModelHelper.setItemModel(toolSwordSollogium, () -> {
+			ItemModelStandard model = new ItemModelStandard(toolSwordSollogium, MOD_ID).setFull3D();
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/sollogium_sword"));
+			return model;
+		});
+		ModelHelper.setItemModel(toolAxeSollogium, () -> {
+			ItemModelStandard model = new ItemModelStandard(toolAxeSollogium, MOD_ID).setFull3D();
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/sollogium_axe"));
+			return model;
+		});
+		ModelHelper.setItemModel(toolShovelSollogium, () -> {
+			ItemModelStandard model = new ItemModelStandard(toolShovelSollogium, MOD_ID).setFull3D();
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/sollogium_shovel"));
+			return model;
+		});
+		ModelHelper.setItemModel(toolPickaxeSollogium, () -> {
+			ItemModelStandard model = new ItemModelStandard(toolPickaxeSollogium, MOD_ID).setFull3D();
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/sollogium_pickaxe"));
+			return model;
+		});
+		ModelHelper.setItemModel(toolHoeSollogium, () -> {
+			ItemModelStandard model = new ItemModelStandard(toolHoeSollogium, MOD_ID).setFull3D();
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/sollogium_hoe"));
+			return model;
+		});
+		ModelHelper.setItemModel(rawSollogiumRaw, () -> {
+			ItemModelStandard model = new ItemModelStandard(rawSollogiumRaw, MOD_ID);
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/raw_sollogium"));
+			return model;
+		});
+		ModelHelper.setItemModel(ingotSollogiumIngot, () -> {
+			ItemModelStandard model = new ItemModelStandard(ingotSollogiumIngot, MOD_ID);
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/sollogium_ingot"));
+			return model;
+		});
+		ModelHelper.setItemModel(hatSollogium, () -> {
+			ItemModelStandard model = new ItemModelStandard(hatSollogium, MOD_ID);
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/sollogium_helmet"));
+			return model;
+		});
+		ModelHelper.setItemModel(shirtSollogium, () -> {
+			ItemModelStandard model = new ItemModelStandard(shirtSollogium, MOD_ID);
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/sollogium_chestplate"));
+			return model;
+		});
+		ModelHelper.setItemModel(pantsSollogium, () -> {
+			ItemModelStandard model = new ItemModelStandard(pantsSollogium, MOD_ID);
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/sollogium_leggings"));
+			return model;
+		});
+		ModelHelper.setItemModel(feetsiesSollogium, () -> {
+			ItemModelStandard model = new ItemModelStandard(feetsiesSollogium, MOD_ID);
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/sollogium_boots"));
 			return model;
 		});
 
