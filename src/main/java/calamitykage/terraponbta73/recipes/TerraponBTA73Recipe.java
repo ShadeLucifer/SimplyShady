@@ -4,6 +4,7 @@ import net.minecraft.core.block.Block;
 import net.minecraft.core.block.Blocks;
 import net.minecraft.core.crafting.LookupFuelFurnace;
 import net.minecraft.core.crafting.LookupFuelFurnaceBlast;
+import net.minecraft.core.data.registry.recipe.entry.RecipeEntryBlastFurnace;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.item.Items;
@@ -18,25 +19,30 @@ import static calamitykage.terraponbta73.blocks.TerraponBTA73Blocks.*;
 public class TerraponBTA73Recipe implements RecipeEntrypoint {
 	@Override
 	public void onRecipesReady () {
-		LookupFuelFurnace.instance.addFuelEntry(loptFuel.id, 128000);
-		LookupFuelFurnaceBlast.instance.addFuelEntry(loptFuel.id, 128000);
+		LookupFuelFurnace.instance.addFuelEntry(loptFuel.id, 2540000);
+		LookupFuelFurnaceBlast.instance.addFuelEntry(loptFuel.id, 2540000);
 
-		// Base Items using just vanilla items, used for the modded metals
+// Base Items using just vanilla items, used for the modded metals
+
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(Items.BUCKET_LAVA)
+			.create("ball_of_lava", new ItemStack(balloflava, 3));
+
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
 				"GSG",
 				"SDS",
 				"GSG")
-			.addInput('G', Blocks.GLOWSTONE)
-			.addInput('D', Blocks.BLOCK_DIAMOND)
-			.addInput('S', Blocks.BLOCK_STEEL)
+			.addInput('G', Items.DUST_GLOWSTONE)
+			.addInput('D', Items.DIAMOND)
+			.addInput('S', Items.INGOT_STEEL)
 			.create("orbOfRogmal", orbOfRogmal.getDefaultStack());
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
 				"CEC",
 				"ERE",
 				"CEC")
-			.addInput('E', Blocks.BLOCK_STEEL)
+			.addInput('E', Items.INGOT_STEEL)
 			.addInput('C', Items.NETHERCOAL)
 			.addInput('R', Blocks.BLOCK_REDSTONE)
 			.create("redstone_alloy", redstoneAlloy.getDefaultStack());
@@ -45,7 +51,7 @@ public class TerraponBTA73Recipe implements RecipeEntrypoint {
 				"CEC",
 				"ERE",
 				"CEC")
-			.addInput('E', Blocks.BLOCK_STEEL)
+			.addInput('E', Items.INGOT_STEEL)
 			.addInput('C', Items.NETHERCOAL)
 			.addInput('R', Blocks.GLOWSTONE)
 			.create("glowstone_alloy", glowstoneAlloy.getDefaultStack());
@@ -54,16 +60,16 @@ public class TerraponBTA73Recipe implements RecipeEntrypoint {
 				"CEC",
 				"ERE",
 				"CEC")
-			.addInput('E', Blocks.BLOCK_STEEL)
+			.addInput('E', Items.INGOT_STEEL)
 			.addInput('C', Items.NETHERCOAL)
-			.addInput('R', Blocks.GLOWSTONE)
+			.addInput('R', Blocks.OBSIDIAN)
 			.create("obsidian_alloy", obsidianAlloy.getDefaultStack());
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
 				"CEC",
 				"ERE",
 				"CEC")
-			.addInput('E', Blocks.BLOCK_STEEL)
+			.addInput('E', Items.INGOT_STEEL)
 			.addInput('C', Items.NETHERCOAL)
 			.addInput('R', Blocks.BLOCK_LAPIS)
 			.create("lapis_alloy", lapisAlloy.getDefaultStack());
@@ -152,8 +158,23 @@ public class TerraponBTA73Recipe implements RecipeEntrypoint {
 				"E  ")
 			.addInput('E', obsidianAlloy)
 			.create("obsidian_alloy_rod", new ItemStack(obsidianAlloyRod, 3));
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"EEE",
+				"EEE",
+				"EEE")
+			.addInput('E', balloflava)
+			.create("lava_star", new ItemStack(lavastar));
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				" E ",
+				"ESE",
+				" E ")
+			.addInput('E', lavastar)
+			.addInput('S', Items.INGOT_STEEL)
+			.create("hell_ingot", new ItemStack(hellingot));
 
-		// Blocks
+// Blocks
 
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
@@ -181,6 +202,13 @@ public class TerraponBTA73Recipe implements RecipeEntrypoint {
 				"UUU",
 				"UUU",
 				"UUU")
+			.addInput('U', ingotSollogiumIngot)
+			.create("sollogium_block", sollogiumBlock.getDefaultStack());
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"UUU",
+				"UUU",
+				"UUU")
 			.addInput('U', ingotEilifligroniumIngot)
 			.create("eilifligronium_block", eilifligroniumBlock.getDefaultStack());
 		RecipeBuilder.Shaped(MOD_ID)
@@ -193,50 +221,29 @@ public class TerraponBTA73Recipe implements RecipeEntrypoint {
 			.addInput('S', seidriliumBlock)
 			.create("eilifligrlamp", eilifligrLamp.getDefaultStack());
 
-
-
-// Metals
-		RecipeBuilder.Shaped(MOD_ID)
-			.setShape(
-				"CCC",
-				"GGG",
-				"DDD")
-			.addInput('G', ingotEinvadrilIngot)
-			.addInput('C', ingotSeidriliumIngot)
-			.addInput('D', ingotHlifintiteIngot)
-			.create("eilifligronium_ingot", ingotEilifligroniumIngot.getDefaultStack());
-		RecipeBuilder.Shaped(MOD_ID)
-			.setShape(
-				"CGC",
-				"GOG",
-				"CGC")
-			.addInput('G', glowstoneAlloy)
-			.addInput('C', Blocks.BLOCK_STEEL)
-			.addInput('O', orbOfRogmal)
-			.create("raw_seidrilium", rawSeidriliumRaw.getDefaultStack());
-		RecipeBuilder.Shaped(MOD_ID)
-			.setShape(
-				"CGC",
-				"GOG",
-				"CGC")
-			.addInput('G', Blocks.BLOCK_NETHER_COAL)
-			.addInput('C', Blocks.BLOCK_STEEL)
-			.addInput('O', orbOfRogmal)
-			.create("raw_sollogium", rawSollogiumRaw.getDefaultStack());
+// Misc. Modded Items
 
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
-				"CEC",
-				"GEG",
+				"DED",
+				"ECE",
 				"DED")
-			.addInput('G', ingotEinvadrilIngot)
-			.addInput('C', ingotSeidriliumIngot)
-			.addInput('D', ingotHlifintiteIngot)
+			.addInput('D', hellingot)
+			.addInput('C', Items.COAL)
 			.addInput('E', Blocks.BLOCK_NETHER_COAL)
 			.create("lopt_fuel", loptFuel.getDefaultStack());
 
+// Seidrilium
 
-
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"CGC",
+				"GOG",
+				"CGC")
+			.addInput('G', Items.INGOT_STEEL)
+			.addInput('C', glowstoneAlloy)
+			.addInput('O', orbOfRogmal)
+			.create("raw_seidrilium", rawSeidriliumRaw.getDefaultStack());
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
 				"DDD",
@@ -320,13 +327,15 @@ public class TerraponBTA73Recipe implements RecipeEntrypoint {
 			.addInput('S', ingotSeidriliumIngot)
 			.create("seidrilium_boots", feetsiesSeidrilium);
 
+// Einvadril
+
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
 				"GCG",
 				"COC",
 				"GCG")
 			.addInput('G', redstoneAlloy)
-			.addInput('C', Blocks.BLOCK_STEEL)
+			.addInput('C', Items.INGOT_STEEL)
 			.addInput('O', orbOfRogmal)
 			.create("raw_einvadril", rawEinvadrilRaw.getDefaultStack());
 		RecipeBuilder.Shaped(MOD_ID)
@@ -412,12 +421,14 @@ public class TerraponBTA73Recipe implements RecipeEntrypoint {
 			.addInput('E', ingotEinvadrilIngot)
 			.create("einvadril_boots", feetsiesEinvadril);
 
+// Hlifintite
+
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
 				"CGC",
 				"GOG",
 				"CGC")
-			.addInput('G', Blocks.BLOCK_LAPIS)
+			.addInput('G', Items.INGOT_STEEL)
 			.addInput('C', lapisAlloy)
 			.addInput('O', orbOfRogmal)
 			.create("raw_hlifintite", rawHlifintiteRaw);
@@ -506,6 +517,117 @@ public class TerraponBTA73Recipe implements RecipeEntrypoint {
 			.addInput('H', ingotHlifintiteIngot)
 			.create("hlifintite_boots", feetsiesHlifintite);
 
+// Sollogium
+
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"CGC",
+				"GOG",
+				"CGC")
+			.addInput('G', hellingot)
+			.addInput('C', Items.INGOT_STEEL)
+			.addInput('O', orbOfRogmal)
+			.create("raw_sollogium", rawSollogiumRaw);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"HHH",
+				" S ",
+				" S ")
+			.addInput('H', ingotSollogiumIngot)
+			.addInput('S', obsidianAlloyRod)
+			.create("sollogium_pickaxe", toolPickaxeSollogium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"HH ",
+				"HS ",
+				" S ")
+			.addInput('H', ingotSollogiumIngot)
+			.addInput('S', obsidianAlloyRod)
+			.create("sollogium_axe", toolAxeSollogium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				" H ",
+				" S ",
+				" S ")
+			.addInput('H', ingotSollogiumIngot)
+			.addInput('S', obsidianAlloyRod)
+			.create("sollogium_shovel", toolShovelSollogium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"HH ",
+				" S ",
+				" S ")
+			.addInput('H', ingotSollogiumIngot)
+			.addInput('S', obsidianAlloyRod)
+			.create("sollogium_hoe", toolHoeSollogium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				" H ",
+				" H ",
+				" S ")
+			.addInput('H', ingotSollogiumIngot)
+			.addInput('S', obsidianAlloyRod)
+			.create("sollogium_sword", toolSwordSollogium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"LHL",
+				"H H",
+				"   ")
+			.addInput('H', ingotSollogiumIngot)
+			.addInput('L', obsidianAlloy)
+			.create("sollogium_helmet", hatSollogium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"   ",
+				"LHL",
+				"H H")
+			.addInput('H', ingotSollogiumIngot)
+			.addInput('L', obsidianAlloy)
+			.create("sollogium_helmet", hatSollogium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"H H",
+				"LHL",
+				"HHH")
+			.addInput('H', ingotSollogiumIngot)
+			.addInput('L', obsidianAlloy)
+			.create("sollogium_chestplate", shirtSollogium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"HHH",
+				"L L",
+				"H H")
+			.addInput('H', ingotSollogiumIngot)
+			.addInput('L', obsidianAlloy)
+			.create("sollogium_leggings", pantsSollogium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"H H",
+				"L L",
+				"   ")
+			.addInput('H', ingotSollogiumIngot)
+			.addInput('L', obsidianAlloy)
+			.create("sollogium_boots", feetsiesSollogium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"   ",
+				"H H",
+				"L L")
+			.addInput('H', ingotSollogiumIngot)
+			.addInput('L', obsidianAlloy)
+			.create("sollogium_boots", feetsiesSollogium);
+
+// Eilifligronium
+
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"CCC",
+				"GGG",
+				"DDD")
+			.addInput('G', ingotEinvadrilIngot)
+			.addInput('C', ingotSeidriliumIngot)
+			.addInput('D', ingotHlifintiteIngot)
+			.create("eilifligronium_ingot", ingotEilifligroniumIngot.getDefaultStack());
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
 				"UU ",
@@ -589,6 +711,8 @@ public class TerraponBTA73Recipe implements RecipeEntrypoint {
 			.addInput('U', ingotEilifligroniumIngot)
 			.create("eilifligronium_boots", feetsiesEilifligronium);
 
+// Smelting to refund armor and tools
+
 		RecipeBuilder.BlastFurnace(MOD_ID)
 			.setInput(hatSeidrilium)
 			.create("seidrilium_ingot", new ItemStack(ingotSeidriliumIngot, 5));
@@ -644,6 +768,34 @@ public class TerraponBTA73Recipe implements RecipeEntrypoint {
 		RecipeBuilder.BlastFurnace(MOD_ID)
 			.setInput(toolSwordEinvadril)
 			.create("einvadril_ingot", new ItemStack(ingotEinvadrilIngot, 2));
+
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(hatSollogium)
+			.create("sollogium_ingot", new ItemStack(ingotSollogiumIngot, 5));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(shirtSollogium)
+			.create("sollogium_ingot", new ItemStack(ingotSollogiumIngot, 8));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(pantsSollogium)
+			.create("sollogium_ingot", new ItemStack(ingotSollogiumIngot, 7));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(feetsiesSollogium)
+			.create("sollogium_ingot", new ItemStack(ingotSollogiumIngot, 4));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolShovelSollogium)
+			.create("sollogium_ingot", new ItemStack(ingotSollogiumIngot, 1));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolPickaxeSollogium)
+			.create("sollogium_ingot", new ItemStack(ingotSollogiumIngot, 3));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolAxeSollogium)
+			.create("sollogium_ingot", new ItemStack(ingotSollogiumIngot, 3));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolHoeSollogium)
+			.create("sollogium_ingot", new ItemStack(ingotSollogiumIngot, 2));
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(toolSwordSollogium)
+			.create("sollogium_ingot", new ItemStack(ingotSollogiumIngot, 2));
 
 		RecipeBuilder.BlastFurnace(MOD_ID)
 			.setInput(hatHlifintite)
@@ -705,11 +857,18 @@ public class TerraponBTA73Recipe implements RecipeEntrypoint {
 			.setInput(rawSeidriliumRaw)
 			.create("seidrilium_ingot", ingotSeidriliumIngot);
 		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(rawSollogiumRaw)
+			.create("sollogium_ingot", ingotSollogiumIngot);
+		RecipeBuilder.BlastFurnace(MOD_ID)
 			.setInput(rawEinvadrilRaw)
 			.create("einvadril_ingot", ingotEinvadrilIngot);
 		RecipeBuilder.BlastFurnace(MOD_ID)
 			.setInput(rawHlifintiteRaw)
 			.create("hlifintite_ingot", ingotHlifintiteIngot);
+
+		RecipeBuilder.BlastFurnace(MOD_ID)
+			.setInput(Blocks.BLOCK_IRON)
+			.create("steel_ingot", new ItemStack(Items.INGOT_STEEL, 4));
 }
 
 	@Override

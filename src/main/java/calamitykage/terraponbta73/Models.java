@@ -22,30 +22,17 @@ public class Models implements ModelEntrypoint {
 	@Override
 	public void initBlockModels(BlockModelDispatcher dispatcher) {
 		ModelHelper.setBlockModel(seidriliumBlock, () -> new BlockModelStandard<>(seidriliumBlock)
-			.setTex(0, "terraponbta73:block/seidrilium_blocktop", Side.TOP)
-			.setTex(0, "terraponbta73:block/seidrilium_blockbottom", Side.BOTTOM)
-			.setTex(0, "terraponbta73:block/seidrilium_blockside", Side.WEST, Side.EAST, Side.SOUTH)
-			.setTex(0, "terraponbta73:block/seidrilium_blockfront", Side.NORTH));
+			.setTex(0, "terraponbta73:block/seidrilium_block", Side.sides));
+		ModelHelper.setBlockModel(sollogiumBlock, () -> new BlockModelStandard<>(sollogiumBlock)
+			.setTex(0, "terraponbta73:block/sollogium_block", Side.sides));
 		ModelHelper.setBlockModel(einvadrilBlock, () -> new BlockModelStandard<>(einvadrilBlock)
-			.setTex(0, "terraponbta73:block/einvadril_blocktop", Side.TOP)
-			.setTex(0, "terraponbta73:block/einvadril_blockbottom", Side.BOTTOM)
-			.setTex(0, "terraponbta73:block/einvadril_blockside", Side.WEST, Side.EAST, Side.SOUTH)
-			.setTex(0, "terraponbta73:block/einvadril_blockfront", Side.NORTH));
+			.setTex(0, "terraponbta73:block/einvadril_block", Side.sides));
 		ModelHelper.setBlockModel(hlifintiteBlock, () -> new BlockModelStandard<>(hlifintiteBlock)
-			.setTex(0, "terraponbta73:block/hlifintite_blocktop", Side.TOP)
-			.setTex(0, "terraponbta73:block/hlifintite_blockbottom", Side.BOTTOM)
-			.setTex(0, "terraponbta73:block/hlifintite_blockside", Side.WEST, Side.EAST, Side.SOUTH)
-			.setTex(0, "terraponbta73:block/hlifintite_blockfront", Side.NORTH));
+			.setTex(0, "terraponbta73:block/hlifintite_block", Side.sides));
 		ModelHelper.setBlockModel(eilifligroniumBlock, () -> new BlockModelStandard<>(eilifligroniumBlock)
-			.setTex(0, "terraponbta73:block/eilifligronium_blocktop", Side.TOP)
-			.setTex(0, "terraponbta73:block/eilifligronium_blockbottom", Side.BOTTOM)
-			.setTex(0, "terraponbta73:block/eilifligronium_blockside", Side.WEST, Side.EAST, Side.SOUTH)
-			.setTex(0, "terraponbta73:block/eilifligronium_blockfront", Side.NORTH));
+			.setTex(0, "terraponbta73:block/eilifligronium_block", Side.sides));
 		ModelHelper.setBlockModel(eilifligrLamp, () -> new BlockModelStandard<>(eilifligrLamp)
-			.setTex(0, "terraponbta73:block/eilifligrlamptop", Side.TOP)
-			.setTex(0, "terraponbta73:block/eilifligrlampbottom", Side.BOTTOM)
-			.setTex(0, "terraponbta73:block/eilifligrlampside", Side.WEST, Side.EAST, Side.SOUTH)
-			.setTex(0, "terraponbta73:block/eilifligrlampfront", Side.NORTH));
+			.setTex(0, "terraponbta73:block/eilifligrlamp", Side.sides));
 	}
 
 	@Override
@@ -55,6 +42,7 @@ public class Models implements ModelEntrypoint {
 			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/steel_rod"));
 			return model;
 		});
+
 		ModelHelper.setItemModel(redstoneAlloy, () -> {
 			ItemModelStandard model = new ItemModelStandard(redstoneAlloy, MOD_ID);
 			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/redstone_alloy"));
@@ -88,6 +76,21 @@ public class Models implements ModelEntrypoint {
 		ModelHelper.setItemModel(glowstoneAlloy, () -> {
 			ItemModelStandard model = new ItemModelStandard(glowstoneAlloy, MOD_ID);
 			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/glowstone_alloy"));
+			return model;
+		});
+		ModelHelper.setItemModel(balloflava, () -> {
+			ItemModelStandard model = new ItemModelStandard(balloflava, MOD_ID);
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/ball_of_lava"));
+			return model;
+		});
+		ModelHelper.setItemModel(lavastar, () -> {
+			ItemModelStandard model = new ItemModelStandard(lavastar, MOD_ID);
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/lava_star"));
+			return model;
+		});
+		ModelHelper.setItemModel(hellingot, () -> {
+			ItemModelStandard model = new ItemModelStandard(hellingot, MOD_ID);
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/hell_ingot"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolSwordSeidrilium, () -> {

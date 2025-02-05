@@ -71,39 +71,8 @@ public class TerraponBTA73 implements ModInitializer, GameStartEntrypoint, Clien
 	}
 	@Override
 	public void onInitialize() {
-		BlockBuilder seidrilium_builder = new BlockBuilder(MOD_ID)
-			.setHardness(6.0f)
-			.setResistance(30.0f)
-			.setLuminance(25)
-			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		BlockBuilder einvadril_builder = new BlockBuilder(MOD_ID)
-			.setHardness(7.0f)
-			.setResistance(45.0f)
-			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		BlockBuilder hlifintite_builder = new BlockBuilder(MOD_ID)
-			.setHardness(9.0f)
-			.setResistance(80.0f)
-			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		BlockBuilder eilifligronium_builder = new BlockBuilder(MOD_ID)
-			.setHardness(12.0f)
-			.setResistance(600.0f)
-			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		BlockBuilder eilifligrlamp_builder = new BlockBuilder(MOD_ID)
-			.setHardness(12.0f)
-			.setResistance(600.0f)
-			.setLuminance(40)
-			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
+		TerraponBTA73Blocks.initBlocks();
 
-		seidriliumBlock = seidrilium_builder
-			.build("block.seidrilium", "block/seidrilium_block", nextID(), b -> new BlockLogic(b, Material.metal));
-		einvadrilBlock = einvadril_builder
-			.build("block.einvadril", "block/einvadril_block", nextID(), b -> new BlockLogic(b, Material.metal));
-		hlifintiteBlock = hlifintite_builder
-			.build("block.hlifintite", "block/hlifintite_block", nextID(), b -> new BlockLogic(b, Material.metal));
-		eilifligroniumBlock = eilifligronium_builder
-			.build("block.eilifligronium", "block/eilifligronium_block", nextID(), b -> new BlockLogic(b, Material.metal));
-		eilifligrLamp = eilifligrlamp_builder
-			.build("eilifligrlamp", "block/eilifligr_lamp", nextID(), b -> new BlockLogic(b, Material.metal));
 	}
 
 }

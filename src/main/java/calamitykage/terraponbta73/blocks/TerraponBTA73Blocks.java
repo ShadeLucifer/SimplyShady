@@ -12,7 +12,7 @@ import turniplabs.halplibe.helper.BlockBuilder;
 import turniplabs.halplibe.util.TomlConfigHandler;
 import turniplabs.halplibe.util.toml.Toml;
 
-public class TerraponBTA73Blocks implements ModInitializer {
+public class TerraponBTA73Blocks {
 	public static final String MOD_ID = "terraponbta73";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 	public static TomlConfigHandler tomlConfig;
@@ -23,15 +23,20 @@ public class TerraponBTA73Blocks implements ModInitializer {
 
 
 	public static Block<?> seidriliumBlock;
+	public static Block<?> sollogiumBlock;
 	public static Block<?> einvadrilBlock;
 	public static Block<?> hlifintiteBlock;
 	public static Block<?> eilifligroniumBlock;
 	public static Block<?> eilifligrLamp;
 
 
-	@Override
-	public void onInitialize() {
+public static void initBlocks() {
 		BlockBuilder seidrilium_builder = new BlockBuilder(MOD_ID)
+			.setHardness(6.0f)
+			.setResistance(30.0f)
+			.setLuminance(25)
+			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
+		BlockBuilder sollogium_builder = new BlockBuilder(MOD_ID)
 			.setHardness(6.0f)
 			.setResistance(30.0f)
 			.setLuminance(25)
@@ -57,6 +62,8 @@ public class TerraponBTA73Blocks implements ModInitializer {
 		seidriliumBlock = seidrilium_builder
 			.build("block.seidrilium", "block/seidrilium_block", nextID(), b -> new BlockLogic(b, Material.metal));
 
+		sollogiumBlock = sollogium_builder
+			.build("block.sollogium", "block/sollogium_block", nextID(), b -> new BlockLogic(b, Material.metal));
 
 		einvadrilBlock = einvadril_builder
 			.build("block.einvadril", "block/einvadril_block", nextID(), b -> new BlockLogic(b, Material.metal));
