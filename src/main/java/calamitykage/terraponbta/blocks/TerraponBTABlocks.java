@@ -23,6 +23,7 @@ public class TerraponBTABlocks {
 	}
 
 	public static Block seidriliumBlock;
+	public static Block sollogiumBlock;
 	public static Block hlifintiteBlock;
 	public static Block einvadrilBlock;
 	public static Block eilifligroniumBlock;
@@ -30,46 +31,55 @@ public class TerraponBTABlocks {
 
 	public void initializeBlocks() {
 		seidriliumBlock = new BlockBuilder(MOD_ID)
-			.setSideTextures(MOD_ID + ":block/seidrilium_block_side")
-			.setTopTexture(MOD_ID + ":block/seidrilium_block_top")
-			.setBottomTexture(MOD_ID + ":block/seidrilium_block_bottom")
+			.setSideTextures(MOD_ID + ":block/seidrilium_block")
+			.setTopTexture(MOD_ID + ":block/seidrilium_block")
+			.setBottomTexture(MOD_ID + ":block/seidrilium_block")
+			.setHardness(6f)
+			.setResistance(3000f)
+			.setLuminance(25)
+			.addTags(BlockTags.MINEABLE_BY_PICKAXE)
+			.build(new Block("block.seidrilium", blockId++, Material.metal));
+		sollogiumBlock = new BlockBuilder(MOD_ID)
+			.setSideTextures(MOD_ID + ":block/sollogium_block")
+			.setTopTexture(MOD_ID + ":block/seidrilium_block")
+			.setBottomTexture(MOD_ID + ":block/seidrilium_block")
 			.setHardness(6f)
 			.setResistance(3000f)
 			.setLuminance(25)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE)
 			.build(new Block("block.seidrilium", blockId++, Material.metal));
 		einvadrilBlock = new BlockBuilder(MOD_ID)
-			.setSideTextures(MOD_ID + ":block/einvadril_block_side")
-			.setTopTexture(MOD_ID + ":block/einvadril_block_top")
-			.setBottomTexture(MOD_ID + ":block/einvadril_block_bottom")
+			.setSideTextures(MOD_ID + ":block/einvadril_block")
+			.setTopTexture(MOD_ID + ":block/einvadril_block")
+			.setBottomTexture(MOD_ID + ":block/einvadril_block")
 			.setHardness(7f)
 			.setResistance(4000f)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE)
 			.build(new Block("block.einvadril", blockId++, Material.metal));
 		hlifintiteBlock = new BlockBuilder(MOD_ID)
-			.setSideTextures(MOD_ID + ":block/hlifintite_block_side")
-			.setTopTexture(MOD_ID + ":block/hlifintite_block_top")
-			.setBottomTexture(MOD_ID + ":block/hlifintite_block_bottom")
+			.setSideTextures(MOD_ID + ":block/hlifintite_block")
+			.setTopTexture(MOD_ID + ":block/hlifintite_block")
+			.setBottomTexture(MOD_ID + ":block/hlifintite_block")
 			.setHardness(8f)
 			.setResistance(9001f)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE)
 			.build(new Block("block.hlifintite", blockId++, Material.metal));
 		eilifligroniumBlock = new BlockBuilder(MOD_ID)
-			.setSideTextures(MOD_ID + ":block/eilifligronium_block_side")
-			.setTopTexture(MOD_ID + ":block/eilifligronium_block_top")
-			.setBottomTexture(MOD_ID + ":block/eilifligronium_block_bottom")
+			.setSideTextures(MOD_ID + ":block/eilifligronium_block")
+			.setTopTexture(MOD_ID + ":block/eilifligronium_block")
+			.setBottomTexture(MOD_ID + ":block/eilifligronium_block")
 			.setHardness(12f)
 			.setResistance(16000f)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE)
 			.build(new Block("block.eilifligronium", blockId++, Material.metal));
 		eilifligrLamp = new BlockBuilder(MOD_ID)
-			.setSideTextures(MOD_ID + ":block/eilifligrlamp_side")
-			.setTopTexture(MOD_ID + ":block/eilifligrlamp_top")
-			.setBottomTexture(MOD_ID + ":block/eilifligrlamp_bottom")
+			.setSideTextures(MOD_ID + ":block/eilifligrlamp")
+			.setTopTexture(MOD_ID + ":block/eilifligrlamp")
+			.setBottomTexture(MOD_ID + ":block/eilifligrlamp")
 			.setHardness(12f)
 			.setResistance(16000f)
 			.setLuminance(30)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE)
-			.build(new Block("block.eilifligrlamp", blockId++, Material.metal));
+			.build(new Block("eilifligrlamp", blockId++, Material.metal));
 	}
 }

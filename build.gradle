@@ -11,6 +11,7 @@ loom {
 	gluedMinecraftJar()
 	noIntermediateMappings()
 	customMinecraftManifest.set("https://github.com/Turnip-Labs/bta-manifest-repo/releases/download/v${project.bta_version}/${project.bta_version}.json")
+	accessWidenerPath = file("src/main/resources/terraponbta.accesswidener")
 }
 
 repositories {
@@ -87,8 +88,8 @@ dependencies {
 
 	// Helper library
 	// If you do not need Halplibe you can comment this line out or delete this line
-	implementation "turniplabs:halplibe:${project.halplibe_version}"
-
+	modImplementation "turniplabs:halplibe:${project.halplibe_version}"
+	modImplementation(project.files("lib/btabackpacks-1.1.8-7.2_01.jar"))
 	modImplementation "ModMenu:ModMenu:${project.mod_menu_version}"
 
 	implementation "org.slf4j:slf4j-api:1.8.0-beta4"

@@ -31,17 +31,18 @@
 			"calamitykage.terraponbta.TerraponBTA"
 		],
 		"recipesReady": [
-			"calamitykage.terraponbta.TerraponBTA"
+			"calamitykage.terraponbta.recipes.TerraponBTARecipes"
 		]
 	},
   "mixins": [
 		"terraponbta.mixins.json"
   ],
-
+	"accessWidener": "terraponbta.accesswidener",
   "depends": {
 		"minecraft": "^7.2-beta",
     "fabricloader": ">=0.15.5"
   },
   "suggests": {
+		"betterwithbackpacks": ">=1.0.0"
   }
 }
