@@ -181,3 +181,28 @@ tile.terraponbta.block.hlifintite.name=Block of Hlífintite
 tile.terraponbta.block.hlifintite.desc=A sturdy block that could withstand a nuke
 tile.terraponbta.block.sollogium.name=Block of Sóllogium
 tile.terraponbta.block.sollogium.desc=A block thats so hot it no longer burns you, can be used for warmth on cold winter nights
+
+tile.terraponbta.seidriliumorestone.name=Seiðrilium Stone Ore
+tile.terraponbta.seidriliumorestone.desc=Radiates manaridium, its the concentrated form of Manaridium
+tile.terraponbta.seidriliumorebasalt.name=Seiðrilium Basalt Ore
+tile.terraponbta.seidriliumorebasalt.desc=Radiates manaridium, its the concentrated form of Manaridium
+tile.terraponbta.netherseidriliumore.name=Nether Seiðrilium Ore
+tile.terraponbta.netherseidriliumore.desc=Radiates manaridium, its the concentrated form of Manaridium
+
+tile.terraponbta.einvadrilorestone.name=Einvadril Stone Ore
+tile.terraponbta.einvadrilorestone.desc=Metal so sharp it sticks out spikes of einvadril, cutting the rock with ease
+tile.terraponbta.einvadrilorebasalt.name=Einvadril Basalt Ore
+tile.terraponbta.einvadrilorebasalt.desc=Metal so sharp it sticks out spikes of einvadril, cutting the rock with ease
+
+tile.terraponbta.hlifintiteorestone.name=Hlífintite Stone Ore
+tile.terraponbta.hlifintiteorestone.desc=A very dense metal, making the rock its formed in even harder to mine
+tile.terraponbta.hlifintiteorebasalt.name=Hlífintite Basalt Ore
+tile.terraponbta.hlifintiteorebasalt.desc=A very dense metal, making the rock its formed in even harder to mine
+
+tile.terraponbta.framiumorestone.name=Framium Stone Ore
+tile.terraponbta.framiumorestone.desc=Radiates natural energy and causes rocks to duplicate if in contact with it long enough
+tile.terraponbta.framiumorebasalt.name=Framium Basalt Ore
+tile.terraponbta.framiumorebasalt.desc=Radiates natural energy and causes rocks to duplicate if in contact with it long enough
+
+tile.terraponbta.sollogiumore.name=Sóllogium Ore
+tile.terraponbta.sollogiumore.desc=The heat given off of this ore is so hot it could make warm a whole city with its residual heat, its like the Sun but even more

@@ -8,8 +8,9 @@
   "authors": [
     "Turnip Labs for the example mod",
 		"CalamityKage, created the concept and assets as well as put the code together",
-		"Useless since I used his MoonMoonMoon item code",
-		"Csweetla for the Fire Damage code"
+		"Useless since I used his MoonMoonMoon Fortune/Loot code",
+		"_CantComplain for the Fire Immunity Code as well as the Fire Damage code",
+		"LukeisStuff's Randomite Ore mod so I can figure out how to generate the ores"
   ],
   "contact": {
     "homepage": "https://github.com/ShadeLucifer/TerraponBTA",
@@ -30,6 +31,9 @@
 		"afterGameStart": [
 			"calamitykage.terraponbta.TerraponBTA"
 		],
+		"terrain-api": [
+			"calamitykage.terraponbta.plugins.TerrainApiPlugin"
+		],
 		"recipesReady": [
 			"calamitykage.terraponbta.recipes.TerraponBTARecipes"
 		]
@@ -40,9 +44,11 @@
 	"accessWidener": "terraponbta.accesswidener",
   "depends": {
 		"minecraft": "^7.2-beta",
-    "fabricloader": ">=0.15.5"
+    "fabricloader": ">=0.15.5",
+		"terrain-api": ">=1.4.4-7.2-pre1"
   },
   "suggests": {
-		"betterwithbackpacks": ">=1.0.0"
+		"betterwithbackpacks": ">=1.0.0",
+		"signalindustries": ">=0.20.0"
   }
 }

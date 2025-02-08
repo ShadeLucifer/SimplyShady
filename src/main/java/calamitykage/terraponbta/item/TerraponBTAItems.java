@@ -1,6 +1,7 @@
 package calamitykage.terraponbta.item;
 
 import calamitykage.terraponbta.TerraponBTA;
+import calamitykage.terraponbta.blocks.ores.*;
 import net.minecraft.client.render.item.model.ItemModelStandard;
 import net.minecraft.core.block.*;
 import net.minecraft.core.data.tag.Tag;
@@ -9,7 +10,9 @@ import net.minecraft.core.item.ItemArmor;
 import net.minecraft.core.item.material.ArmorMaterial;
 import net.minecraft.core.item.material.ToolMaterial;
 import net.minecraft.core.item.tool.*;
-import tosutosu.betterwithbackpacks.item.ItemBackpack;
+import sunsetsatellite.signalindustries.blocks.BlockOreDilithium;
+import sunsetsatellite.signalindustries.blocks.BlockOreDimensionalShard;
+import sunsetsatellite.signalindustries.blocks.BlockOreSignalum;
 import turniplabs.halplibe.helper.ArmorHelper;
 import turniplabs.halplibe.helper.ItemBuilder;
 import turniplabs.halplibe.util.ConfigHandler;
@@ -26,8 +29,8 @@ public class TerraponBTAItems {
 	static {
 		Properties prop = new Properties();
 		prop.setProperty("starting_item_id","25400");
-		prop.setProperty("fortune_amount","5");
-		prop.setProperty("looting_amount","5");
+		prop.setProperty("fortune_amount","10");
+		prop.setProperty("looting_amount","10");
 
 		ConfigHandler config = new ConfigHandler(MOD_ID,prop);
 		itemId = config.getInt("starting_item_id");
@@ -41,6 +44,7 @@ public class TerraponBTAItems {
 		if (block.hasTag(FORCE_FORTUNE)) return true;
 		if (block.hasTag(FORCE_NO_FORTUNE)) return false;
 		if (block instanceof BlockLeavesBase) return true;
+		if (block instanceof BlockLog) return true;
 		if (block instanceof BlockOreCoal) return true;
 		if (block instanceof BlockOreDiamond) return true;
 		if (block instanceof BlockOreGold) return true;
@@ -49,18 +53,26 @@ public class TerraponBTAItems {
 		if (block instanceof BlockOreNetherCoal) return true;
 		if (block instanceof BlockOreRedstone) return true;
 		if (block instanceof BlockTallGrass) return true;
+		if (block instanceof BlockEinvadrilOre) return true;
+		if (block instanceof BlockSollogiumOre) return true;
+		if (block instanceof BlockHlifintiteOre) return true;
+		if (block instanceof BlockSeidriliumOre) return true;
+		if (block instanceof BlockFramiumOre) return true;
+		if (block instanceof BlockOreSignalum) return true;
+		if (block instanceof BlockOreDilithium) return true;
+		if (block instanceof BlockOreDimensionalShard) return true;
 		return false;
 	}
-	public static ToolMaterial seidriliumTool = new ToolMaterial().setDurability(8392).setEfficiency(22.0f, 26.0f).setMiningLevel(8).setDamage(10);
-	public static ToolMaterial sollogiumTool = new ToolMaterial().setDurability(8168).setEfficiency(17.0f, 15.0f).setMiningLevel(8).setDamage(10);
-	public static ToolMaterial framiumTool = new ToolMaterial().setDurability(8192).setEfficiency(17.0f, 15.0f).setMiningLevel(8).setDamage(9);
-	public static ToolMaterial einvadrilTool = new ToolMaterial().setDurability(6124).setEfficiency(14.0f, 20.0f).setMiningLevel(7).setDamage(14);
-	public static ToolMaterial mattriteTool = new ToolMaterial().setDurability(6284).setEfficiency(15.0f, 21.0f).setMiningLevel(7).setDamage(13);
-	public static ToolMaterial feigrilTool = new ToolMaterial().setDurability(6862).setEfficiency(13.0f, 24.0f).setMiningLevel(7).setDamage(12);
-	public static ToolMaterial hlifintiteTool = new ToolMaterial().setDurability(12862).setEfficiency(12.0f, 12.0f).setMiningLevel(12).setDamage(7);
-	public static ToolMaterial ginnungienTool = new ToolMaterial().setDurability(13142).setEfficiency(12.0f, 12.0f).setMiningLevel(11).setDamage(7);
-	public static ToolMaterial modrastiriumTool = new ToolMaterial().setDurability(14644).setEfficiency(10.0f, 10.0f).setMiningLevel(13).setDamage(7);
-	public static ToolMaterial eilifligroniumTool = new ToolMaterial().setDurability(-1).setEfficiency(25.0f, 30.0f).setMiningLevel(25).setDamage(25);
+	public static ToolMaterial seidriliumTool = new ToolMaterial().setDurability(8392).setEfficiency(22.0f, 26.0f).setMiningLevel(5).setDamage(10);
+	public static ToolMaterial sollogiumTool = new ToolMaterial().setDurability(8168).setEfficiency(17.0f, 15.0f).setMiningLevel(5).setDamage(10);
+	public static ToolMaterial framiumTool = new ToolMaterial().setDurability(8192).setEfficiency(17.0f, 15.0f).setMiningLevel(5).setDamage(9);
+	public static ToolMaterial einvadrilTool = new ToolMaterial().setDurability(6124).setEfficiency(14.0f, 20.0f).setMiningLevel(4).setDamage(14);
+	public static ToolMaterial mattriteTool = new ToolMaterial().setDurability(6284).setEfficiency(15.0f, 21.0f).setMiningLevel(4).setDamage(13);
+	public static ToolMaterial feigrilTool = new ToolMaterial().setDurability(6862).setEfficiency(13.0f, 24.0f).setMiningLevel(4).setDamage(12);
+	public static ToolMaterial hlifintiteTool = new ToolMaterial().setDurability(12862).setEfficiency(12.0f, 12.0f).setMiningLevel(7).setDamage(7);
+	public static ToolMaterial ginnungienTool = new ToolMaterial().setDurability(13142).setEfficiency(12.0f, 12.0f).setMiningLevel(7).setDamage(7);
+	public static ToolMaterial modrastiriumTool = new ToolMaterial().setDurability(14644).setEfficiency(10.0f, 10.0f).setMiningLevel(7).setDamage(7);
+	public static ToolMaterial eilifligroniumTool = new ToolMaterial().setDurability(-1).setEfficiency(25.0f, 30.0f).setMiningLevel(9).setDamage(25);
 
 	public static ArmorMaterial seidriliumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "seidrilium", 8392, 65f, 65f, 65f, 65f);
 	public static ArmorMaterial sollogiumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "sollogium", 8168, 55f, 55f, 100f, 55f);
@@ -362,7 +374,7 @@ public class TerraponBTAItems {
 		toolAxeSollogium = new ItemBuilder(MOD_ID)
 			.setIcon(MOD_ID + ":item/sollogium_axe")
 			.setItemModel(item -> new ItemModelStandard(item, null).setFull3D())
-			.build(new ItemToolAxe("Sollogium.axe", itemId++, sollogiumTool));
+			.build(new ItemToolAxe("sollogium.axe", itemId++, sollogiumTool));
 		toolPickaxeSollogium = new ItemBuilder(MOD_ID)
 			.setIcon(MOD_ID + ":item/sollogium_pickaxe")
 			.setItemModel(item -> new ItemModelStandard(item, null).setFull3D())

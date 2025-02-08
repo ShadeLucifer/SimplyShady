@@ -10,7 +10,6 @@ import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.item.tag.ItemTags;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import tosutosu.betterwithbackpacks.item.ItemBackpack;
 import turniplabs.halplibe.helper.ItemBuilder;
 import turniplabs.halplibe.helper.ModVersionHelper;
 import turniplabs.halplibe.helper.RecipeBuilder;

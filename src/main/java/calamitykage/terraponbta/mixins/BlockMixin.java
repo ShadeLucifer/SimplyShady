@@ -33,5 +33,16 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 				}
 			}
 		}
+		@Inject(method = "harvestBlock(Lnet/minecraft/core/world/World;Lnet/minecraft/core/entity/player/EntityPlayer;IIIILnet/minecraft/core/block/entity/TileEntity;)V",
+			at = @At(value = "INVOKE", target = "Lnet/minecraft/core/block/Block;dropBlockWithCause(Lnet/minecraft/core/world/World;Lnet/minecraft/core/enums/EnumDropCause;IIIILnet/minecraft/core/block/entity/TileEntity;)V",
+				shift = At.Shift.AFTER))
+		private void multiplyHarvest1(World world, EntityPlayer entityplayer, int x, int y, int z, int meta, TileEntity tileEntity, CallbackInfo ci){
+			ItemStack heldItemStack = entityplayer.inventory.getCurrentItem();
+			if (heldItemStack != null && heldItemStack.getItem() instanceof ItemTool && ((ItemTool) heldItemStack.getItem()).getMaterial() == TerraponBTAItems.eilifligroniumTool && TerraponBTAItems.canBeFortuned((Block) (Object)this)){
+				for (int i = 0; i < world.rand.nextInt(TerraponBTAItems.FORTUNE_AMOUNT); i++) {
+					this.dropBlockWithCause(world, EnumDropCause.PROPER_TOOL, x, y, z, meta, tileEntity);
+				}
+			}
+		}
 	}
 
