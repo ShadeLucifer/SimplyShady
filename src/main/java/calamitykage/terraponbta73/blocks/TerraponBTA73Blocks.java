@@ -1,7 +1,6 @@
 package calamitykage.terraponbta73.blocks;
 
 import calamitykage.terraponbta73.TerraponBTA73Config;
-import net.fabricmc.api.ModInitializer;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.BlockLogic;
 import net.minecraft.core.block.material.Material;
@@ -10,7 +9,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import turniplabs.halplibe.helper.BlockBuilder;
 import turniplabs.halplibe.util.TomlConfigHandler;
-import turniplabs.halplibe.util.toml.Toml;
 
 public class TerraponBTA73Blocks {
 	public static final String MOD_ID = "terraponbta73";
@@ -24,6 +22,7 @@ public class TerraponBTA73Blocks {
 
 	public static Block<?> seidriliumBlock;
 	public static Block<?> sollogiumBlock;
+	public static Block<?> framiumBlock;
 	public static Block<?> einvadrilBlock;
 	public static Block<?> hlifintiteBlock;
 	public static Block<?> eilifligroniumBlock;
@@ -37,6 +36,11 @@ public static void initBlocks() {
 			.setLuminance(25)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
 		BlockBuilder sollogium_builder = new BlockBuilder(MOD_ID)
+			.setHardness(6.0f)
+			.setResistance(30.0f)
+			.setLuminance(25)
+			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
+		BlockBuilder framium_builder = new BlockBuilder(MOD_ID)
 			.setHardness(6.0f)
 			.setResistance(30.0f)
 			.setLuminance(25)
@@ -64,6 +68,9 @@ public static void initBlocks() {
 
 		sollogiumBlock = sollogium_builder
 			.build("block.sollogium", "block/sollogium_block", nextID(), b -> new BlockLogic(b, Material.metal));
+
+		framiumBlock = framium_builder
+			.build("block.framium", "block/framium_block", nextID(), b -> new BlockLogic(b, Material.metal));
 
 		einvadrilBlock = einvadril_builder
 			.build("block.einvadril", "block/einvadril_block", nextID(), b -> new BlockLogic(b, Material.metal));

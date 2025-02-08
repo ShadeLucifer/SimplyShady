@@ -25,6 +25,8 @@ public class Models implements ModelEntrypoint {
 			.setTex(0, "terraponbta73:block/seidrilium_block", Side.sides));
 		ModelHelper.setBlockModel(sollogiumBlock, () -> new BlockModelStandard<>(sollogiumBlock)
 			.setTex(0, "terraponbta73:block/sollogium_block", Side.sides));
+		ModelHelper.setBlockModel(framiumBlock, () -> new BlockModelStandard<>(framiumBlock)
+			.setTex(0, "terraponbta73:block/framium_block", Side.sides));
 		ModelHelper.setBlockModel(einvadrilBlock, () -> new BlockModelStandard<>(einvadrilBlock)
 			.setTex(0, "terraponbta73:block/einvadril_block", Side.sides));
 		ModelHelper.setBlockModel(hlifintiteBlock, () -> new BlockModelStandard<>(hlifintiteBlock)
@@ -42,10 +44,34 @@ public class Models implements ModelEntrypoint {
 			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/steel_rod"));
 			return model;
 		});
-
+		ModelHelper.setItemModel(infusedGoldRod, () -> {
+			ItemModelStandard model = new ItemModelStandard(infusedGoldRod, MOD_ID).setFull3D();
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/infused_gold_rod"));
+			return model;
+		});
+		ModelHelper.setItemModel(infusedGold, () -> {
+			ItemModelStandard model = new ItemModelStandard(infusedGold, MOD_ID);
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/infused_gold"));
+			return model;
+		});
 		ModelHelper.setItemModel(redstoneAlloy, () -> {
 			ItemModelStandard model = new ItemModelStandard(redstoneAlloy, MOD_ID);
 			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/redstone_alloy"));
+			return model;
+		});
+		ModelHelper.setItemModel(gaiaSteel, () -> {
+			ItemModelStandard model = new ItemModelStandard(gaiaSteel, MOD_ID);
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/gaia_steel"));
+			return model;
+		});
+		ModelHelper.setItemModel(gaiaEssence, () -> {
+			ItemModelStandard model = new ItemModelStandard(gaiaEssence, MOD_ID);
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/gaia_essence"));
+			return model;
+		});
+		ModelHelper.setItemModel(radiantGaiaEssence, () -> {
+			ItemModelStandard model = new ItemModelStandard(radiantGaiaEssence, MOD_ID);
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/radiant_gaia_essence"));
 			return model;
 		});
 		ModelHelper.setItemModel(redstoneAlloyRod, () -> {
@@ -148,6 +174,62 @@ public class Models implements ModelEntrypoint {
 			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/seidrilium_boots"));
 			return model;
 		});
+		ModelHelper.setItemModel(toolSwordFramium, () -> {
+			ItemModelStandard model = new ItemModelStandard(toolSwordFramium, MOD_ID).setFull3D();
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/framium_sword"));
+			return model;
+		});
+		ModelHelper.setItemModel(toolAxeFramium, () -> {
+			ItemModelStandard model = new ItemModelStandard(toolAxeFramium, MOD_ID).setFull3D();
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/framium_axe"));
+			return model;
+		});
+		ModelHelper.setItemModel(toolShovelFramium, () -> {
+			ItemModelStandard model = new ItemModelStandard(toolShovelFramium, MOD_ID).setFull3D();
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/framium_shovel"));
+			return model;
+		});
+		ModelHelper.setItemModel(toolPickaxeFramium, () -> {
+			ItemModelStandard model = new ItemModelStandard(toolPickaxeFramium, MOD_ID).setFull3D();
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/framium_pickaxe"));
+			return model;
+		});
+		ModelHelper.setItemModel(toolHoeFramium, () -> {
+			ItemModelStandard model = new ItemModelStandard(toolHoeFramium, MOD_ID).setFull3D();
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/framium_hoe"));
+			return model;
+		});
+		ModelHelper.setItemModel(rawFramiumRaw, () -> {
+			ItemModelStandard model = new ItemModelStandard(rawFramiumRaw, MOD_ID);
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/raw_framium"));
+			return model;
+		});
+		ModelHelper.setItemModel(ingotFramiumIngot, () -> {
+			ItemModelStandard model = new ItemModelStandard(ingotFramiumIngot, MOD_ID);
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/framium_ingot"));
+			return model;
+		});
+			ModelHelper.setItemModel(hatFramium, () -> {
+			ItemModelStandard model = new ItemModelStandard(hatFramium, MOD_ID);
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/framium_helmet"));
+			return model;
+		});
+		ModelHelper.setItemModel(shirtFramium, () -> {
+			ItemModelStandard model = new ItemModelStandard(shirtFramium, MOD_ID);
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/framium_chestplate"));
+			return model;
+		});
+		ModelHelper.setItemModel(pantsFramium, () -> {
+			ItemModelStandard model = new ItemModelStandard(pantsFramium, MOD_ID);
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/framium_leggings"));
+			return model;
+		});
+		ModelHelper.setItemModel(feetsiesFramium, () -> {
+			ItemModelStandard model = new ItemModelStandard(feetsiesFramium, MOD_ID);
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/framium_boots"));
+			return model;
+
+		});
 		ModelHelper.setItemModel(toolSwordSollogium, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolSwordSollogium, MOD_ID).setFull3D();
 			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/sollogium_sword"));
@@ -207,6 +289,11 @@ public class Models implements ModelEntrypoint {
 		ModelHelper.setItemModel(loptFuel, () -> {
 			ItemModelStandard model = new ItemModelStandard(loptFuel, MOD_ID);
 			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/lopt_fuel"));
+			return model;
+		});
+		ModelHelper.setItemModel(reinforcedLeather, () -> {
+			ItemModelStandard model = new ItemModelStandard(reinforcedLeather, MOD_ID);
+			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/reinforced_leather"));
 			return model;
 		});
 		ModelHelper.setItemModel(orbOfRogmal, () -> {
@@ -395,8 +482,8 @@ public class Models implements ModelEntrypoint {
 			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/eilifligronium_boots"));
 			return model;
 		});
-	}
 
+	}
 	@Override
 	public void initEntityModels(EntityRenderDispatcher dispatcher) {
 

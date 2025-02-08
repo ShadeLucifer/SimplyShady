@@ -28,6 +28,7 @@ public class TerraponBTA73Recipe implements RecipeEntrypoint {
 			.setInput(Items.BUCKET_LAVA)
 			.create("ball_of_lava", new ItemStack(balloflava, 3));
 
+// Essential Parts
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
 				"GSG",
@@ -173,7 +174,49 @@ public class TerraponBTA73Recipe implements RecipeEntrypoint {
 			.addInput('E', lavastar)
 			.addInput('S', Items.INGOT_STEEL)
 			.create("hell_ingot", new ItemStack(hellingot));
-
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"EEE",
+				"ERE",
+				"EEE")
+			.addInput('E', Items.INGOT_STEEL)
+			.addInput('C', reinforcedLeather)
+			.create("reinforced_leather", reinforcedLeather.getDefaultStack());
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"ABC",
+				"EOD",
+				"GFH")
+			.addInput('A', Blocks.FLOWER_RED)
+			.addInput('B', Blocks.FLOWER_YELLOW)
+			.addInput('C', Blocks.FLOWER_ORANGE)
+			.addInput('D', Blocks.FLOWER_PINK)
+			.addInput('E', Blocks.FLOWER_LIGHT_BLUE)
+			.addInput('F', Blocks.FLOWER_PURPLE)
+			.addInput('G', Blocks.MUSHROOM_BROWN)
+			.addInput('H', Blocks.MUSHROOM_RED)
+			.addInput('O', Items.DUST_GLOWSTONE)
+			.create("gaia_essence", new ItemStack(gaiaEssence));
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				" G ",
+				"GOG",
+				" G ")
+			.addInput('G', gaiaEssence)
+			.addInput('O', Blocks.GLOWSTONE)
+			.create("radiant_gaia_essence", new ItemStack(radiantGaiaEssence));
+		RecipeBuilder.Shapeless(MOD_ID)
+			.addInput(radiantGaiaEssence)
+			.addInput(Items.INGOT_STEEL)
+			.create("gaia_steel", new ItemStack(gaiaSteel));
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				" E ",
+				"ESE",
+				" E ")
+			.addInput('E', gaiaEssence)
+			.addInput('S', Items.INGOT_GOLD)
+			.create("infused_gold", new ItemStack(infusedGold));
 // Blocks
 
 		RecipeBuilder.Shaped(MOD_ID)
@@ -492,7 +535,7 @@ public class TerraponBTA73Recipe implements RecipeEntrypoint {
 				"LHL",
 				"HHH")
 			.addInput('H', ingotHlifintiteIngot)
-			.addInput('L', Items.LEATHER)
+			.addInput('L', reinforcedLeather)
 			.create("hlifintite_chestplate", shirtHlifintite);
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
@@ -500,7 +543,7 @@ public class TerraponBTA73Recipe implements RecipeEntrypoint {
 				"L L",
 				"H H")
 			.addInput('H', ingotHlifintiteIngot)
-			.addInput('L', Items.LEATHER)
+			.addInput('L', reinforcedLeather)
 			.create("hlifintite_leggings", pantsHlifintite);
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
@@ -616,6 +659,101 @@ public class TerraponBTA73Recipe implements RecipeEntrypoint {
 			.addInput('H', ingotSollogiumIngot)
 			.addInput('L', obsidianAlloy)
 			.create("sollogium_boots", feetsiesSollogium);
+
+// Framium
+
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"CGC",
+				"GOG",
+				"CGC")
+			.addInput('G', infusedGold)
+			.addInput('C', gaiaSteel)
+			.addInput('O', orbOfRogmal)
+			.create("raw_framium", rawFramiumRaw);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"HHH",
+				" S ",
+				" S ")
+			.addInput('H', ingotFramiumIngot)
+			.addInput('S', infusedGoldRod)
+			.create("framium_pickaxe", toolPickaxeFramium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"HH ",
+				"HS ",
+				" S ")
+			.addInput('H', ingotFramiumIngot)
+			.addInput('S', infusedGoldRod)
+			.create("framium_axe", toolAxeFramium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				" H ",
+				" S ",
+				" S ")
+			.addInput('H', ingotFramiumIngot)
+			.addInput('S', infusedGoldRod)
+			.create("framium_shovel", toolShovelFramium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"HH ",
+				" S ",
+				" S ")
+			.addInput('H', ingotFramiumIngot)
+			.addInput('S', infusedGoldRod)
+			.create("framium_hoe", toolHoeFramium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				" H ",
+				" H ",
+				" S ")
+			.addInput('H', ingotFramiumIngot)
+			.addInput('S', infusedGoldRod)
+			.create("framium_sword", toolSwordFramium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"HHH",
+				"H H",
+				"   ")
+			.addInput('H', ingotFramiumIngot)
+			.create("framium_helmet", hatFramium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"   ",
+				"HHH",
+				"H H")
+			.addInput('H', ingotFramiumIngot)
+			.create("framium_helmet", hatFramium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"H H",
+				"HHH",
+				"HHH")
+			.addInput('H', ingotFramiumIngot)
+			.addInput('L', reinforcedLeather)
+			.create("framium_chestplate", shirtFramium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"HHH",
+				"H H",
+				"H H")
+			.addInput('H', ingotFramiumIngot)
+			.create("framium_leggings", pantsFramium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"H H",
+				"H H",
+				"   ")
+			.addInput('H', ingotFramiumIngot)
+			.create("framium_boots", feetsiesFramium);
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(
+				"   ",
+				"H H",
+				"H H")
+			.addInput('H', ingotFramiumIngot)
+			.create("framium_boots", feetsiesFramium);
 
 // Eilifligronium
 
@@ -868,7 +1006,7 @@ public class TerraponBTA73Recipe implements RecipeEntrypoint {
 
 		RecipeBuilder.BlastFurnace(MOD_ID)
 			.setInput(Blocks.BLOCK_IRON)
-			.create("steel_ingot", new ItemStack(Items.INGOT_STEEL, 4));
+			.create("steel_ingot", new ItemStack(Items.INGOT_STEEL, 6));
 }
 
 	@Override

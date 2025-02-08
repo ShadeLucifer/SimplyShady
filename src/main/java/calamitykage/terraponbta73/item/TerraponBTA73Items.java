@@ -116,9 +116,27 @@ public class TerraponBTA73Items {
 	public static Item balloflava;
 	public static Item lavastar;
 	public static Item hellingot;
+	public static Item reinforcedLeather;
+	public static Item rawFramiumRaw;
+	public static Item ingotFramiumIngot;
+	public static Item toolPickaxeFramium;
+	public static Item toolAxeFramium;
+	public static Item toolSwordFramium;
+	public static Item toolShovelFramium;
+	public static Item toolHoeFramium;
+	public static Item hatFramium;
+	public static Item shirtFramium;
+	public static Item pantsFramium;
+	public static Item feetsiesFramium;
+	public static Item gaiaEssence;
+	public static Item radiantGaiaEssence;
+	public static Item infusedGold;
+	public static Item infusedGoldRod;
+	public static Item gaiaSteel;
 
 	static {
 // Basic Items used to craft the new stuff
+
  	orbOfRogmal = new ItemBuilder(MOD_ID)
 		.build(new Item("orbofrogmal", MOD_ID + (":item/orbofrogmal"), nextID()));
 	steelRod = new ItemBuilder(MOD_ID)
@@ -143,6 +161,19 @@ public class TerraponBTA73Items {
 		.build(new Item("lavastar", MOD_ID + ("item:/lavastar"), nextID()));
 	hellingot = new ItemBuilder(MOD_ID)
 		.build(new Item("hell.ingot", MOD_ID + ("item:/hell_ingot"), nextID()));
+	reinforcedLeather = new ItemBuilder(MOD_ID)
+		.build(new Item("reinforced.leather", MOD_ID + ("item:/reinforced_leather"), nextID()));
+	gaiaEssence = new ItemBuilder(MOD_ID)
+		.build(new Item("gaia.essence", MOD_ID + ("item:/gaia_essence"), nextID()));
+	radiantGaiaEssence = new ItemBuilder(MOD_ID)
+		.build(new Item("radiant.gaia.essence", MOD_ID + ("item:/radiant_gaia_essence"), nextID()));
+	gaiaSteel = new ItemBuilder(MOD_ID)
+		.build(new Item("gaia.steel", MOD_ID + ("item:/gaia_steel"), nextID()));
+	infusedGold = new ItemBuilder(MOD_ID)
+		.build(new Item("infused.gold", MOD_ID + ("item:/infused_gold"), nextID()));
+	infusedGoldRod = new ItemBuilder(MOD_ID)
+		.build(new Item("infused.gold.rod", MOD_ID + ("item:/infused_gold_rod"), nextID()));
+
 
 // Seidrilium (Magick... *snort snort*)
 
@@ -194,6 +225,31 @@ public class TerraponBTA73Items {
 		.build(new ItemArmor("einvadril.leggings", MOD_ID + (":item/einvadril_leggings"), nextID(), einvadrilArmor, 1));
 	feetsiesEinvadril = new ItemBuilder(MOD_ID)
 		.build(new ItemArmor("einvadril.boots", MOD_ID + (":item/einvadril_boots"), nextID(), einvadrilArmor, 0));
+
+// Framium
+
+	rawFramiumRaw = new ItemBuilder(MOD_ID)
+		.build(new Item("raw.framium", MOD_ID + ":item/raw_framium", nextID()));
+	ingotFramiumIngot = new ItemBuilder(MOD_ID)
+		.build(new Item("framium.ingot", MOD_ID + (":item/framium_ingot"), nextID()));
+	toolSwordFramium = new ItemBuilder(MOD_ID)
+		.build(new ItemToolSword("framium.sword", MOD_ID + (":item/framium_sword"), nextID(), framiumTool));
+	toolAxeFramium = new ItemBuilder(MOD_ID)
+		.build(new ItemToolAxe("framium.axe", MOD_ID + (":item/framium_axe"), nextID(), framiumTool));
+	toolPickaxeFramium = new ItemBuilder(MOD_ID)
+		.build(new ItemToolPickaxe("framium.pickaxe", MOD_ID + (":item/framium_pickaxe"), nextID(), framiumTool));
+	toolShovelFramium = new ItemBuilder(MOD_ID)
+		.build(new ItemToolShovel("framium.shovel", MOD_ID + (":item/framium_shovel"), nextID(), framiumTool));
+	toolHoeFramium = new ItemBuilder(MOD_ID)
+		.build(new ItemToolHoe("framium.hoe", MOD_ID + (":item/framium_hoe"), nextID(), framiumTool));
+	hatFramium = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("framium.helmet", MOD_ID + (":item/framium_helmet"), nextID(), framiumArmor, 3));
+	shirtFramium = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("framium.chestplate", MOD_ID + (":item/framium_chestplate"), nextID(), framiumArmor, 2));
+	pantsFramium = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("framium.leggings", MOD_ID + (":item/framium_leggings"), nextID(), framiumArmor, 1));
+	feetsiesFramium = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("framium.boots", MOD_ID + (":item/framium_boots"), nextID(), framiumArmor, 0));
 
 // Hlifintite (Durability is very protective)
 
