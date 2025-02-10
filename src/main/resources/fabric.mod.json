@@ -4,7 +4,7 @@
 	"version": "${version}",
 
 	"name": "TerraponBTA",
-	"description": "Adds 4 new metals and tiers for such",
+	"description": "Adds 6 new tiers (For now)",
 	"authors": [
 		"Turnip Labs for the example mod",
 		"CalamityKage, created the concept and slapped code together",

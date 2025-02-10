@@ -41,445 +41,445 @@ public class Models implements ModelEntrypoint {
 	public void initItemModels(ItemModelDispatcher dispatcher) {
 		ModelHelper.setItemModel(steelRod, () -> {
 			ItemModelStandard model = new ItemModelStandard(steelRod, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/steel_rod"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/steel_rod"));
 			return model;
 		});
 		ModelHelper.setItemModel(infusedGoldRod, () -> {
 			ItemModelStandard model = new ItemModelStandard(infusedGoldRod, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/infused_gold_rod"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/infused_gold_rod"));
 			return model;
 		});
 		ModelHelper.setItemModel(infusedGold, () -> {
 			ItemModelStandard model = new ItemModelStandard(infusedGold, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/infused_gold"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/infused_gold"));
 			return model;
 		});
 		ModelHelper.setItemModel(redstoneAlloy, () -> {
 			ItemModelStandard model = new ItemModelStandard(redstoneAlloy, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/redstone_alloy"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/redstone_alloy"));
 			return model;
 		});
 		ModelHelper.setItemModel(gaiaSteel, () -> {
 			ItemModelStandard model = new ItemModelStandard(gaiaSteel, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/gaia_steel"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/gaia_steel"));
 			return model;
 		});
 		ModelHelper.setItemModel(gaiaEssence, () -> {
 			ItemModelStandard model = new ItemModelStandard(gaiaEssence, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/gaia_essence"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/gaia_essence"));
 			return model;
 		});
 		ModelHelper.setItemModel(radiantGaiaEssence, () -> {
 			ItemModelStandard model = new ItemModelStandard(radiantGaiaEssence, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/radiant_gaia_essence"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/radiant_gaia_essence"));
 			return model;
 		});
 		ModelHelper.setItemModel(redstoneAlloyRod, () -> {
 			ItemModelStandard model = new ItemModelStandard(redstoneAlloyRod, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/redstone_alloy_rod"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/redstone_alloy_rod"));
 			return model;
 		});
 		ModelHelper.setItemModel(lapisAlloy, () -> {
 			ItemModelStandard model = new ItemModelStandard(lapisAlloy, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/lapis_alloy"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/lapis_alloy"));
 			return model;
 		});
 		ModelHelper.setItemModel(lapisAlloyRod, () -> {
 			ItemModelStandard model = new ItemModelStandard(lapisAlloyRod, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/lapis_alloy_rod"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/lapis_alloy_rod"));
 			return model;
 		});
 		ModelHelper.setItemModel(obsidianAlloyRod, () -> {
 			ItemModelStandard model = new ItemModelStandard(obsidianAlloyRod, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/obsidian_alloy_rod"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/obsidian_alloy_rod"));
 			return model;
 		});
 		ModelHelper.setItemModel(obsidianAlloy, () -> {
 			ItemModelStandard model = new ItemModelStandard(obsidianAlloy, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/obsidian_alloy"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/obsidian_alloy"));
 			return model;
 		});
 		ModelHelper.setItemModel(glowstoneAlloy, () -> {
 			ItemModelStandard model = new ItemModelStandard(glowstoneAlloy, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/glowstone_alloy"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/glowstone_alloy"));
 			return model;
 		});
 		ModelHelper.setItemModel(balloflava, () -> {
 			ItemModelStandard model = new ItemModelStandard(balloflava, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/ball_of_lava"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/ball_of_lava"));
 			return model;
 		});
 		ModelHelper.setItemModel(lavastar, () -> {
 			ItemModelStandard model = new ItemModelStandard(lavastar, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/lava_star"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/lava_star"));
 			return model;
 		});
 		ModelHelper.setItemModel(hellingot, () -> {
 			ItemModelStandard model = new ItemModelStandard(hellingot, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/hell_ingot"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/hell_ingot"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolSwordSeidrilium, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolSwordSeidrilium, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/seidrilium_sword"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/seidrilium_sword"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolAxeSeidrilium, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolAxeSeidrilium, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/seidrilium_axe"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/seidrilium_axe"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolShovelSeidrilium, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolShovelSeidrilium, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/seidrilium_shovel"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/seidrilium_shovel"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolPickaxeSeidrilium, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolPickaxeSeidrilium, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/seidrilium_pickaxe"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/seidrilium_pickaxe"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolHoeSeidrilium, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolHoeSeidrilium, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/seidrilium_hoe"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/seidrilium_hoe"));
 			return model;
 		});
 		ModelHelper.setItemModel(rawSeidriliumRaw, () -> {
 			ItemModelStandard model = new ItemModelStandard(rawSeidriliumRaw, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/raw_seidrilium"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/raw_seidrilium"));
 			return model;
 		});
 		ModelHelper.setItemModel(ingotSeidriliumIngot, () -> {
 			ItemModelStandard model = new ItemModelStandard(ingotSeidriliumIngot, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/seidrilium_ingot"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/seidrilium_ingot"));
 			return model;
 		});
 		ModelHelper.setItemModel(hatSeidrilium, () -> {
 			ItemModelStandard model = new ItemModelStandard(hatSeidrilium, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/seidrilium_helmet"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/seidrilium_helmet"));
 			return model;
 		});
 		ModelHelper.setItemModel(shirtSeidrilium, () -> {
 			ItemModelStandard model = new ItemModelStandard(shirtSeidrilium, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/seidrilium_chestplate"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/seidrilium_chestplate"));
 			return model;
 		});
 		ModelHelper.setItemModel(pantsSeidrilium, () -> {
 			ItemModelStandard model = new ItemModelStandard(pantsSeidrilium, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/seidrilium_leggings"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/seidrilium_leggings"));
 			return model;
 		});
 		ModelHelper.setItemModel(feetsiesSeidrilium, () -> {
 			ItemModelStandard model = new ItemModelStandard(feetsiesSeidrilium, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/seidrilium_boots"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/seidrilium_boots"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolSwordFramium, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolSwordFramium, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/framium_sword"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/framium_sword"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolAxeFramium, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolAxeFramium, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/framium_axe"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/framium_axe"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolShovelFramium, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolShovelFramium, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/framium_shovel"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/framium_shovel"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolPickaxeFramium, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolPickaxeFramium, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/framium_pickaxe"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/framium_pickaxe"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolHoeFramium, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolHoeFramium, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/framium_hoe"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/framium_hoe"));
 			return model;
 		});
 		ModelHelper.setItemModel(rawFramiumRaw, () -> {
 			ItemModelStandard model = new ItemModelStandard(rawFramiumRaw, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/raw_framium"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/raw_framium"));
 			return model;
 		});
 		ModelHelper.setItemModel(ingotFramiumIngot, () -> {
 			ItemModelStandard model = new ItemModelStandard(ingotFramiumIngot, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/framium_ingot"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/framium_ingot"));
 			return model;
 		});
 			ModelHelper.setItemModel(hatFramium, () -> {
 			ItemModelStandard model = new ItemModelStandard(hatFramium, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/framium_helmet"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/framium_helmet"));
 			return model;
 		});
 		ModelHelper.setItemModel(shirtFramium, () -> {
 			ItemModelStandard model = new ItemModelStandard(shirtFramium, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/framium_chestplate"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/framium_chestplate"));
 			return model;
 		});
 		ModelHelper.setItemModel(pantsFramium, () -> {
 			ItemModelStandard model = new ItemModelStandard(pantsFramium, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/framium_leggings"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/framium_leggings"));
 			return model;
 		});
 		ModelHelper.setItemModel(feetsiesFramium, () -> {
 			ItemModelStandard model = new ItemModelStandard(feetsiesFramium, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/framium_boots"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/framium_boots"));
 			return model;
 
 		});
 		ModelHelper.setItemModel(toolSwordSollogium, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolSwordSollogium, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/sollogium_sword"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/sollogium_sword"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolAxeSollogium, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolAxeSollogium, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/sollogium_axe"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/sollogium_axe"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolShovelSollogium, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolShovelSollogium, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/sollogium_shovel"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/sollogium_shovel"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolPickaxeSollogium, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolPickaxeSollogium, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/sollogium_pickaxe"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/sollogium_pickaxe"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolHoeSollogium, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolHoeSollogium, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/sollogium_hoe"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/sollogium_hoe"));
 			return model;
 		});
 		ModelHelper.setItemModel(rawSollogiumRaw, () -> {
 			ItemModelStandard model = new ItemModelStandard(rawSollogiumRaw, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/raw_sollogium"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/raw_sollogium"));
 			return model;
 		});
 		ModelHelper.setItemModel(ingotSollogiumIngot, () -> {
 			ItemModelStandard model = new ItemModelStandard(ingotSollogiumIngot, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/sollogium_ingot"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/sollogium_ingot"));
 			return model;
 		});
 		ModelHelper.setItemModel(hatSollogium, () -> {
 			ItemModelStandard model = new ItemModelStandard(hatSollogium, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/sollogium_helmet"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/sollogium_helmet"));
 			return model;
 		});
 		ModelHelper.setItemModel(shirtSollogium, () -> {
 			ItemModelStandard model = new ItemModelStandard(shirtSollogium, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/sollogium_chestplate"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/sollogium_chestplate"));
 			return model;
 		});
 		ModelHelper.setItemModel(pantsSollogium, () -> {
 			ItemModelStandard model = new ItemModelStandard(pantsSollogium, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/sollogium_leggings"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/sollogium_leggings"));
 			return model;
 		});
 		ModelHelper.setItemModel(feetsiesSollogium, () -> {
 			ItemModelStandard model = new ItemModelStandard(feetsiesSollogium, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/sollogium_boots"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/sollogium_boots"));
 			return model;
 		});
 
 		ModelHelper.setItemModel(loptFuel, () -> {
 			ItemModelStandard model = new ItemModelStandard(loptFuel, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/lopt_fuel"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/lopt_fuel"));
 			return model;
 		});
 		ModelHelper.setItemModel(reinforcedLeather, () -> {
 			ItemModelStandard model = new ItemModelStandard(reinforcedLeather, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/reinforced_leather"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/reinforced_leather"));
 			return model;
 		});
 		ModelHelper.setItemModel(orbOfRogmal, () -> {
 			ItemModelStandard model = new ItemModelStandard(orbOfRogmal, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/orbofrogmal"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/orbofrogmal"));
 			return model;
 		});
 
 
 		ModelHelper.setItemModel(toolSwordEinvadril, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolSwordEinvadril, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/einvadril_sword"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/einvadril_sword"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolAxeEinvadril, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolAxeEinvadril, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/einvadril_axe"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/einvadril_axe"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolShovelEinvadril, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolShovelEinvadril, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/einvadril_shovel"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/einvadril_shovel"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolPickaxeEinvadril, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolPickaxeEinvadril, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/einvadril_pickaxe"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/einvadril_pickaxe"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolHoeEinvadril, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolHoeEinvadril, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/einvadril_hoe"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/einvadril_hoe"));
 			return model;
 		});
 		ModelHelper.setItemModel(rawEinvadrilRaw, () -> {
 			ItemModelStandard model = new ItemModelStandard(rawEinvadrilRaw, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/raw_einvadril"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/raw_einvadril"));
 			return model;
 		});
 		ModelHelper.setItemModel(ingotEinvadrilIngot, () -> {
 			ItemModelStandard model = new ItemModelStandard(ingotEinvadrilIngot, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/einvadril_ingot"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/einvadril_ingot"));
 			return model;
 		});
 		ModelHelper.setItemModel(hatEinvadril, () -> {
 			ItemModelStandard model = new ItemModelStandard(hatEinvadril, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/einvadril_helmet"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/einvadril_helmet"));
 			return model;
 		});
 		ModelHelper.setItemModel(hatEinvadril, () -> {
 			ItemModelStandard model = new ItemModelStandard(hatEinvadril, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/einvadril_helmet"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/einvadril_helmet"));
 			return model;
 		});
 		ModelHelper.setItemModel(shirtEinvadril, () -> {
 			ItemModelStandard model = new ItemModelStandard(shirtEinvadril, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/einvadril_chestplate"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/einvadril_chestplate"));
 			return model;
 		});
 		ModelHelper.setItemModel(pantsEinvadril, () -> {
 			ItemModelStandard model = new ItemModelStandard(pantsEinvadril, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/einvadril_leggings"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/einvadril_leggings"));
 			return model;
 		});
 		ModelHelper.setItemModel(feetsiesEinvadril, () -> {
 			ItemModelStandard model = new ItemModelStandard(feetsiesEinvadril, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/einvadril_boots"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/einvadril_boots"));
 			return model;
 		});
 
 
 		ModelHelper.setItemModel(toolSwordHlifintite, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolSwordHlifintite, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/hlifintite_sword"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/hlifintite_sword"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolAxeHlifintite, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolAxeHlifintite, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/hlifintite_axe"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/hlifintite_axe"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolShovelHlifintite, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolShovelHlifintite, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/hlifintite_shovel"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/hlifintite_shovel"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolPickaxeHlifintite, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolPickaxeHlifintite, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/hlifintite_pickaxe"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/hlifintite_pickaxe"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolHoeHlifintite, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolHoeHlifintite, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/hlifintite_hoe"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/hlifintite_hoe"));
 			return model;
 		});
 		ModelHelper.setItemModel(rawHlifintiteRaw, () -> {
 			ItemModelStandard model = new ItemModelStandard(rawHlifintiteRaw, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/raw_hlifintite"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/raw_hlifintite"));
 			return model;
 		});
 		ModelHelper.setItemModel(ingotHlifintiteIngot, () -> {
 			ItemModelStandard model = new ItemModelStandard(ingotHlifintiteIngot, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/hlifintite_ingot"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/hlifintite_ingot"));
 			return model;
 		});
 		ModelHelper.setItemModel(hatHlifintite, () -> {
 			ItemModelStandard model = new ItemModelStandard(hatHlifintite, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/hlifintite_helmet"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/hlifintite_helmet"));
 			return model;
 		});
 		ModelHelper.setItemModel(hatHlifintite, () -> {
 			ItemModelStandard model = new ItemModelStandard(hatHlifintite, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/hlifintite_helmet"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/hlifintite_helmet"));
 			return model;
 		});
 		ModelHelper.setItemModel(shirtHlifintite, () -> {
 			ItemModelStandard model = new ItemModelStandard(shirtHlifintite, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/hlifintite_chestplate"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/hlifintite_chestplate"));
 			return model;
 		});
 		ModelHelper.setItemModel(pantsHlifintite, () -> {
 			ItemModelStandard model = new ItemModelStandard(pantsHlifintite, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/hlifintite_leggings"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/hlifintite_leggings"));
 			return model;
 		});
 		ModelHelper.setItemModel(feetsiesHlifintite, () -> {
 			ItemModelStandard model = new ItemModelStandard(feetsiesHlifintite, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/hlifintite_boots"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/hlifintite_boots"));
 			return model;
 		});
 
 
 		ModelHelper.setItemModel(toolSwordEilifligronium, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolSwordEilifligronium, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/eilifligronium_sword"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/eilifligronium_sword"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolAxeEilifligronium, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolAxeEilifligronium, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/eilifligronium_axe"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/eilifligronium_axe"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolShovelEilifligronium, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolShovelEilifligronium, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/eilifligronium_shovel"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/eilifligronium_shovel"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolPickaxeEilifligronium, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolPickaxeEilifligronium, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/eilifligronium_pickaxe"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/eilifligronium_pickaxe"));
 			return model;
 		});
 		ModelHelper.setItemModel(toolHoeEilifligronium, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolHoeEilifligronium, MOD_ID).setFull3D();
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/eilifligronium_hoe"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/eilifligronium_hoe"));
 			return model;
 		});
 		ModelHelper.setItemModel(ingotEilifligroniumIngot, () -> {
 			ItemModelStandard model = new ItemModelStandard(ingotEilifligroniumIngot, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/eilifligronium_ingot"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/eilifligronium_ingot"));
 			return model;
 		});
 		ModelHelper.setItemModel(hatEilifligronium, () -> {
 			ItemModelStandard model = new ItemModelStandard(hatEilifligronium, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/eilifligronium_helmet"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/eilifligronium_helmet"));
 			return model;
 		});
 		ModelHelper.setItemModel(hatEilifligronium, () -> {
 			ItemModelStandard model = new ItemModelStandard(hatEilifligronium, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/eilifligronium_helmet"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/eilifligronium_helmet"));
 			return model;
 		});
 		ModelHelper.setItemModel(shirtEilifligronium, () -> {
 			ItemModelStandard model = new ItemModelStandard(shirtEilifligronium, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/eilifligronium_chestplate"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/eilifligronium_chestplate"));
 			return model;
 		});
 		ModelHelper.setItemModel(pantsEilifligronium, () -> {
 			ItemModelStandard model = new ItemModelStandard(pantsEilifligronium, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/eilifligronium_leggings"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/eilifligronium_leggings"));
 			return model;
 		});
 		ModelHelper.setItemModel(feetsiesEilifligronium, () -> {
 			ItemModelStandard model = new ItemModelStandard(feetsiesEilifligronium, MOD_ID);
-			model.icon = TextureRegistry.getTexture(new NamespaceID(MOD_ID, "item/eilifligronium_boots"));
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/eilifligronium_boots"));
 			return model;
 		});
 

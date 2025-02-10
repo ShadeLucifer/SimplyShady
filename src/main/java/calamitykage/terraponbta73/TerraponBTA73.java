@@ -27,11 +27,10 @@ import net.minecraft.core.util.collection.NamespaceID;
 import net.minecraft.core.util.helper.Side;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import turniplabs.halplibe.helper.BlockBuilder;
-import turniplabs.halplibe.helper.ItemBuilder;
-import turniplabs.halplibe.helper.ModelHelper;
-import turniplabs.halplibe.helper.RecipeBuilder;
+import turniplabs.halplibe.helper.*;
 import turniplabs.halplibe.util.*;
+
+import java.util.Properties;
 
 import static calamitykage.terraponbta73.blocks.TerraponBTA73Blocks.*;
 import static calamitykage.terraponbta73.item.TerraponBTA73Items.*;
@@ -44,7 +43,6 @@ public class TerraponBTA73 implements ModInitializer, GameStartEntrypoint, Clien
 	private static int nextID() {
 		return startingID++;
 	}
-
 
 
 	@Override
