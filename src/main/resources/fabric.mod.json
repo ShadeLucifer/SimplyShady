@@ -42,7 +42,7 @@
 			"calamitykage.terraponbta73.TerraponBTA73"
 		],
 		"onInitialize": [
-			"calamitykage.terraponbta73.blocks.TerraponBTA73Blocks"
+			"calamitykage.terraponbta73.TerraponBTA73"
 		]
 
 	},

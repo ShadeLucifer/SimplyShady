@@ -21,7 +21,7 @@ import turniplabs.halplibe.util.ConfigHandler;
 import static calamitykage.terraponbta73.TerraponBTA73.MOD_ID;
 import java.util.Properties;
 
-public class TerraponBTA73Items implements ModInitializer {
+public class TerraponBTA73Items {
 	private static int startingID = TerraponBTA73Config.CFG.getInt("IDs.startingItemID");
 	public static final ConfigHandler config;
 
@@ -56,9 +56,7 @@ public class TerraponBTA73Items implements ModInitializer {
 		config = new ConfigHandler(MOD_ID, prop);
 	}
 
-
-
-	private void initializeArmorMaterials() {
+	public static void initializeArmorMaterials() {
 		seidriliumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "seidrilium", config.getInt("durability.seidriliumArmor"), 65f, 65f, 65f, 65f);
 		sollogiumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "sollogium", config.getInt("durability.sollogiumArmor"), 55f, 55f, 95f, 55f);
 		framiumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "framium", config.getInt("durability.framiumArmor"), 65f, 65f, 65f, 65f);
@@ -71,8 +69,7 @@ public class TerraponBTA73Items implements ModInitializer {
 		eilifligroniumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "eilifligronium", config.getInt("durability.eilifligroniumArmor"), 100f, 100f, 100f, 100f);
 	}
 
-
-	private void initializeToolMaterials() {
+	public static void initializeToolMaterials() {
 		seidriliumTool = new ToolMaterial().setDurability(config.getInt("durability.seidriliumTool")).setEfficiency(22.0f, 26.0f).setMiningLevel(8).setDamage(10);
 		sollogiumTool = new ToolMaterial().setDurability(config.getInt("durability.sollogiumTool")).setEfficiency(17.0f, 15.0f).setMiningLevel(8).setDamage(10);
 		framiumTool = new ToolMaterial().setDurability(config.getInt("durability.framiumTool")).setEfficiency(17.0f, 15.0f).setMiningLevel(8).setDamage(9);
@@ -84,6 +81,7 @@ public class TerraponBTA73Items implements ModInitializer {
 		modrastiriumTool = new ToolMaterial().setDurability(config.getInt("durability.modrastiriumTool")).setEfficiency(10.0f, 10.0f).setMiningLevel(13).setDamage(7);
 		eilifligroniumTool = new ToolMaterial().setDurability(config.getInt("durability.eilifligroniumTool")).setEfficiency(25.0f, 30.0f).setMiningLevel(25).setDamage(25);
 	}
+
 	public static ArmorMaterial seidriliumArmor;
 	public static ArmorMaterial sollogiumArmor;
 	public static ArmorMaterial framiumArmor;
@@ -191,9 +189,8 @@ public class TerraponBTA73Items implements ModInitializer {
 	public static Item infusedGoldRod;
 	public static Item gaiaSteel;
 
+	public static void initializeItems() {
 
-
-	private void initializeItems() {
 // Basic Items used to craft the new stuff
 
  	orbOfRogmal = new ItemBuilder(MOD_ID)
@@ -285,8 +282,8 @@ public class TerraponBTA73Items implements ModInitializer {
 	feetsiesEinvadril = new ItemBuilder(MOD_ID)
 		.build(new ItemArmor("einvadril.boots", MOD_ID + (":item/einvadril_boots"), nextID(), einvadrilArmor, 0));
 
-// Framium
-
+// Framium (Now there's two of you?!)
+		/**
 	rawFramiumRaw = new ItemBuilder(MOD_ID)
 		.build(new Item("raw.framium", MOD_ID + ":item/raw_framium", nextID()));
 	ingotFramiumIngot = new ItemBuilder(MOD_ID)
@@ -309,6 +306,7 @@ public class TerraponBTA73Items implements ModInitializer {
 		.build(new ItemArmor("framium.leggings", MOD_ID + (":item/framium_leggings"), nextID(), framiumArmor, 1));
 	feetsiesFramium = new ItemBuilder(MOD_ID)
 		.build(new ItemArmor("framium.boots", MOD_ID + (":item/framium_boots"), nextID(), framiumArmor, 0));
+*/
 
 // Hlifintite (Durability is very protective)
 
@@ -360,7 +358,7 @@ public class TerraponBTA73Items implements ModInitializer {
 	feetsiesSollogium = new ItemBuilder(MOD_ID)
 		.build(new ItemArmor("sollogium.boots", MOD_ID + (":item/sollogium_boots"), nextID(), sollogiumArmor, 0));
 
-
+// This is for any unique items made purely with the modded stuff I have added.
 
 	loptFuel = new ItemBuilder(MOD_ID)
 		.build(new Item("lopt.fuel", MOD_ID + (":item/lopt_fuel"), nextID()));
@@ -391,10 +389,4 @@ public class TerraponBTA73Items implements ModInitializer {
 }
 
 
-	@Override
-	public void onInitialize() {
-		initializeArmorMaterials();
-		initializeToolMaterials();
-		initializeItems();
-	}
 }
