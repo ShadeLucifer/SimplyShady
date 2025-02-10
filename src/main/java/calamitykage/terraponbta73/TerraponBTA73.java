@@ -70,6 +70,7 @@ public class TerraponBTA73 implements ModInitializer, GameStartEntrypoint, Clien
 	@Override
 	public void onInitialize() {
 		TerraponBTA73Blocks.initBlocks();
+		TerraponBTA73Items.
 
 	}
 
