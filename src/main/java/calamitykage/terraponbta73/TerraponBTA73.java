@@ -10,11 +10,6 @@ import turniplabs.halplibe.util.*;
 public class TerraponBTA73 implements ModInitializer, GameStartEntrypoint, ClientStartEntrypoint {
 	public static final String MOD_ID = "terraponbta73";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-	public static TomlConfigHandler tomlConfig;
-	private static int startingID = TerraponBTA73Config.CFG.getInt("IDs.startingBlockID");
-	private static int nextID() {
-		return startingID++;
-	}
 
 
 	@Override
@@ -45,7 +40,6 @@ public class TerraponBTA73 implements ModInitializer, GameStartEntrypoint, Clien
 		TerraponBTA73Items.initializeArmorMaterials();
 		TerraponBTA73Items.initializeToolMaterials();
 		TerraponBTA73Items.initializeItems();
-
 	}
 
 }

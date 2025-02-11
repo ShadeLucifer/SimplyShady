@@ -661,7 +661,7 @@ public class TerraponBTA73Recipe implements RecipeEntrypoint {
 			.create("sollogium_boots", feetsiesSollogium);
 
 // Framium
-
+/*
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
 				"CGC",
@@ -754,6 +754,7 @@ public class TerraponBTA73Recipe implements RecipeEntrypoint {
 				"H H")
 			.addInput('H', ingotFramiumIngot)
 			.create("framium_boots", feetsiesFramium);
+*/
 
 // Eilifligronium
 

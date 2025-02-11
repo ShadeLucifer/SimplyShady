@@ -4,6 +4,9 @@
   "package": "calamitykage.terraponbta73.mixins",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "ItemEntityMixin",
+    "SollogiumPlayerMixin",
+    "EilifligroniumPlayerMixin"
   ],
   "client": [
   ],

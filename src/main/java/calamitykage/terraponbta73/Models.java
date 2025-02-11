@@ -174,6 +174,12 @@ public class Models implements ModelEntrypoint {
 			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/seidrilium_boots"));
 			return model;
 		});
+		/*
+		ModelHelper.setItemModel(ingotFramiumIngot, () -> {
+			ItemModelStandard model = new ItemModelStandard(ingotFramiumIngot, MOD_ID);
+			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/framium_ingot"));
+			return model;
+		});
 		ModelHelper.setItemModel(toolSwordFramium, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolSwordFramium, MOD_ID).setFull3D();
 			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/framium_sword"));
@@ -204,12 +210,7 @@ public class Models implements ModelEntrypoint {
 			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/raw_framium"));
 			return model;
 		});
-		ModelHelper.setItemModel(ingotFramiumIngot, () -> {
-			ItemModelStandard model = new ItemModelStandard(ingotFramiumIngot, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/framium_ingot"));
-			return model;
-		});
-			ModelHelper.setItemModel(hatFramium, () -> {
+		ModelHelper.setItemModel(hatFramium, () -> {
 			ItemModelStandard model = new ItemModelStandard(hatFramium, MOD_ID);
 			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/framium_helmet"));
 			return model;
@@ -228,8 +229,11 @@ public class Models implements ModelEntrypoint {
 			ItemModelStandard model = new ItemModelStandard(feetsiesFramium, MOD_ID);
 			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/framium_boots"));
 			return model;
-
 		});
+		*/
+
+
+
 		ModelHelper.setItemModel(toolSwordSollogium, () -> {
 			ItemModelStandard model = new ItemModelStandard(toolSwordSollogium, MOD_ID).setFull3D();
 			model.icon = TextureRegistry.getTexture(NamespaceID.getPermanent(MOD_ID, "item/sollogium_sword"));
