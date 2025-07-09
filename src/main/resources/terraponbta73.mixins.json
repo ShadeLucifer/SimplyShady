@@ -4,9 +4,12 @@
   "package": "calamitykage.terraponbta73.mixins",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "EilifligroniumPlayerMixin",
     "ItemEntityMixin",
     "SollogiumPlayerMixin",
-    "EilifligroniumPlayerMixin"
+    "entity.MobMixin",
+    "accessor.ItemToolSwordAccessor",
+    "BlockLogicMixin"
   ],
   "client": [
   ],

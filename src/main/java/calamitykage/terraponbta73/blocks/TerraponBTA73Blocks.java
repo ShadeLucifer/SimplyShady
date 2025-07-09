@@ -1,10 +1,10 @@
 package calamitykage.terraponbta73.blocks;
 
 import calamitykage.terraponbta73.TerraponBTA73Config;
-import net.minecraft.core.block.Block;
-import net.minecraft.core.block.BlockLogic;
+import net.minecraft.core.block.*;
 import net.minecraft.core.block.material.Material;
 import net.minecraft.core.block.tag.BlockTags;
+import net.minecraft.core.data.tag.Tag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import turniplabs.halplibe.helper.BlockBuilder;
@@ -15,6 +15,7 @@ public class TerraponBTA73Blocks {
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 	public static TomlConfigHandler tomlConfig;
 	private static int startingID = TerraponBTA73Config.CFG.getInt("IDs.startingBlockID");
+
 	private static int nextID() {
 		return startingID++;
 	}
@@ -29,7 +30,7 @@ public class TerraponBTA73Blocks {
 	public static Block<?> eilifligrLamp;
 
 
-public static void initBlocks() {
+	public static void initBlocks() {
 		BlockBuilder seidrilium_builder = new BlockBuilder(MOD_ID)
 			.setHardness(6.0f)
 			.setResistance(30.0f)
@@ -85,4 +86,27 @@ public static void initBlocks() {
 			.build("eilifligrlamp", "block/eilifligr_lamp", nextID(), b -> new BlockLogic(b, Material.metal));
 	}
 
+
+	public static Tag<Block<?>> FORCE_FORTUNE = Tag.of("terraponbta73$force_enable_fortune");
+	public static Tag<Block<?>> FORCE_NO_FORTUNE = Tag.of("terraponbta73$force_disable_fortune");
+
+	public static boolean canBeFortuned(Block block) {
+		if (block.hasTag(FORCE_FORTUNE)) return true;
+		if (block.hasTag(FORCE_NO_FORTUNE)) return false;
+		if (Block.hasLogicClass(block, BlockLogicLeavesBase.class)) return true;
+		if (Block.hasLogicClass(block, BlockLogicOreCoal.class)) return true;
+		if (Block.hasLogicClass(block, BlockLogicOreDiamond.class)) return true;
+		if (Block.hasLogicClass(block, BlockLogicOreGold.class)) return true;
+		if (Block.hasLogicClass(block, BlockLogicOreIron.class)) return true;
+		if (Block.hasLogicClass(block, BlockLogicOreLapis.class)) return true;
+		if (Block.hasLogicClass(block, BlockLogicOreNetherCoal.class)) return true;
+		if (Block.hasLogicClass(block, BlockLogicOreRedstone.class)) return true;
+		if (Block.hasLogicClass(block, BlockLogicLog.class)) return true;
+		if (Block.hasLogicClass(block, BlockLogicTallGrass.class)) return true;
+		return false;
+
+	}
+	public static void init() {
+
+	}
 }

@@ -5,5 +5,6 @@ import net.minecraft.core.item.Item;
 
 public abstract class ModItemTags {
 	public static Tag<Item> fireImmuneAsEntity = Tag.of("item_entity_fireimmune");
+	public static Tag<Item> mobIgnoresEntity = Tag.of("item_entity_mobignore");
 
 }

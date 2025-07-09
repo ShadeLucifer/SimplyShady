@@ -1,7 +1,6 @@
 package calamitykage.terraponbta73.item;
 
 import calamitykage.terraponbta73.TerraponBTA73Config;
-import net.fabricmc.api.ModInitializer;
 import net.minecraft.client.render.item.model.ItemModelStandard;
 import net.minecraft.client.render.texture.stitcher.TextureRegistry;
 import net.minecraft.core.block.Block;
@@ -41,7 +40,7 @@ public class TerraponBTA73Items {
 		prop.setProperty("durability.hlifintiteArmor", "12862");
 		prop.setProperty("durability.ginnungienArmor", "13142");
 		prop.setProperty("durability.modrastiriumArmor", "14644");
-		prop.setProperty("durability.eilifligroniumArmor", "999999999");
+		prop.setProperty("durability.eilifligroniumArmor", "-1");
 
 		prop.setProperty("durability.seidriliumTool", "8168");
 		prop.setProperty("durability.sollogiumTool", "8168");
@@ -52,7 +51,7 @@ public class TerraponBTA73Items {
 		prop.setProperty("durability.hlifintiteTool", "12862");
 		prop.setProperty("durability.ginnungienTool", "13142");
 		prop.setProperty("durability.modrastiriumTool", "14644");
-		prop.setProperty("durability.eilifligroniumTool", "999999999");
+		prop.setProperty("durability.eilifligroniumTool", "-1");
 
 		config = new ConfigHandler(MOD_ID, prop);
 	}
@@ -163,6 +162,50 @@ public class TerraponBTA73Items {
 	public static Item infusedGold;
 	public static Item infusedGoldRod;
 	public static Item gaiaSteel;
+	public static Item rawModrastiriumRaw;
+	public static Item ingotModrastiriumIngot;
+	public static Item toolPickaxeModrastirium;
+	public static Item toolAxeModrastirium;
+	public static Item toolSwordModrastirium;
+	public static Item toolShovelModrastirium;
+	public static Item toolHoeModrastirium;
+	public static Item hatModrastirium;
+	public static Item shirtModrastirium;
+	public static Item pantsModrastirium;
+	public static Item feetsiesModrastirium;
+	public static Item rawMattriteRaw;
+	public static Item ingotMattriteIngot;
+	public static Item toolPickaxeMattrite;
+	public static Item toolAxeMattrite;
+	public static Item toolSwordMattrite;
+	public static Item toolShovelMattrite;
+	public static Item toolHoeMattrite;
+	public static Item hatMattrite;
+	public static Item shirtMattrite;
+	public static Item pantsMattrite;
+	public static Item feetsiesMattrite;
+	public static Item rawGinnungienRaw;
+	public static Item ingotGinnungienIngot;
+	public static Item toolPickaxeGinnungien;
+	public static Item toolAxeGinnungien;
+	public static Item toolSwordGinnungien;
+	public static Item toolShovelGinnungien;
+	public static Item toolHoeGinnungien;
+	public static Item hatGinnungien;
+	public static Item shirtGinnungien;
+	public static Item pantsGinnungien;
+	public static Item feetsiesGinnungien;
+	public static Item rawFeigrilRaw;
+	public static Item ingotFeigrilIngot;
+	public static Item toolPickaxeFeigril;
+	public static Item toolAxeFeigril;
+	public static Item toolSwordFeigril;
+	public static Item toolShovelFeigril;
+	public static Item toolHoeFeigril;
+	public static Item hatFeigril;
+	public static Item shirtFeigril;
+	public static Item pantsFeigril;
+	public static Item feetsiesFeigril;
 
 public static void initializeArmorMaterials() {
 		seidriliumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "seidrilium", config.getInt("durability.seidriliumArmor"), 65f, 65f, 65f, 65f);
@@ -259,34 +302,8 @@ public static void initializeItems() {
 	feetsiesSeidrilium = new ItemBuilder(MOD_ID)
 		.build(new ItemArmor("seidrilium.boots", MOD_ID + (":item/seidrilium_boots"), nextID(), seidriliumArmor, 0));
 
-
-// Einvadril (EINVADRIL (HULK) STRONGEST THERE IS!)
-
-	rawEinvadrilRaw = new ItemBuilder(MOD_ID)
-		.build(new Item("raw.einvadril", MOD_ID + ":item/raw_Einvadril", nextID()));
-	ingotEinvadrilIngot = new ItemBuilder(MOD_ID)
-		.build(new Item("einvadril.ingot", MOD_ID + (":item/einvadril_ingot"), nextID()));
-	toolSwordEinvadril = new ItemBuilder(MOD_ID)
-		.build(new ItemToolSword("einvadril.sword", MOD_ID + (":item/einvadril_sword"), nextID(), einvadrilTool));
-	toolAxeEinvadril = new ItemBuilder(MOD_ID)
-		.build(new ItemToolAxe("einvadril.axe", MOD_ID + (":item/einvadril_axe"), nextID(), einvadrilTool));
-	toolPickaxeEinvadril = new ItemBuilder(MOD_ID)
-		.build(new ItemToolPickaxe("einvadril.pickaxe", MOD_ID + (":item/einvadril_pickaxe"), nextID(), einvadrilTool));
-	toolShovelEinvadril = new ItemBuilder(MOD_ID)
-		.build(new ItemToolShovel("einvadril.shovel", MOD_ID + (":item/einvadril_shovel"), nextID(), einvadrilTool));
-	toolHoeEinvadril = new ItemBuilder(MOD_ID)
-		.build(new ItemToolHoe("einvadril.hoe", MOD_ID + (":item/einvadril_hoe"), nextID(), einvadrilTool));
-	hatEinvadril = new ItemBuilder(MOD_ID)
-		.build(new ItemArmor("einvadril.helmet", MOD_ID + (":item/einvadril_helmet"), nextID(), einvadrilArmor, 3));
-	shirtEinvadril = new ItemBuilder(MOD_ID)
-		.build(new ItemArmor("einvadril.chestplate", MOD_ID + (":item/einvadril_chestplate"), nextID(), einvadrilArmor, 2));
-	pantsEinvadril = new ItemBuilder(MOD_ID)
-		.build(new ItemArmor("einvadril.leggings", MOD_ID + (":item/einvadril_leggings"), nextID(), einvadrilArmor, 1));
-	feetsiesEinvadril = new ItemBuilder(MOD_ID)
-		.build(new ItemArmor("einvadril.boots", MOD_ID + (":item/einvadril_boots"), nextID(), einvadrilArmor, 0));
-
 // Framium (Now there's two of you?!)
-		/**
+
 	rawFramiumRaw = new ItemBuilder(MOD_ID)
 		.build(new Item("raw.framium", MOD_ID + ":item/raw_framium", nextID()));
 	ingotFramiumIngot = new ItemBuilder(MOD_ID)
@@ -309,32 +326,6 @@ public static void initializeItems() {
 		.build(new ItemArmor("framium.leggings", MOD_ID + (":item/framium_leggings"), nextID(), framiumArmor, 1));
 	feetsiesFramium = new ItemBuilder(MOD_ID)
 		.build(new ItemArmor("framium.boots", MOD_ID + (":item/framium_boots"), nextID(), framiumArmor, 0));
-*/
-
-// Hlifintite (Durability is very protective)
-
-	rawHlifintiteRaw = new ItemBuilder(MOD_ID)
-		.build(new Item("raw.hlifintite", MOD_ID + ":item/raw_Hlifintite", nextID()));
-	ingotHlifintiteIngot = new ItemBuilder(MOD_ID)
-		.build(new Item("hlifintite.ingot", MOD_ID + (":item/hlifintite_ingot"), nextID()));
-	toolSwordHlifintite = new ItemBuilder(MOD_ID)
-		.build(new ItemToolSword("hlifintite.sword", MOD_ID + (":item/hlifintite_sword"), nextID(), hlifintiteTool));
-	toolAxeHlifintite = new ItemBuilder(MOD_ID)
-		.build(new ItemToolAxe("hlifintite.axe", MOD_ID + (":item/hlifintite_axe"), nextID(), hlifintiteTool));
-	toolPickaxeHlifintite = new ItemBuilder(MOD_ID)
-		.build(new ItemToolPickaxe("hlifintite.pickaxe", MOD_ID + (":item/hlifintite_pickaxe"), nextID(), hlifintiteTool));
-	toolShovelHlifintite = new ItemBuilder(MOD_ID)
-		.build(new ItemToolShovel("hlifintite.shovel", MOD_ID + (":item/hlifintite_shovel"), nextID(), hlifintiteTool));
-	toolHoeHlifintite = new ItemBuilder(MOD_ID)
-		.build(new ItemToolHoe("hlifintite.hoe", MOD_ID + (":item/hlifintite_hoe"), nextID(), hlifintiteTool));
-	hatHlifintite = new ItemBuilder(MOD_ID)
-		.build(new ItemArmor("hlifintite.helmet", MOD_ID + (":item/hlifintite_helmet"), nextID(), hlifintiteArmor, 3));
-	shirtHlifintite = new ItemBuilder(MOD_ID)
-		.build(new ItemArmor("hlifintite.chestplate", MOD_ID + (":item/hlifintite_chestplate"), nextID(), hlifintiteArmor, 2));
-	pantsHlifintite = new ItemBuilder(MOD_ID)
-		.build(new ItemArmor("hlifintite.leggings", MOD_ID + (":item/hlifintite_leggings"), nextID(), hlifintiteArmor, 1));
-	feetsiesHlifintite = new ItemBuilder(MOD_ID)
-		.build(new ItemArmor("hlifintite.boots", MOD_ID + (":item/hlifintite_boots"), nextID(), hlifintiteArmor, 0));
 
 // Sollogium (BURN BABY BURN)
 
@@ -371,6 +362,134 @@ public static void initializeItems() {
 	feetsiesSollogium = new ItemBuilder(MOD_ID)
 		.setTags(fireImmuneAsEntity)
 		.build(new ItemArmor("sollogium.boots", MOD_ID + (":item/sollogium_boots"), nextID(), sollogiumArmor, 0));
+
+// Einvadril (EINVADRIL (HULK) STRONGEST THERE IS!)
+
+	rawEinvadrilRaw = new ItemBuilder(MOD_ID)
+		.build(new Item("raw.einvadril", MOD_ID + ":item/raw_Einvadril", nextID()));
+	ingotEinvadrilIngot = new ItemBuilder(MOD_ID)
+		.build(new Item("einvadril.ingot", MOD_ID + (":item/einvadril_ingot"), nextID()));
+	toolSwordEinvadril = new ItemBuilder(MOD_ID)
+		.build(new ItemToolSword("einvadril.sword", MOD_ID + (":item/einvadril_sword"), nextID(), einvadrilTool));
+	toolAxeEinvadril = new ItemBuilder(MOD_ID)
+		.build(new ItemToolAxe("einvadril.axe", MOD_ID + (":item/einvadril_axe"), nextID(), einvadrilTool));
+	toolPickaxeEinvadril = new ItemBuilder(MOD_ID)
+		.build(new ItemToolPickaxe("einvadril.pickaxe", MOD_ID + (":item/einvadril_pickaxe"), nextID(), einvadrilTool));
+	toolShovelEinvadril = new ItemBuilder(MOD_ID)
+		.build(new ItemToolShovel("einvadril.shovel", MOD_ID + (":item/einvadril_shovel"), nextID(), einvadrilTool));
+	toolHoeEinvadril = new ItemBuilder(MOD_ID)
+		.build(new ItemToolHoe("einvadril.hoe", MOD_ID + (":item/einvadril_hoe"), nextID(), einvadrilTool));
+	hatEinvadril = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("einvadril.helmet", MOD_ID + (":item/einvadril_helmet"), nextID(), einvadrilArmor, 3));
+	shirtEinvadril = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("einvadril.chestplate", MOD_ID + (":item/einvadril_chestplate"), nextID(), einvadrilArmor, 2));
+	pantsEinvadril = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("einvadril.leggings", MOD_ID + (":item/einvadril_leggings"), nextID(), einvadrilArmor, 1));
+	feetsiesEinvadril = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("einvadril.boots", MOD_ID + (":item/einvadril_boots"), nextID(), einvadrilArmor, 0));
+
+// Mattrite (Might of the strong)
+
+	rawMattriteRaw = new ItemBuilder(MOD_ID)
+		.build(new Item("raw.mattrite", MOD_ID + ":item/raw_mattrite", nextID()));
+	ingotMattriteIngot = new ItemBuilder(MOD_ID)
+		.build(new Item("mattrite.ingot", MOD_ID + (":item/mattrite_ingot"), nextID()));
+	toolSwordMattrite = new ItemBuilder(MOD_ID)
+		.build(new ItemToolSword("mattrite.sword", MOD_ID + (":item/mattrite_sword"), nextID(), mattriteTool));
+	toolAxeMattrite = new ItemBuilder(MOD_ID)
+		.build(new ItemToolAxe("mattrite.axe", MOD_ID + (":item/mattrite_axe"), nextID(), mattriteTool));
+	toolPickaxeMattrite = new ItemBuilder(MOD_ID)
+		.build(new ItemToolPickaxe("mattrite.pickaxe", MOD_ID + (":item/mattrite_pickaxe"), nextID(), mattriteTool));
+	toolShovelMattrite = new ItemBuilder(MOD_ID)
+		.build(new ItemToolShovel("mattrite.shovel", MOD_ID + (":item/mattrite_shovel"), nextID(), mattriteTool));
+	toolHoeMattrite = new ItemBuilder(MOD_ID)
+		.build(new ItemToolHoe("mattrite.hoe", MOD_ID + (":item/mattrite_hoe"), nextID(), mattriteTool));
+	hatMattrite = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("mattrite.helmet", MOD_ID + (":item/mattrite_helmet"), nextID(), mattriteArmor, 3));
+	shirtMattrite = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("mattrite.chestplate", MOD_ID + (":item/mattrite_chestplate"), nextID(), mattriteArmor, 2));
+	pantsMattrite = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("mattrite.leggings", MOD_ID + (":item/mattrite_leggings"), nextID(), mattriteArmor, 1));
+	feetsiesMattrite = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("mattrite.boots", MOD_ID + (":item/mattrite_boots"), nextID(), mattriteArmor, 0));
+
+// Hlifintite (Durability is very protective)
+
+	rawHlifintiteRaw = new ItemBuilder(MOD_ID)
+		.build(new Item("raw.hlifintite", MOD_ID + ":item/raw_Hlifintite", nextID()));
+	ingotHlifintiteIngot = new ItemBuilder(MOD_ID)
+		.build(new Item("hlifintite.ingot", MOD_ID + (":item/hlifintite_ingot"), nextID()));
+	toolSwordHlifintite = new ItemBuilder(MOD_ID)
+		.build(new ItemToolSword("hlifintite.sword", MOD_ID + (":item/hlifintite_sword"), nextID(), hlifintiteTool));
+	toolAxeHlifintite = new ItemBuilder(MOD_ID)
+		.build(new ItemToolAxe("hlifintite.axe", MOD_ID + (":item/hlifintite_axe"), nextID(), hlifintiteTool));
+	toolPickaxeHlifintite = new ItemBuilder(MOD_ID)
+		.build(new ItemToolPickaxe("hlifintite.pickaxe", MOD_ID + (":item/hlifintite_pickaxe"), nextID(), hlifintiteTool));
+	toolShovelHlifintite = new ItemBuilder(MOD_ID)
+		.build(new ItemToolShovel("hlifintite.shovel", MOD_ID + (":item/hlifintite_shovel"), nextID(), hlifintiteTool));
+	toolHoeHlifintite = new ItemBuilder(MOD_ID)
+		.build(new ItemToolHoe("hlifintite.hoe", MOD_ID + (":item/hlifintite_hoe"), nextID(), hlifintiteTool));
+	hatHlifintite = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("hlifintite.helmet", MOD_ID + (":item/hlifintite_helmet"), nextID(), hlifintiteArmor, 3));
+	shirtHlifintite = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("hlifintite.chestplate", MOD_ID + (":item/hlifintite_chestplate"), nextID(), hlifintiteArmor, 2));
+	pantsHlifintite = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("hlifintite.leggings", MOD_ID + (":item/hlifintite_leggings"), nextID(), hlifintiteArmor, 1));
+	feetsiesHlifintite = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("hlifintite.boots", MOD_ID + (":item/hlifintite_boots"), nextID(), hlifintiteArmor, 0));
+
+// Modrastirium (A mothers love knows no bounds)
+
+	rawModrastiriumRaw = new ItemBuilder(MOD_ID)
+		.build(new Item("raw.modrastirium", MOD_ID + ":item/raw_modrastirium", nextID()));
+	ingotModrastiriumIngot = new ItemBuilder(MOD_ID)
+		.build(new Item("modrastirium.ingot", MOD_ID + (":item/modrastirium_ingot"), nextID()));
+	toolSwordModrastirium = new ItemBuilder(MOD_ID)
+		.build(new ItemToolSword("modrastirium.sword", MOD_ID + (":item/modrastirium_sword"), nextID(), modrastiriumTool));
+	toolAxeModrastirium = new ItemBuilder(MOD_ID)
+		.build(new ItemToolAxe("modrastirium.axe", MOD_ID + (":item/modrastirium_axe"), nextID(), modrastiriumTool));
+	toolPickaxeModrastirium = new ItemBuilder(MOD_ID)
+		.build(new ItemToolPickaxe("modrastirium.pickaxe", MOD_ID + (":item/modrastirium_pickaxe"), nextID(), modrastiriumTool));
+	toolShovelModrastirium = new ItemBuilder(MOD_ID)
+		.build(new ItemToolShovel("modrastirium.shovel", MOD_ID + (":item/modrastirium_shovel"), nextID(), modrastiriumTool));
+	toolHoeModrastirium = new ItemBuilder(MOD_ID)
+		.build(new ItemToolHoe("modrastirium.hoe", MOD_ID + (":item/modrastirium_hoe"), nextID(), modrastiriumTool));
+	hatModrastirium = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("modrastirium.helmet", MOD_ID + (":item/modrastirium_helmet"), nextID(), modrastiriumArmor, 3));
+	shirtModrastirium = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("modrastirium.chestplate", MOD_ID + (":item/modrastirium_chestplate"), nextID(), modrastiriumArmor, 2));
+	pantsModrastirium = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("modrastirium.leggings", MOD_ID + (":item/modrastirium_leggings"), nextID(), modrastiriumArmor, 1));
+	feetsiesModrastirium = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("modrastirium.boots", MOD_ID + (":item/modrastirium_boots"), nextID(), modrastiriumArmor, 0));
+
+
+// Ginnungien (Space does not control you)
+
+	rawGinnungienRaw = new ItemBuilder(MOD_ID)
+		.build(new Item("raw.ginnungien", MOD_ID + ":item/raw_ginnungien", nextID()));
+	ingotGinnungienIngot = new ItemBuilder(MOD_ID)
+		.build(new Item("ginnungien.ingot", MOD_ID + (":item/ginnungien_ingot"), nextID()));
+	toolSwordGinnungien = new ItemBuilder(MOD_ID)
+		.build(new ItemToolSword("ginnungien.sword", MOD_ID + (":item/ginnungien_sword"), nextID(), ginnungienTool));
+	toolAxeGinnungien = new ItemBuilder(MOD_ID)
+		.build(new ItemToolAxe("ginnungien.axe", MOD_ID + (":item/ginnungien_axe"), nextID(), ginnungienTool));
+	toolPickaxeGinnungien = new ItemBuilder(MOD_ID)
+		.build(new ItemToolPickaxe("ginnungien.pickaxe", MOD_ID + (":item/ginnungien_pickaxe"), nextID(), ginnungienTool));
+	toolShovelGinnungien = new ItemBuilder(MOD_ID)
+		.build(new ItemToolShovel("ginnungien.shovel", MOD_ID + (":item/ginnungien_shovel"), nextID(), ginnungienTool));
+	toolHoeGinnungien = new ItemBuilder(MOD_ID)
+		.build(new ItemToolHoe("ginnungien.hoe", MOD_ID + (":item/ginnungien_hoe"), nextID(), ginnungienTool));
+	hatGinnungien = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("ginnungien.helmet", MOD_ID + (":item/ginnungien_helmet"), nextID(), ginnungienArmor, 3));
+	shirtGinnungien = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("ginnungien.chestplate", MOD_ID + (":item/ginnungien_chestplate"), nextID(), ginnungienArmor, 2));
+	pantsGinnungien = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("ginnungien.leggings", MOD_ID + (":item/ginnungien_leggings"), nextID(), ginnungienArmor, 1));
+	feetsiesGinnungien = new ItemBuilder(MOD_ID)
+		.build(new ItemArmor("ginnungien.boots", MOD_ID + (":item/ginnungien_boots"), nextID(), ginnungienArmor, 0));
+
+
 
 // This is for any unique items made purely with the modded stuff I have added.
 
