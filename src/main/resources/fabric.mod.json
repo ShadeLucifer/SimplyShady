@@ -23,6 +23,15 @@
     "main": [
 			"calamitykage.terraponbta73.TerraponBTA73"
     ],
+		"client": [
+			"calamitykage.terraponbta73.TerraponBTAClient"
+		],
+		"beforeClientStart": [
+			"calamitykage.terraponbta73.TerraponBTAClient"
+		],
+		"afterClientStart": [
+			"calamitykage.terraponbta73.TerraponBTAClient"
+		],
 		"beforeGameStart": [
 			"calamitykage.terraponbta73.TerraponBTA73"
 		],
@@ -51,9 +60,17 @@
   ],
 
   "depends": {
-		"minecraft": "*",
-    "fabricloader": ">=0.15.5"
+		"minecraft": "~7.3",
+		"fabricloader": ">=0.15.5",
+		"catalyst-core": ">=2.1.0",
+		"catalyst-fluids": ">=2.1.5",
+		"catalyst-multiblocks": ">=2.0.0",
+		"catalyst-energy": ">=2.0.4",
+		"catalyst-multipart": ">=2.0.2",
+		"dragonfly": ">=1.7.0-alpha.4",
+		"halplibe": ">=5.2.4"
   },
   "suggests": {
+		"signalindustries": "*"
   }
 }

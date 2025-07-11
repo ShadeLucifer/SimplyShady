@@ -1,10 +1,13 @@
 package calamitykage.terraponbta73;
 
+import calamitykage.terraponbta73.blocks.ModelTerraponPortal;
+import calamitykage.terraponbta73.blocks.TerraponBTA73Blocks;
 import calamitykage.terraponbta73.item.TerraponBTA73Items;
 import net.minecraft.client.render.EntityRenderDispatcher;
 import net.minecraft.client.render.TileEntityRenderDispatcher;
 import net.minecraft.client.render.block.color.BlockColorDispatcher;
 import net.minecraft.client.render.block.model.BlockModelDispatcher;
+import net.minecraft.client.render.block.model.BlockModelPortal;
 import net.minecraft.client.render.block.model.BlockModelStandard;
 import net.minecraft.client.render.item.model.ItemModel;
 import net.minecraft.client.render.item.model.ItemModelDispatcher;
@@ -29,8 +32,10 @@ public class Models implements ModelEntrypoint {
 			.setTex(0, "terraponbta73:block/seidrilium_block", Side.sides));
 		ModelHelper.setBlockModel(sollogiumBlock, () -> new BlockModelStandard<>(sollogiumBlock)
 			.setTex(0, "terraponbta73:block/sollogium_block", Side.sides));
-		ModelHelper.setBlockModel(framiumBlock, () -> new BlockModelStandard<>(framiumBlock)
-			.setTex(0, "terraponbta73:block/framium_block", Side.sides));
+//		ModelHelper.setBlockModel(framiumBlock, () -> new BlockModelStandard<>(framiumBlock)
+//			.setTex(0, "terraponbta73:block/framium_block", Side.sides));
+		ModelHelper.setBlockModel(terraponPortalBlock, () -> new BlockModelStandard<>(terraponPortalBlock)
+		.setTex(0, "terraponbta73:block/terraponPortalBlock", Side.sides));
 		ModelHelper.setBlockModel(einvadrilBlock, () -> new BlockModelStandard<>(einvadrilBlock)
 			.setTex(0, "terraponbta73:block/einvadril_block", Side.sides));
 		ModelHelper.setBlockModel(hlifintiteBlock, () -> new BlockModelStandard<>(hlifintiteBlock)
@@ -39,6 +44,16 @@ public class Models implements ModelEntrypoint {
 			.setTex(0, "terraponbta73:block/eilifligronium_block", Side.sides));
 		ModelHelper.setBlockModel(eilifligrLamp, () -> new BlockModelStandard<>(eilifligrLamp)
 			.setTex(0, "terraponbta73:block/eilifligrlamp", Side.sides));
+		ModelHelper.setBlockModel(terragrass, () -> new BlockModelStandard<>(terragrass)
+			.setTex(0, "terraponbta73:block/terragrass_top", Side.TOP)
+			.setTex(0, "terraponbta73:block/terragrass_side", Side.EAST, Side.WEST, Side.NORTH, Side.SOUTH)
+			.setTex(0, "terraponbta73:block/terragrass_bottom", Side.BOTTOM));
+		ModelHelper.setBlockModel(terrastone, () -> new BlockModelStandard<>(terrastone)
+			.setTex(0, "terraponbta73:block/terrastone", Side.sides));
+		ModelHelper.setBlockModel(terradirt, () -> new BlockModelStandard<>(terradirt)
+			.setTex(0, "terraponbta73:block/terradirt", Side.sides));
+
+		dispatcher.addDispatch((new ModelTerraponPortal<>(TerraponBTA73Blocks.terraponPortal)).setAllTextures(0, "terraponbta73:block/terraponPortal"));
 	}
 
 	@Override
@@ -122,7 +137,7 @@ public class Models implements ModelEntrypoint {
 		dispatcher.addDispatch(makeModel(feetsiesEinvadril, "einvadril_boots"));
 
 // Feigril
-
+/*
 		dispatcher.addDispatch(makeModel(rawFeigrilRaw, "raw_feigril"));
 		dispatcher.addDispatch(makeModel(ingotFeigrilIngot, "feigril_ingot"));
 		dispatcher.addDispatch(makeModel(toolAxeFeigril, "feigril_axe").setFull3D());
@@ -148,7 +163,8 @@ public class Models implements ModelEntrypoint {
 		dispatcher.addDispatch(makeModel(shirtMattrite, "mattrite_chestplate"));
 		dispatcher.addDispatch(makeModel(pantsMattrite, "mattrite_leggings"));
 		dispatcher.addDispatch(makeModel(feetsiesMattrite, "mattrite_boots"));
-
+ **
+*/
 // Hlifintite
 
 		dispatcher.addDispatch(makeModel(rawHlifintiteRaw, "raw_hlifintite"));
@@ -164,7 +180,7 @@ public class Models implements ModelEntrypoint {
 		dispatcher.addDispatch(makeModel(feetsiesHlifintite, "hlifintite_boots"));
 
 // Ginnungien
-
+/*
 		dispatcher.addDispatch(makeModel(rawGinnungienRaw, "raw_ginnungien"));
 		dispatcher.addDispatch(makeModel(ingotGinnungienIngot, "ginnungien_ingot"));
 		dispatcher.addDispatch(makeModel(toolAxeGinnungien, "ginnungien_axe").setFull3D());
@@ -190,7 +206,8 @@ public class Models implements ModelEntrypoint {
 		dispatcher.addDispatch(makeModel(shirtModrastirium, "modrastirium_chestplate"));
 		dispatcher.addDispatch(makeModel(pantsModrastirium, "modrastirium_leggings"));
 		dispatcher.addDispatch(makeModel(feetsiesModrastirium, "modrastirium_boots"));
-
+ **
+*/
 // Eilifligronium
 
 		dispatcher.addDispatch(makeModel(ingotEilifligroniumIngot, "eilifligronium_ingot"));

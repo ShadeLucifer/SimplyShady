@@ -97,6 +97,14 @@ dependencies {
     // Helper library
     // If you do not need Halplibe you can comment this line out or delete this line
     modImplementation("turniplabs:halplibe:$halplibe_version")
+   modImplementation(files("lib/catalyst-core-2.1.2-7.3_04.jar"))
+    modImplementation(files("lib/catalyst-effects-2.0.0-7.3_04.jar"))
+    modImplementation(files("lib/catalyst-fluids-2.1.5-7.3_04.jar"))
+    modImplementation(files("lib/catalyst-energy-2.0.4-7.3_04.jar"))
+    modImplementation(files("lib/catalyst-multiblocks-2.0.0-7.3_04.jar"))
+    modImplementation(files("lib/catalyst-multipart-2.0.2-7.3_04.jar"))
+    modImplementation(files("lib/dragonfly-1.7.0-alpha.4.jar"))
+    modImplementation(files("lib/signalindustries-0.21.12-7.3_04.jar"))
 
     modImplementation("turniplabs:modmenu-bta:$mod_menu_version")
 

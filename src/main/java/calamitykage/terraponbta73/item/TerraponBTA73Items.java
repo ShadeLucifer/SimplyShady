@@ -35,22 +35,22 @@ public class TerraponBTA73Items {
 		prop.setProperty("durability.sollogiumArmor", "8168");
 		prop.setProperty("durability.framiumArmor", "8192");
 		prop.setProperty("durability.einvadrilArmor", "6124");
-		prop.setProperty("durability.mattriteArmor", "6284");
-		prop.setProperty("durability.feigrilArmor", "6862");
+//		prop.setProperty("durability.mattriteArmor", "6284");
+//		prop.setProperty("durability.feigrilArmor", "6862");
 		prop.setProperty("durability.hlifintiteArmor", "12862");
-		prop.setProperty("durability.ginnungienArmor", "13142");
-		prop.setProperty("durability.modrastiriumArmor", "14644");
+//		prop.setProperty("durability.ginnungienArmor", "13142");
+//		prop.setProperty("durability.modrastiriumArmor", "14644");
 		prop.setProperty("durability.eilifligroniumArmor", "-1");
 
 		prop.setProperty("durability.seidriliumTool", "8168");
 		prop.setProperty("durability.sollogiumTool", "8168");
 		prop.setProperty("durability.framiumTool", "8192");
 		prop.setProperty("durability.einvadrilTool", "6124");
-		prop.setProperty("durability.mattriteTool", "6284");
-		prop.setProperty("durability.feigrilTool", "6862");
+//		prop.setProperty("durability.mattriteTool", "6284");
+//		prop.setProperty("durability.feigrilTool", "6862");
 		prop.setProperty("durability.hlifintiteTool", "12862");
-		prop.setProperty("durability.ginnungienTool", "13142");
-		prop.setProperty("durability.modrastiriumTool", "14644");
+//		prop.setProperty("durability.ginnungienTool", "13142");
+//		prop.setProperty("durability.modrastiriumTool", "14644");
 		prop.setProperty("durability.eilifligroniumTool", "-1");
 
 		config = new ConfigHandler(MOD_ID, prop);
@@ -59,23 +59,23 @@ public class TerraponBTA73Items {
 	public static ArmorMaterial seidriliumArmor;
 	public static ArmorMaterial sollogiumArmor;
 	public static ArmorMaterial framiumArmor;
-	public static ArmorMaterial mattriteArmor;
+//	public static ArmorMaterial mattriteArmor;
 	public static ArmorMaterial einvadrilArmor;
-	public static ArmorMaterial feigrilArmor;
+//	public static ArmorMaterial feigrilArmor;
 	public static ArmorMaterial hlifintiteArmor;
-	public static ArmorMaterial ginnungienArmor;
-	public static ArmorMaterial modrastiriumArmor;
+//	public static ArmorMaterial ginnungienArmor;
+//	public static ArmorMaterial modrastiriumArmor;
 	public static ArmorMaterial eilifligroniumArmor;
 
 	public static ToolMaterial seidriliumTool;
 	public static ToolMaterial sollogiumTool;
 	public static ToolMaterial framiumTool;
-	public static ToolMaterial mattriteTool;
+//	public static ToolMaterial mattriteTool;
 	public static ToolMaterial einvadrilTool;
-	public static ToolMaterial feigrilTool;
+//	public static ToolMaterial feigrilTool;
 	public static ToolMaterial hlifintiteTool;
-	public static ToolMaterial ginnungienTool;
-	public static ToolMaterial modrastiriumTool;
+//	public static ToolMaterial ginnungienTool;
+//	public static ToolMaterial modrastiriumTool;
 	public static ToolMaterial eilifligroniumTool;
 
 	public static Item ingotSeidriliumIngot;
@@ -162,6 +162,9 @@ public class TerraponBTA73Items {
 	public static Item infusedGold;
 	public static Item infusedGoldRod;
 	public static Item gaiaSteel;
+
+/*
+*
 	public static Item rawModrastiriumRaw;
 	public static Item ingotModrastiriumIngot;
 	public static Item toolPickaxeModrastirium;
@@ -206,17 +209,19 @@ public class TerraponBTA73Items {
 	public static Item shirtFeigril;
 	public static Item pantsFeigril;
 	public static Item feetsiesFeigril;
+ **
+*/
 
-public static void initializeArmorMaterials() {
+	public static void initializeArmorMaterials() {
 		seidriliumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "seidrilium", config.getInt("durability.seidriliumArmor"), 65f, 65f, 65f, 65f);
 		sollogiumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "sollogium", config.getInt("durability.sollogiumArmor"), 55f, 55f, 95f, 55f);
 		framiumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "framium", config.getInt("durability.framiumArmor"), 65f, 65f, 65f, 65f);
 		einvadrilArmor = ArmorHelper.createArmorMaterial(MOD_ID, "einvadril", config.getInt("durability.einvadrilArmor"), 95f, 55f, 55f, 55f);
-		mattriteArmor = ArmorHelper.createArmorMaterial(MOD_ID, "mattrite", config.getInt("durability.mattriteArmor"), 95f, 55f, 55f, 55f);
-		feigrilArmor = ArmorHelper.createArmorMaterial(MOD_ID, "feigril", config.getInt("durability.feigrilArmor"), 95f, 55f, 55f, 55f);
+//		mattriteArmor = ArmorHelper.createArmorMaterial(MOD_ID, "mattrite", config.getInt("durability.mattriteArmor"), 95f, 55f, 55f, 55f);
+//		feigrilArmor = ArmorHelper.createArmorMaterial(MOD_ID, "feigril", config.getInt("durability.feigrilArmor"), 95f, 55f, 55f, 55f);
 		hlifintiteArmor = ArmorHelper.createArmorMaterial(MOD_ID, "hlifintite", config.getInt("durability.hlifintiteArmor"), 80f, 80f, 80f, 80f);
-		ginnungienArmor = ArmorHelper.createArmorMaterial(MOD_ID, "ginnungien", config.getInt("durability.ginnungienArmor"), 70f, 70f, 70f, 100f);
-		modrastiriumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "modrastirium", config.getInt("durability.modrastiriumArmor"), 85f, 75f, 85f, 75f);
+//		ginnungienArmor = ArmorHelper.createArmorMaterial(MOD_ID, "ginnungien", config.getInt("durability.ginnungienArmor"), 70f, 70f, 70f, 100f);
+//		modrastiriumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "modrastirium", config.getInt("durability.modrastiriumArmor"), 85f, 75f, 85f, 75f);
 		eilifligroniumArmor = ArmorHelper.createArmorMaterial(MOD_ID, "eilifligronium", config.getInt("durability.eilifligroniumArmor"), 100f, 100f, 100f, 100f);
 	}
 
@@ -225,12 +230,12 @@ public static void initializeToolMaterials() {
 		sollogiumTool = new ToolMaterial().setDurability(config.getInt("durability.sollogiumTool")).setEfficiency(17.0f, 15.0f).setMiningLevel(8).setDamage(10);
 		framiumTool = new ToolMaterial().setDurability(config.getInt("durability.framiumTool")).setEfficiency(17.0f, 15.0f).setMiningLevel(8).setDamage(9);
 		einvadrilTool = new ToolMaterial().setDurability(config.getInt("durability.einvadrilTool")).setEfficiency(14.0f, 20.0f).setMiningLevel(7).setDamage(14);
-		mattriteTool = new ToolMaterial().setDurability(config.getInt("durability.mattriteTool")).setEfficiency(15.0f, 21.0f).setMiningLevel(7).setDamage(13);
-		feigrilTool = new ToolMaterial().setDurability(config.getInt("durability.feigrilTool")).setEfficiency(13.0f, 24.0f).setMiningLevel(7).setDamage(12);
+//		mattriteTool = new ToolMaterial().setDurability(config.getInt("durability.mattriteTool")).setEfficiency(15.0f, 21.0f).setMiningLevel(7).setDamage(13);
+//		feigrilTool = new ToolMaterial().setDurability(config.getInt("durability.feigrilTool")).setEfficiency(13.0f, 24.0f).setMiningLevel(7).setDamage(12);
 		hlifintiteTool = new ToolMaterial().setDurability(config.getInt("durability.hlifintiteTool")).setEfficiency(12.0f, 12.0f).setMiningLevel(12).setDamage(7);
-		ginnungienTool = new ToolMaterial().setDurability(config.getInt("durability.ginnungienTool")).setEfficiency(12.0f, 12.0f).setMiningLevel(11).setDamage(7);
-		modrastiriumTool = new ToolMaterial().setDurability(config.getInt("durability.modrastiriumTool")).setEfficiency(10.0f, 10.0f).setMiningLevel(13).setDamage(7);
-		eilifligroniumTool = new ToolMaterial().setDurability(config.getInt("durability.eilifligroniumTool")).setEfficiency(25.0f, 30.0f).setMiningLevel(25).setDamage(25);
+//		ginnungienTool = new ToolMaterial().setDurability(config.getInt("durability.ginnungienTool")).setEfficiency(12.0f, 12.0f).setMiningLevel(11).setDamage(7);
+//		modrastiriumTool = new ToolMaterial().setDurability(config.getInt("durability.modrastiriumTool")).setEfficiency(10.0f, 10.0f).setMiningLevel(13).setDamage(7);
+		eilifligroniumTool = new ToolMaterial().setDurability(config.getInt("durability.eilifligroniumTool")).setEfficiency(100.0f, 100.0f).setMiningLevel(25).setDamage(25);
 	}
 
 
@@ -389,6 +394,8 @@ public static void initializeItems() {
 		.build(new ItemArmor("einvadril.boots", MOD_ID + (":item/einvadril_boots"), nextID(), einvadrilArmor, 0));
 
 // Mattrite (Might of the strong)
+/*
+
 
 	rawMattriteRaw = new ItemBuilder(MOD_ID)
 		.build(new Item("raw.mattrite", MOD_ID + ":item/raw_mattrite", nextID()));
@@ -412,6 +419,8 @@ public static void initializeItems() {
 		.build(new ItemArmor("mattrite.leggings", MOD_ID + (":item/mattrite_leggings"), nextID(), mattriteArmor, 1));
 	feetsiesMattrite = new ItemBuilder(MOD_ID)
 		.build(new ItemArmor("mattrite.boots", MOD_ID + (":item/mattrite_boots"), nextID(), mattriteArmor, 0));
+ **
+*/
 
 // Hlifintite (Durability is very protective)
 
@@ -439,7 +448,7 @@ public static void initializeItems() {
 		.build(new ItemArmor("hlifintite.boots", MOD_ID + (":item/hlifintite_boots"), nextID(), hlifintiteArmor, 0));
 
 // Modrastirium (A mothers love knows no bounds)
-
+/*
 	rawModrastiriumRaw = new ItemBuilder(MOD_ID)
 		.build(new Item("raw.modrastirium", MOD_ID + ":item/raw_modrastirium", nextID()));
 	ingotModrastiriumIngot = new ItemBuilder(MOD_ID)
@@ -463,9 +472,10 @@ public static void initializeItems() {
 	feetsiesModrastirium = new ItemBuilder(MOD_ID)
 		.build(new ItemArmor("modrastirium.boots", MOD_ID + (":item/modrastirium_boots"), nextID(), modrastiriumArmor, 0));
 
-
+ **
+*/
 // Ginnungien (Space does not control you)
-
+/*
 	rawGinnungienRaw = new ItemBuilder(MOD_ID)
 		.build(new Item("raw.ginnungien", MOD_ID + ":item/raw_ginnungien", nextID()));
 	ingotGinnungienIngot = new ItemBuilder(MOD_ID)
@@ -488,7 +498,8 @@ public static void initializeItems() {
 		.build(new ItemArmor("ginnungien.leggings", MOD_ID + (":item/ginnungien_leggings"), nextID(), ginnungienArmor, 1));
 	feetsiesGinnungien = new ItemBuilder(MOD_ID)
 		.build(new ItemArmor("ginnungien.boots", MOD_ID + (":item/ginnungien_boots"), nextID(), ginnungienArmor, 0));
-
+ **
+*/
 
 
 // This is for any unique items made purely with the modded stuff I have added.
