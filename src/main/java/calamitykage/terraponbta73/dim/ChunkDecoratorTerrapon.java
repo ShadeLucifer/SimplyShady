@@ -62,7 +62,7 @@ public class ChunkDecoratorTerrapon implements ChunkDecorator {
 		}
 
 		if (lakeChance != 0 && rand.nextInt(lakeChance) == 0) {
-			int fluid = Blocks.FLUID_WATER_STILL.id();
+			int fluid = TerraponBTA73Blocks.manawater.id();
 
 			int i1 = x + rand.nextInt(16) + 8;
 			int l4 = minY + rand.nextInt(rangeY);
@@ -85,7 +85,7 @@ public class ChunkDecoratorTerrapon implements ChunkDecorator {
 			int j7 = x + rand.nextInt(16);
 			int k10 = minY + rand.nextInt(rangeY / 8);
 			int j13 = z + rand.nextInt(16);
-			(new WorldFeatureOres(TerraponBTA73Blocks.seidriliumBlock.id(), 6)).place(this.world, rand, j7, k10, j13);
+			(new WorldFeatureOre(TerraponBTA73Blocks.seidriliumBlock.id(), 6)).place(this.world, rand, j7, k10, j13);
 		}
 
 
@@ -100,7 +100,7 @@ public class ChunkDecoratorTerrapon implements ChunkDecorator {
 			int l21 = x + rand.nextInt(16) + 8;
 			int k23 = minY + rand.nextInt(rand.nextInt(rangeY - rangeY / 16) + rangeY / 16);
 			int l24 = z + rand.nextInt(16) + 8;
-			(new WorldFeatureLiquid(Blocks.FLUID_WATER_FLOWING.id())).place(this.world, rand, l21, k23, l24);
+			(new WorldFeatureLiquid(TerraponBTA73Blocks.manawaterflow.id())).place(this.world, rand, l21, k23, l24);
 		}
 
 		/*for(int i19 = 0; i19 < 20; ++i19) {

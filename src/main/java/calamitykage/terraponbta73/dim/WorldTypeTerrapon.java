@@ -24,7 +24,7 @@ public class WorldTypeTerrapon extends WorldTypeOverworld {
 			.withSeasonInCycle(Seasons.OVERWORLD_SPRING, 365)
 			.withSeasonInCycle(Seasons.OVERWORLD_SUMMER, 365)
 			.withSeasonInCycle(Seasons.OVERWORLD_FALL, 365)
-			.withSeasonInCycle(Seasons.OVERWORLD_WINTER, 365).build()).oceanBlock(Blocks.FLUID_WATER_STILL)
+			.withSeasonInCycle(Seasons.OVERWORLD_WINTER, 365).build()).oceanBlock(TerraponBTA73Blocks.manawater)
 			.fillerBlock(Blocks.STONE).allowRespawn();
 
 	}
@@ -32,7 +32,7 @@ public class WorldTypeTerrapon extends WorldTypeOverworld {
 
 	@Override
 	public int getOceanBlockId() {
-		return Blocks.FLUID_WATER_STILL.id();
+		return TerraponBTA73Blocks.manawater.id();
 	}
 
 	@Override

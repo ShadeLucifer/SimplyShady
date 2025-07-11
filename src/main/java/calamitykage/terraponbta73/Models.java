@@ -7,6 +7,7 @@ import net.minecraft.client.render.EntityRenderDispatcher;
 import net.minecraft.client.render.TileEntityRenderDispatcher;
 import net.minecraft.client.render.block.color.BlockColorDispatcher;
 import net.minecraft.client.render.block.model.BlockModelDispatcher;
+import net.minecraft.client.render.block.model.BlockModelFluid;
 import net.minecraft.client.render.block.model.BlockModelPortal;
 import net.minecraft.client.render.block.model.BlockModelStandard;
 import net.minecraft.client.render.item.model.ItemModel;
@@ -26,6 +27,10 @@ import static calamitykage.terraponbta73.item.TerraponBTA73Items.*;
 
 
 public class Models implements ModelEntrypoint {
+
+	public static final Side[] S_TB = new Side[]{Side.TOP, Side.BOTTOM};
+	public static final Side[] S_SIDES = new Side[]{Side.NORTH, Side.EAST, Side.SOUTH, Side.WEST};
+
 	@Override
 	public void initBlockModels(BlockModelDispatcher dispatcher) {
 		ModelHelper.setBlockModel(seidriliumBlock, () -> new BlockModelStandard<>(seidriliumBlock)
@@ -53,6 +58,8 @@ public class Models implements ModelEntrypoint {
 		ModelHelper.setBlockModel(terradirt, () -> new BlockModelStandard<>(terradirt)
 			.setTex(0, "terraponbta73:block/terradirt", Side.sides));
 
+		dispatcher.addDispatch((new BlockModelFluid(manawaterflow)).onRenderLayer(1).setAllTextures(0, "terraponbta73:block/manawaterflow").setTex(0, "terraponbta73:block/manawater", new Side[]{Side.TOP}));
+		dispatcher.addDispatch((new BlockModelFluid(manawater)).onRenderLayer(1).setTex(0, "terraponbta73:block/manawater", S_TB).setTex(0, "tofucraft:block/manawaterflow", S_SIDES));
 		dispatcher.addDispatch((new ModelTerraponPortal<>(TerraponBTA73Blocks.terraponPortal)).setAllTextures(0, "terraponbta73:block/terraponPortal"));
 	}
 
@@ -79,6 +86,7 @@ public class Models implements ModelEntrypoint {
 		dispatcher.addDispatch(makeModel(balloflava, "ball_of_lava"));
 		dispatcher.addDispatch(makeModel(lavastar, "lava_star"));
 		dispatcher.addDispatch(makeModel(loptFuel, "lopt_fuel"));
+		dispatcher.addDispatch(makeModel(manawaterBucket, "manawater_bucket"));
 
 // Seidrilium
 

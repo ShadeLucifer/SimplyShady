@@ -48,6 +48,8 @@ public class TerraponBTA73Blocks extends DataInitializer implements BlockInitEnt
 	public static Block<?> terragrass;
 	public static Block<?> terradirt;
 	public static Block<?> terrastone;
+	public static Block<?> manawater;
+	public static Block<?> manawaterflow;
 
 
 	public static void initBlocks() {
@@ -104,8 +106,18 @@ public class TerraponBTA73Blocks extends DataInitializer implements BlockInitEnt
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
 
-
-
+		manawater = new BlockBuilder(MOD_ID)
+			.setHardness(100.0f)
+			.setLightOpacity(3)
+			.setVisualUpdateOnMetadata()
+			.setTags(BlockTags.IS_WATER, BlockTags.PLACE_OVERWRITES, BlockTags.NOT_IN_CREATIVE_MENU)
+			.build("soymilk", nextID(), block -> new ManaWaterStill(block, Material.water, manawaterflow)).withDisabledStats();
+		manawaterflow = new BlockBuilder(MOD_ID)
+			.setHardness(100.0f)
+			.setLightOpacity(3)
+			.setTags(BlockTags.IS_WATER, BlockTags.PLACE_OVERWRITES, BlockTags.NOT_IN_CREATIVE_MENU)
+			.setVisualUpdateOnMetadata()
+			.build("soymilk_flow", nextID(), block -> new ManaWaterFlow(block, Material.water, manawater)).withDisabledStats();
 		terraponPortal = new BlockBuilder(MOD_ID)
 			.setBlockSound(BlockSounds.PERMAFROST)
 			.setUnbreakable()

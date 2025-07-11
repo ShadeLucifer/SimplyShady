@@ -1,6 +1,7 @@
 package calamitykage.terraponbta73.item;
 
 import calamitykage.terraponbta73.TerraponBTA73Config;
+import calamitykage.terraponbta73.blocks.TerraponBTA73Blocks;
 import net.minecraft.client.render.item.model.ItemModelStandard;
 import net.minecraft.client.render.texture.stitcher.TextureRegistry;
 import net.minecraft.core.block.Block;
@@ -9,6 +10,8 @@ import net.minecraft.core.block.BlockLogicOreCoal;
 import net.minecraft.core.data.tag.Tag;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemArmor;
+import net.minecraft.core.item.ItemBucket;
+import net.minecraft.core.item.Items;
 import net.minecraft.core.item.material.ArmorMaterial;
 import net.minecraft.core.item.material.ToolMaterial;
 import net.minecraft.core.item.tool.*;
@@ -162,7 +165,7 @@ public class TerraponBTA73Items {
 	public static Item infusedGold;
 	public static Item infusedGoldRod;
 	public static Item gaiaSteel;
-
+	public static Item manawaterBucket;
 /*
 *
 	public static Item rawModrastiriumRaw;
@@ -280,7 +283,7 @@ public static void initializeItems() {
 		.build(new Item("infused.gold", MOD_ID + ("item:/infused_gold"), nextID()));
 	infusedGoldRod = new ItemBuilder(MOD_ID)
 		.build(new Item("infused.gold.rod", MOD_ID + ("item:/infused_gold_rod"), nextID()));
-
+	manawaterBucket = new ItemBuilder(MOD_ID).setContainerItem(() -> Items.BUCKET).setStackSize(1).build(new ItemBucket("manawater_bucket", "terraponbta73:manawater_bucket", nextID(), TerraponBTA73Blocks.manawater));
 
 // Seidrilium (Magick... *snort snort*)
 
